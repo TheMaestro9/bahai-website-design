@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجامعة البهائية في مصر</title>
+    <meta name="description" content="البوابة الرسمية للتعريف بالدين البهائي في مصر، مبادئه، تاريخه، ومساهمات الجامعة البهائية المصرية في بناء المجتمع.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="#" class="logo-link">
+                    <span class="logo-main">الجامعة البهائية في مصر</span>
+                    <span class="logo-sub">الموقع الرسمي</span>
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#about">البهائيون في مصر</a></li>
+                    <li><a href="#beliefs">ما يؤمنون به</a></li>
+                    <li><a href="#contributions">مساهماتهم</a></li>
+                    <li><a href="#history">التاريخ</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="القائمة">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="#about" onclick="closeMobileNav()">البهائيون في مصر</a></li>
+            <li><a href="#beliefs" onclick="closeMobileNav()">ما يؤمنون به</a></li>
+            <li><a href="#contributions" onclick="closeMobileNav()">مساهماتهم</a></li>
+            <li><a href="#history" onclick="closeMobileNav()">التاريخ</a></li>
+            <li><a href="#faq" onclick="closeMobileNav()">الأسئلة الشائعة</a></li>
+            <li><a href="#contact" onclick="closeMobileNav()">تواصل معنا</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+
+    <!-- ===== SLIDE 2: HERO — Quote + full-bleed image ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg" style="background-image: url('hero.png')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <blockquote class="hero-quote">
+                "لم يزل كان إصلاح العالم بالأعمال الطيبة الطاهرة والأخلاق الراضية المرضية"
+            </blockquote>
+            <cite class="hero-cite">— حضرة بهاء الله</cite>
+        </div>
+        <div class="hero-scroll-hint">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 3: INTRO — الرئيسية ===== -->
+    <section class="intro-section" id="intro">
+        <div class="intro-inner">
+            <p class="intro-body dropcap">
+                على ضفاف النيل، وفي قلب أرض الكنانة، تمتد جذور الجامعة البهائية لأكثر من مائةٍ وثمانين عامًا. فقد كانت مصر، على مرّ العصور، في طليعة البلدان التي احتضنت رسالات الله، وتهيّأت لتلقّي نورها، ومن ثمّ احتضنت هذه الدعوة العالمية.
+            </p>
+            <p class="intro-body">
+                فمنذ عام 1863م، لم تكن أرض مصر مجرّد محطة عبور، بل كانت منارةً فكرية تشعّ علمًا وثقافةً إلى محيطها. يهدف هذا الموقع إلى تعريف زوّاره بالدين البهائي، ومبادئه وتعاليمه، وإبراز مساهمات البهائيين في بناء مصر الحبيبة، لما فيه خير ورخاء الجميع.
+            </p>
+            <p class="intro-body">
+                ويسعى البهائيون، استلهامًا من تعاليمهم، إلى الإسهام في بناء حضارة إنسانية مزدهرة، شعارها وحدة الجنس البشري، وروحها المحبة، وغايتها خدمة مصر والإنسانية جمعاء.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SLIDES 4–6: ABOUT — البهائيون في مصر ===== -->
+    <section class="split-section" id="about">
+        <div class="split-image">
+            <img src="img-about.png" alt="البهائيون في مصر — مجتمع يعمل لخير الوطن">
+        </div>
+        <div class="split-content">
+            <span class="section-tag">البهائيون في مصر</span>
+            <h2 class="split-heading">جزء من نسيج الوطن</h2>
+            <p>البهائيون المصريون جزء من نسيج المجتمع المصري ويعمل أفراده، بروح من المسؤولية والمواطنة، على الإسهام في تقدم المجتمع، من خلال المشاركة في مبادرات تربوية واجتماعية تهدف إلى تعزيز التماسك الاجتماعي وترسيخ قيم التعاون والاحترام المتبادل.</p>
+            <p>ويؤمن البهائيون بأن لكل فرد دورًا في بناء مجتمعه، وأن التقدم الحقيقي يتحقق عندما تتكامل الجهود الفردية والجماعية في خدمة الصالح العام.</p>
+        </div>
+    </section>
+
+    <!-- Slide 5: Quote divider -->
+    <div class="quote-divider">
+        <blockquote>
+            يَا أَبْناءَ الإِنْسانِ<br>
+            هَلْ عَرَفْتُمْ لِمَ خَلَقْناكُمْ مِنْ تُرابٍ واحِدٍ؛ لِئَلاَّ يَفْتَخِرَ أَحَدٌ عَلى أَحَدٍ.
+        </blockquote>
+        <cite>— حضرة بهاء الله</cite>
+    </div>
+
+    <!-- ===== SLIDES 7–9: BELIEFS — ما يؤمنون به ===== -->
+    <section class="beliefs-section" id="beliefs">
+        <div class="beliefs-inner">
+            <span class="section-tag centered">ما يؤمنون به</span>
+            <h2 class="section-heading centered">إن الأرض وطن واحد والبشر سكانه</h2>
+            <p class="section-lead centered">
+                الديانة البهائية دين عالمي مستقل يقوم على الإيمان بوحدة الله، ووحدة الأديان، ووحدة الجنس البشري. وترى تعاليمها أن الرسالات الإلهية تمثل مراحل متتابعة لهداية البشرية.
+           وقد جاء حضرة بهاء الله برسالة تدعو إلى تحقيق السلام العالمي، وإرساء العدل، وبناء مجتمع يسوده التعاون والتكافل.
+
+            </p>
+
+
+            <!-- Slide 8 quote -->
+            <div class="inline-quote">
+                <span class="inline-quote-text">يَا ابْنَ الإِنْسانِ — أَحْبَبْتُ خَلْقَكَ فَخَلَقْتُكَ، فَأَحْبِبْني كَيْ أَذْكُرَكَ، وَفِي رُوحِ الْحَياةِ أُثَبِّتُكَ.</span>
+                <cite>— حضرة بهاء الله</cite>
+            </div>
+
+            <div class="beliefs-grid">
+                <div class="belief-item">
+                    <div class="belief-icon">☀</div>
+                    <h3>وحدة الله</h3>
+                    <p>الإيمان بإله واحد، خالق الكون، مصدر كل خير وجمال في الوجود.</p>
+                </div>
+                <div class="belief-item">
+                    <div class="belief-icon">◉</div>
+                    <h3>وحدة الأديان</h3>
+                    <p>الرسالات الإلهية تمثل مراحل متتابعة لهداية البشرية من مصدر واحد.</p>
+                </div>
+                <div class="belief-item">
+                    <div class="belief-icon">❊</div>
+                    <h3>وحدة البشرية</h3>
+                    <p>البشر جميعاً أسرة واحدة، والتنوع ثروة لا مصدر نزاع.</p>
+                </div>
+                <div class="belief-item">
+                    <div class="belief-icon">⚖</div>
+                    <h3>العلم والدين</h3>
+                    <p>يجب أن يتوافق العلم والدين، فكلاهما وسيلة للوصول إلى الحقيقة.</p>
+                </div>
+                <div class="belief-item">
+                    <div class="belief-icon">♾</div>
+                    <h3>المساواة بين الجنسين</h3>
+                    <p>المرأة والرجل متساويان في الحقوق والواجبات أمام الله وأمام المجتمع.</p>
+                </div>
+                <div class="belief-item">
+                    <div class="belief-icon">✦</div>
+                    <h3>نبذ التعصب</h3>
+                    <p>ضرورة القضاء على جميع أشكال التعصب لبناء عالم أكثر استقراراً وازدهاراً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDES 10–13: CONTRIBUTIONS — مساهماتهم ===== -->
+    <section class="split-section split-reversed" id="contributions">
+        <div class="split-image">
+            <img src="img-contributions.png" alt="مساهمات البهائيين في بناء المجتمع المصري">
+        </div>
+        <div class="split-content">
+            <span class="section-tag">مساهماتنا</span>
+            <h2 class="split-heading">العمل في سبيل خير العالم</h2>
+            <div class="pull-quote">
+                "قل أن اتحدوا في كلمتكم واتفقوا في رأيكم واجعلوا إشراقكم أفضل من عشيكم وغدكم أحسن من أمسكم. فضل الإنسان في الخدمة والكمال لا في الزينة والثروة والمال"
+                <cite>— حضرة بهاء الله</cite>
+            </div>
+            <p>يساهم البهائيون في مصر في أنشطة تهدف إلى تنمية القدرات الروحية والفكرية للأفراد، وتعزيز روح الخدمة والمسؤولية تجاه المجتمع.</p>
+            <ul class="contributions-list">
+                <li>برامج للأطفال تهدف إلى غرس القيم الأخلاقية</li>
+                <li>برامج لليافعين لتطوير قدراتهم واكتشاف دورهم في المجتمع</li>
+                <li>أنشطة للشباب والبالغين تركز على التعلم الجماعي</li>
+                <li>مبادرات مجتمعية لتعزيز التماسك الاجتماعي وخدمة البيئة</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 11 quote -->
+    <div class="quote-divider quote-divider-light">
+        <blockquote>
+            يَا ابْنَ الرُّوحِ — فِي أَوَّلِ القَوْلِ امْلِكْ قَلْباً جَيِّداً حَسَناً مُنيراً لِتَمْلِكَ مُلْكاً دائِماً باقِياً.
+        </blockquote>
+        <cite>— حضرة بهاء الله</cite>
+    </div>
+
+    <!-- ===== SLIDES 14–20: HISTORY — تاريخ البهائية في مصر ===== -->
+    <section class="history-section" id="history">
+        <div class="history-hero">
+            <img src="img-history.png" alt="تاريخ البهائية في مصر — نور امتد عبر الزمان" class="history-bg-img">
+            <div class="history-hero-overlay">
+                <span class="section-tag light">تاريخ البهائية في مصر</span>
+                <h2 class="history-hero-title">نورٌ امتدّ عبر الزمان</h2>
+            </div>
+        </div>
+
+        <div class="history-content">
+            <!-- Slide 15 quote -->
+            <div class="history-opening-quote">
+                <blockquote>
+                    يَا ابْنَ الوُجُودِ — حُبِّي حِصْني مَنْ دَخَلَ فِيهِ نَجا وَأَمِنَ وَمَنْ أَعْرَضَ غَوَى وَهَلَكَ.
+                </blockquote>
+                <cite>— حضرة بهاء الله</cite>
+            </div>
+
+            <!-- Slide 16 main history -->
+            <div class="history-block">
+                <p class="dropcap">يمتد وجود البهائيين في مصر إلى أكثر من قرن ونصف، حيث كانت مصر من أوائل البلدان التي شهدت انتشار هذه الدعوة. وقد لعبت مصر دورًا مهمًا في تاريخ الديانة البهائية، نظرًا لموقعها الثقافي والجغرافي، مما جعلها مركزًا للتفاعل الفكري والديني في المنطقة.</p>
+                <p>ويعكس هذا التاريخ إسهامات متعددة في مجالات الفكر والثقافة والفن، ساهمت في إثراء الحياة الفكرية والاجتماعية في مصر.</p>
+            </div>
+
+            <!-- Slide 20 detailed history -->
+            <div class="history-block">
+                <p>على هذه الأرض الطيبة التي كانت دوماً ملقىً للحضارات ومنارةً للحرية، يمتد تاريخ الجامعة البهائية في مصر لأكثر من مائة وثمانين عامًا. فمنذ عام 1863م، نمت جذور هذه الجامعة في وجدان الوطن، لتكون جزءاً لا يتجزأ من نسيجه الاجتماعي وتاريخه الحديث.</p>
+                <p>إن وجودنا في مصر ليس مجرد تاريخ من المهاجرين الأوائل، بل هو قصة تلاحم فكري وإنساني؛ فقد شهدت صالونات القاهرة والإسكندرية حوارات عميقة بين حضرة عبد البهاء وبين رواد النهضة المصرية، من أمثال <strong>أمير الشعراء أحمد شوقي</strong> و<strong>عباس محمود العقاد</strong> و<strong>الشيخ محمد عبده</strong>، الذين رأوا في هذه التعاليم آفاقاً لنهضة المجتمع ورقيّه.</p>
+            </div>
+
+            <div class="milestone-box">
+                <div class="milestone-year">١٩٢٥م</div>
+                <div class="milestone-text">
+                    <h4>حكم تاريخي رائد</h4>
+                    <p>سطر القضاء المصري حكماً تاريخياً رائداً جعل من مصر أول دولة في العالم العربي والإسلامي تُقرّ بالاستقلال الديني للعقيدة البهائية كدين قائم بذاته.</p>
+                </div>
+            </div>
+
+            <a href="#" class="read-more-link">قراءة المزيد عن تاريخ البهائية في مصر ←</a>
+        </div>
+    </section>
+
+    <!-- ===== SLIDES 21–22: FAQ — الأسئلة الشائعة ===== -->
+    <section class="faq-section" id="faq">
+        <div class="faq-inner">
+            <span class="section-tag centered">الأسئلة الشائعة</span>
+            <h2 class="section-heading centered">تحرّوا الحقيقة بأنفسكم</h2>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>هل الديانة البهائية دين مستقل؟</summary>
+                    <p>نعم، الديانة البهائية دين عالمي مستقل له نصوصه وتعاليمه ونظامه الإداري.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>ما هدف هذا الموقع؟</summary>
+                    <p>يهدف الموقع إلى التعريف بالدين البهائي ومبادئه، وإبراز مساهمات المجتمع البهائي في مصر.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>ما أبرز المبادئ التي يؤكد عليها البهائيون؟</summary>
+                    <p>وحدة الجنس البشري، المساواة، نبذ التعصب، التوافق بين العلم والدين، وخدمة المجتمع.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDES 23–24: CONTACT — تواصل معنا ===== -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <span class="section-tag centered light">تواصل معنا</span>
+            <h2 class="section-heading centered light">باب المحبة مفتوح للجميع</h2>
+            <p class="contact-lead">يسعدنا استقبال استفساراتكم والتواصل معكم للتعرف على المزيد حول المجتمع البهائي وأنشطته. يمكنكم التواصل معنا عبر البريد الإلكتروني أو من خلال النماذج المتاحة على الموقع.</p>
+            <a href="mailto:info@bahai-egypt.org" class="btn-contact">تواصل معنا</a>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 25: HIDDEN WORDS — الكلمات المكنونة ===== -->
+    <section class="hidden-words-section" id="hidden-words">
+        <div class="hidden-words-inner">
+            <span class="section-tag centered">الكلمات المكنونة</span>
+            <p class="section-lead centered">لحضرة بهاء الله</p>
+            <div class="words-carousel">
+                <div class="word-card active">
+                    <blockquote>يَا ابْنَ الإِنْسانِ<br>أَحْبَبْتُ خَلْقَكَ فَخَلَقْتُكَ، فَأَحْبِبْني كَيْ أَذْكُرَكَ، وَفِي رُوحِ الْحَياةِ أُثَبِّتُكَ.</blockquote>
+                </div>
+                <div class="word-card">
+                    <blockquote>يَا ابْنَ الوُجُودِ<br>حُبِّي حِصْني مَنْ دَخَلَ فِيهِ نَجا وَأَمِنَ وَمَنْ أَعْرَضَ غَوَى وَهَلَكَ.</blockquote>
+                </div>
+                <div class="word-card">
+                    <blockquote>يَا ابْنَ الرُّوحِ<br>فِي أَوَّلِ القَوْلِ امْلِكْ قَلْباً جَيِّداً حَسَناً مُنيراً لِتَمْلِكَ مُلْكاً دائِماً باقِياً أَزَلاً قَدِيماً.</blockquote>
+                </div>
+                <div class="word-card">
+                    <blockquote>يَا ابْنَ الإِنْسانِ<br>أَنْتَ مُلْكِي وَمُلْكِي لا يَفْنى. كَيْفَ تَخافُ مِنْ فَنائِكَ، وَأَنْتَ نُوري وَنُوري لا يُطْفى.</blockquote>
+                </div>
+                <div class="word-card">
+                    <blockquote>يَا ابْنَ البَشَرِ<br>إِنْ أَصَابَتْكَ نِعْمَةٌ لا تَفْرَحْ بِها، وَإِنْ تَمَسَّكَ ذِلَّةٌ لا تَحْزَنْ مِنْهَا.</blockquote>
+                </div>
+                <div class="word-card">
+                    <blockquote>يَا ابْنَ الرُّوحِ<br>خَلَقْتُكَ غَنِيّاً كَيْفَ تَفْتَقِرُ، وَصَنَعْتُكَ عَزِيزاً بِمَ تَسْتَذِلُّ.</blockquote>
+                </div>
+            </div>
+            <div class="words-controls">
+                <button class="word-btn" id="prevWord" onclick="changeWord(-1)">→</button>
+                <div class="words-dots" id="wordsDots"></div>
+                <button class="word-btn" id="nextWord" onclick="changeWord(1)">←</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDES 26–28: MEDIA — لقاءات وفيديوهات ===== -->
+    <section class="media-section" id="media">
+        <div class="media-inner">
+            <span class="section-tag centered">المركز الإعلامي</span>
+
+            <h3 class="media-subtitle">مناجاة — فيديوهات روحية</h3>
+            <div class="media-grid">
+                <a href="https://www.youtube.com/watch?v=UWuXlMMeUiI" target="_blank" rel="noopener" class="media-card">
+                    <div class="media-thumb youtube-thumb" style="background-image: url('https://img.youtube.com/vi/UWuXlMMeUiI/mqdefault.jpg')">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>مناجاة — ١</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=dGsjz2DCuBs" target="_blank" rel="noopener" class="media-card">
+                    <div class="media-thumb youtube-thumb" style="background-image: url('https://img.youtube.com/vi/dGsjz2DCuBs/mqdefault.jpg')">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>مناجاة — ٢</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=PS9eyyq1gMc" target="_blank" rel="noopener" class="media-card">
+                    <div class="media-thumb youtube-thumb" style="background-image: url('https://img.youtube.com/vi/PS9eyyq1gMc/mqdefault.jpg')">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <p>مناجاة — ٣</p>
+                </a>
+            </div>
+
+            <h3 class="media-subtitle" style="margin-top: 4rem;">لقاءات مع البهائيين المصريين</h3>
+            <div class="interviews-list">
+                <a href="#" class="interview-item">
+                    <span class="interview-num">١</span>
+                    <span class="interview-text">إبراهيم عيسى مع غادة علاء ومحمد بن موسى — البهائية</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٢</span>
+                    <span class="interview-text">الساحة مع م. بهاء إسحاق — بهائي في مصر، حكاية ٣ أجيال</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٣</span>
+                    <span class="interview-text">ما علاقة الدين البهائي بالطائفة الشيعية وإسرائيل؟</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٤</span>
+                    <span class="interview-text">مصر: لماذا يعاني البهائيون لدفن موتاهم؟</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٥</span>
+                    <span class="interview-text">اعرف البهائية — غادة علاء وبهاء إسحاق مع أحمد سعد زايد</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٦</span>
+                    <span class="interview-text">أسرار الديانة البهائية — د. سيامك ساساني وأ. غادة علاء</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٧</span>
+                    <span class="interview-text">سيرة أسرة مصرية بهائية</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+                <a href="#" class="interview-item">
+                    <span class="interview-num">٨</span>
+                    <span class="interview-text">لقاء المتحدث الإعلامي للبهائيين في مصر بعد رفض المحكمة تخصيص مقابر</span>
+                    <span class="interview-arrow">←</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 29: BIC ARTICLES ===== -->
+    <section class="articles-section" id="articles">
+        <div class="articles-inner">
+            <span class="section-tag centered">مقالات الجامعة البهائية العالمية</span>
+            <h2 class="section-heading centered">البهائيون في مصر — على الصعيد الدولي</h2>
+            <div class="articles-list">
+                <a href="https://www.bic.org" target="_blank" class="article-item">
+                    <span class="article-tag">الأمم المتحدة</span>
+                    <h4>خبراء الأمم المتحدة يتناولون انتهاكات حقوق البهائيين في مصر</h4>
+                </a>
+                <a href="https://www.bic.org" target="_blank" class="article-item">
+                    <span class="article-tag">مجلس حقوق الإنسان</span>
+                    <h4>بيان حول مصر في الدورة 59 لمجلس حقوق الإنسان الأممي</h4>
+                </a>
+                <a href="https://www.bic.org" target="_blank" class="article-item">
+                    <span class="article-tag">مجلس حقوق الإنسان</span>
+                    <h4>بيان حول مصر في الدورة 58 لمجلس حقوق الإنسان الأممي</h4>
+                </a>
+                <a href="https://www.bic.org" target="_blank" class="article-item">
+                    <span class="article-tag">حرية الدين</span>
+                    <h4>دول أعضاء في الأمم المتحدة تحث مصر على احترام حرية الدين والمعتقد</h4>
+                </a>
+                <a href="https://www.bic.org" target="_blank" class="article-item">
+                    <span class="article-tag">التنمية</span>
+                    <h4>الجامعة البهائية في COP27 تستعرض أنشطة التنمية البهائية في مصر</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 30: FOOTER — نهاية الصفحة ===== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-main">الجامعة البهائية في مصر</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="#about">البهائيون في مصر</a>
+                <a href="#beliefs">ما يؤمنون به</a>
+                <a href="#contributions">مساهماتنا</a>
+                <a href="#history">التاريخ</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+                <a href="https://www.bahai.org/ar" target="_blank" rel="noopener">الموقع العالمي</a>
+            </nav>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">&copy; 2026 الجامعة البهائية في مصر — جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // ---- Hamburger Menu ----
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+            overlay.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+        function closeMobileNav() {
+            mobileNav.classList.remove('open');
+            overlay.classList.remove('open');
+            hamburger.classList.remove('active');
+        }
+
+        // ---- Sticky header on scroll ----
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // ---- Hidden Words Carousel ----
+        let currentWord = 0;
+        const wordCards = document.querySelectorAll('.word-card');
+        const dotsContainer = document.getElementById('wordsDots');
+        
+        // Build dots
+        wordCards.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('word-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToWord(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        function goToWord(index) {
+            wordCards[currentWord].classList.remove('active');
+            document.querySelectorAll('.word-dot')[currentWord].classList.remove('active');
+            currentWord = (index + wordCards.length) % wordCards.length;
+            wordCards[currentWord].classList.add('active');
+            document.querySelectorAll('.word-dot')[currentWord].classList.add('active');
+        }
+
+        function changeWord(direction) { goToWord(currentWord + direction); }
+
+        // Auto-rotate every 6s
+        setInterval(() => changeWord(1), 6000);
+
+        // ---- Intersection Observer for fade-in ----
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.split-section, .beliefs-grid, .belief-item, .history-block, .milestone-box, .faq-item, .media-card, .interview-item, .article-item, .nav-tiles').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
