@@ -22,6 +22,7 @@
     --font-sans:   'Cairo', system-ui, sans-serif;
     --transition:  all .35s cubic-bezier(.4,0,.2,1);
     --max-w:       1100px;
+    --symbol-url:  url('bahai-symbol.png');
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -73,6 +74,12 @@ strong { color: var(--text-dark); font-weight: 700; }
 }
 
 .header-logo .logo-link { display: flex; flex-direction: column; gap: 0.1rem; }
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
 
 .logo-main {
     font-family: var(--font-serif);
@@ -472,11 +479,31 @@ strong { color: var(--text-dark); font-weight: 700; }
 .beliefs-section {
     background: var(--white);
     padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.beliefs-section::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background-image: var(--symbol-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.03;
+    pointer-events: none;
+    transform: rotate(15deg);
+    z-index: 0;
 }
 
 .beliefs-inner {
     max-width: var(--max-w);
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .section-heading {
@@ -1104,4 +1131,83 @@ strong { color: var(--text-dark); font-weight: 700; }
     .history-hero-title { font-size: 1.8rem; }
     .interview-item { grid-template-columns: 2rem 1fr; }
     .interview-arrow { display: none; }
+}
+
+/* ================================================================
+   IDENTITY — Custom Baha'i & Lotus Symbol
+   ================================================================ */
+.site-symbol {
+    width: 250px;
+    height: 250px;
+    background-image: var(--symbol-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 3rem auto;
+    opacity: 0.8;
+}
+
+.section-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.section-separator::before,
+.section-separator::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(to right, rgba(0,0,0,0), var(--divider), rgba(0,0,0,0));
+    max-width: 200px;
+}
+
+.history-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.history-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background-image: var(--symbol-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.04;
+    pointer-events: none;
+    transform: translateY(-40%) rotate(-15deg);
+    z-index: 0;
+}
+
+.history-content {
+    position: relative;
+    z-index: 1;
+}
+
+.header-logo .logo-link {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.8rem;
+}
+
+.header-logo .logo-link::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: var(--symbol-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: filter 0.3s;
+}
+
+.site-header:not(.scrolled) .header-logo .logo-link::before {
+    filter: brightness(0) invert(1); /* White in hero */
 }
