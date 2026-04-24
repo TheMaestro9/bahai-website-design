@@ -22,10 +22,10 @@
     --font-sans:   'Cairo', system-ui, sans-serif;
     --transition:  all .35s cubic-bezier(.4,0,.2,1);
     --max-w:       1100px;
-    --symbol-url:  url('bahai-symbol.png');
+    --symbol-url:  url('assets/bahai-symbol.png');
     /* ---- Pattern assets ---- */
-    --pattern-geo:    url('pattern 1.jpg');   /* Islamic geometric lattice */
-    --pattern-lotus:  url('pattern4.png');    /* Egyptian lotus border frieze */
+    --pattern-geo:    url('assets/pattern-1.jpg');   /* Islamic geometric lattice */
+    --pattern-lotus:  url('assets/pattern4.png');    /* Egyptian lotus border frieze */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
