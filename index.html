@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Skip to main content for keyboard users -->
+    <a href="#main-content" class="skip-link">تخطى إلى المحتوى الرئيسي</a>
     <!-- ===== HEADER / NAV ===== -->
     <header class="site-header" id="site-header">
       <div class="header-inner">
@@ -36,7 +38,7 @@
             <li><a href="#contact">تواصل معنا</a></li>
           </ul>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="القائمة">
+        <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -64,6 +66,8 @@
     ></div>
 
     <!-- ===== SLIDE 2: HERO — Quote + full-bleed image ===== -->
+    <!-- Main content landmark -->
+    <main id="main-content">
     <section class="hero" id="home">
       <div
         class="hero-bg"
@@ -72,6 +76,8 @@
       <div class="hero-overlay"></div>
       <div class="hero-pattern"></div>
       <div class="hero-content">
+        <!-- h1: Only one on the page, represents site identity -->
+        <h1 class="hero-site-title">الجامعة البهائية في مصر</h1>
         <blockquote class="hero-quote">
           "لم يزل كان إصلاح العالم بالأعمال الطيبة الطاهرة والأخلاق الراضية
           المرضية"
@@ -117,6 +123,9 @@
         <img
           src="assets/img-about.png"
           alt="البهائيون في مصر — مجتمع يعمل لخير الوطن"
+          loading="lazy"
+          width="550"
+          height="520"
         />
       </div>
       <div class="split-content papyrus-bg">
@@ -171,29 +180,29 @@
 
         <div class="beliefs-grid">
           <div class="belief-item">
-            <div class="belief-icon">☀</div>
+            <div class="belief-icon" aria-hidden="true">☀</div>
             <h3>وحدة الله</h3>
             <p>الإيمان بإله واحد، خالق الكون، مصدر كل خير وجمال في الوجود.</p>
           </div>
           <div class="belief-item">
-            <div class="belief-icon">◉</div>
+            <div class="belief-icon" aria-hidden="true">◉</div>
             <h3>وحدة الأديان</h3>
             <p>
               الرسالات الإلهية تمثل مراحل متتابعة لهداية البشرية من مصدر واحد.
             </p>
           </div>
           <div class="belief-item">
-            <div class="belief-icon">❊</div>
+            <div class="belief-icon" aria-hidden="true">❊</div>
             <h3>وحدة البشرية</h3>
             <p>البشر جميعاً أسرة واحدة، والتنوع ثروة لا مصدر نزاع.</p>
           </div>
           <div class="belief-item">
-            <div class="belief-icon">⚖</div>
+            <div class="belief-icon" aria-hidden="true">⚖</div>
             <h3>العلم والدين</h3>
             <p>يجب أن يتوافق العلم والدين، فكلاهما وسيلة للوصول إلى الحقيقة.</p>
           </div>
           <div class="belief-item">
-            <div class="belief-icon">♾</div>
+            <div class="belief-icon" aria-hidden="true">♾</div>
             <h3>المساواة بين الجنسين</h3>
             <p>
               المرأة والرجل متساويان في الحقوق والواجبات أمام الله وأمام
@@ -201,7 +210,7 @@
             </p>
           </div>
           <div class="belief-item">
-            <div class="belief-icon">✦</div>
+            <div class="belief-icon" aria-hidden="true">✦</div>
             <h3>نبذ التعصب</h3>
             <p>
               ضرورة القضاء على جميع أشكال التعصب لبناء عالم أكثر استقراراً
@@ -221,6 +230,9 @@
         <img
           src="assets/img-contributions.png"
           alt="مساهمات البهائيين في بناء المجتمع المصري"
+          loading="lazy"
+          width="550"
+          height="520"
         />
       </div>
       <div class="split-content papyrus-bg">
@@ -263,6 +275,9 @@
           src="assets/history-hero.jpeg"
           alt="تاريخ البهائية في مصر — نور امتد عبر الزمان"
           class="history-bg-img"
+          loading="lazy"
+          width="1100"
+          height="420"
         />
         <div class="history-hero-overlay">
           <span class="section-tag light">تاريخ البهائية في مصر</span>
@@ -428,13 +443,13 @@
             </blockquote>
           </div>
         </div>
-        <div class="words-controls">
-          <button class="word-btn" id="prevWord" onclick="changeWord(-1)">
-            →
+        <div class="words-controls" role="group" aria-label="تنقل بين الكلمات المكنونة">
+          <button class="word-btn" id="prevWord" onclick="changeWord(-1)" aria-label="الكلمة السابقة">
+            <span aria-hidden="true">→</span>
           </button>
-          <div class="words-dots" id="wordsDots"></div>
-          <button class="word-btn" id="nextWord" onclick="changeWord(1)">
-            ←
+          <div class="words-dots" id="wordsDots" role="tablist" aria-label="مؤشرات الكلمات"></div>
+          <button class="word-btn" id="nextWord" onclick="changeWord(1)" aria-label="الكلمة التالية">
+            <span aria-hidden="true">←</span>
           </button>
         </div>
       </div>
@@ -445,7 +460,7 @@
     </div>
 
     <!-- ===== SLIDES 26–28: MEDIA — لقاءات وفيديوهات ===== -->
-    <section class="media-section papyrus-bg" id="media">
+    <section class="media-section papyrus-bg" id="media" aria-label="المركز الإعلامي">
       <div class="media-inner">
         <span class="section-tag centered">المركز الإعلامي</span>
 
@@ -602,6 +617,8 @@
       </div>
     </section>
 
+    </main><!-- end #main-content -->
+
     <!-- ===== SLIDE 30: FOOTER — نهاية الصفحة ===== -->
     <footer class="site-footer">
       <div class="footer-inner">
@@ -632,15 +649,26 @@
       const mobileNav = document.getElementById("mobile-nav");
       const overlay = document.getElementById("mobile-nav-overlay");
       hamburger.addEventListener("click", () => {
-        mobileNav.classList.toggle("open");
+        const isOpen = mobileNav.classList.toggle("open");
         overlay.classList.toggle("open");
         hamburger.classList.toggle("active");
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        hamburger.setAttribute("aria-label", isOpen ? "إغلاق القائمة" : "فتح القائمة");
       });
       function closeMobileNav() {
         mobileNav.classList.remove("open");
         overlay.classList.remove("open");
         hamburger.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.setAttribute("aria-label", "فتح القائمة");
       }
+      // Close mobile nav on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mobileNav.classList.contains("open")) {
+          closeMobileNav();
+          hamburger.focus();
+        }
+      });
 
       // ---- Sticky header on scroll ----
       const header = document.getElementById("site-header");
@@ -657,29 +685,34 @@
       wordCards.forEach((_, i) => {
         const dot = document.createElement("button");
         dot.classList.add("word-dot");
+        dot.setAttribute("role", "tab");
+        dot.setAttribute("aria-label", `الكلمة ${i + 1}`);
+        dot.setAttribute("aria-selected", i === 0 ? "true" : "false");
         if (i === 0) dot.classList.add("active");
         dot.addEventListener("click", () => goToWord(i));
         dotsContainer.appendChild(dot);
       });
 
       function goToWord(index) {
+        const dots = document.querySelectorAll(".word-dot");
         wordCards[currentWord].classList.remove("active");
-        document
-          .querySelectorAll(".word-dot")
-          [currentWord].classList.remove("active");
+        dots[currentWord].classList.remove("active");
+        dots[currentWord].setAttribute("aria-selected", "false");
         currentWord = (index + wordCards.length) % wordCards.length;
         wordCards[currentWord].classList.add("active");
-        document
-          .querySelectorAll(".word-dot")
-          [currentWord].classList.add("active");
+        dots[currentWord].classList.add("active");
+        dots[currentWord].setAttribute("aria-selected", "true");
       }
 
       function changeWord(direction) {
         goToWord(currentWord + direction);
       }
 
-      // Auto-rotate every 6s
-      setInterval(() => changeWord(1), 6000);
+      // Auto-rotate every 6s — pauses if user prefers reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion) {
+        setInterval(() => changeWord(1), 6000);
+      }
 
       // ---- Intersection Observer for fade-in ----
       const observer = new IntersectionObserver(
