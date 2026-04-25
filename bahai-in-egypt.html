@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>البهائية في مصر - تاريخ الجامعة</title>
+    <meta
+      name="description"
+      content="تعرف على تاريخ الدين البهائي في مصر، منذ الزيارة المباركة لحضرة بهاء الله عام 1868 وحتى اليوم."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Specific overrides for this page */
+        .history-hero {
+            height: 60vh;
+            min-height: 400px;
+        }
+        .content-section {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .history-image-caption {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 1rem;
+            font-family: var(--font-sans);
+        }
+        .page-navigation {
+            background: var(--blue-pale);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--divider);
+            position: sticky;
+            top: 70px;
+            z-index: 10;
+        }
+        .page-navigation .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: flex;
+            gap: 1.5rem;
+            padding: 0 2rem;
+        }
+        .page-navigation a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-mid);
+        }
+        .page-navigation a:hover {
+            color: var(--blue-deep);
+        }
+        @media (max-width: 900px) {
+            .page-navigation { top: 60px; }
+        }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">تخطى إلى المحتوى الرئيسي</a>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header scrolled" id="site-header">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="index.html" class="logo-link">
+            <div class="logo-text">
+                <span class="logo-main">الجامعة البهائية في مصر</span>
+                <span class="logo-sub">الموقع الرسمي</span>
+            </div>
+          </a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="index.html#about">البهائيون في مصر</a></li>
+            <li><a href="index.html#beliefs">ما يؤمنون به</a></li>
+            <li><a href="index.html#contributions">مساهماتهم</a></li>
+            <li><a href="index.html#history">التاريخ</a></li>
+            <li><a href="index.html#faq">الأسئلة الشائعة</a></li>
+            <li><a href="index.html#contact">تواصل معنا</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html#about" onclick="closeMobileNav()">البهائيون في مصر</a></li>
+        <li><a href="index.html#beliefs" onclick="closeMobileNav()">ما يؤمنون به</a></li>
+        <li><a href="index.html#contributions" onclick="closeMobileNav()">مساهماتهم</a></li>
+        <li><a href="index.html#history" onclick="closeMobileNav()">التاريخ</a></li>
+        <li><a href="index.html#faq" onclick="closeMobileNav()">الأسئلة الشائعة</a></li>
+        <li><a href="index.html#contact" onclick="closeMobileNav()">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+
+    <main id="main-content">
+      <!-- ===== HERO SECTION ===== -->
+      <section class="history-hero">
+        <img
+          src="assets/history-hero.jpeg"
+          alt="تاريخ البهائية في مصر"
+          class="history-bg-img"
+        />
+        <div class="history-hero-overlay">
+          <span class="section-tag light">تاريخنا</span>
+          <h1 class="history-hero-title">البهائية في مصر: قرن ونصف من الوجود</h1>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 1: VISITATION ===== -->
+      <section class="content-section">
+        <h2 class="section-heading">المرور المبارك لحضرة بهاء الله لأرض مصر</h2>
+        <div class="history-block visible">
+          <p class="dropcap">
+            في عام 1868م، شرفت أرض مصر بمرور مبارك وفريد لحضرة بهاء الله. فبينما كان في طريقه إلى المنفى الأخير في مدينة عكا، توقفت السفينة التي كانت تقله في ميناء الإسكندرية العريق.
+          </p>
+          <p>
+            مكث حضرة بهاء الله في الإسكندرية لمدة يوم وليلة، وهي فترة قصيرة في حساب الزمن، لكنها كانت عميقة في أثرها الروحي. فقد أسبغت هذه الزيارة نوراً وعزاً سرمدياً على مصر، ومهدت الطريق لانتشار رسالته الداعية إلى السلام والوحدة في قلب هذا الوطن.
+          </p>
+          <div class="inline-quote">
+              <span class="inline-quote-text">"يا أرض النيل، طوبى لكِ بما فزتِ بلقاء ربكِ في هذا اليوم المبارك."</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 2: EARLY BELIEVERS ===== -->
+      <section class="content-section">
+        <h2 class="section-heading">أوائل المهاجرين ودخول الأمر المبارك</h2>
+        <div class="history-block visible">
+          <p>
+            مع مطلع القرن العشرين، بدأت مرحلة جديدة في تاريخ الجامعة البهائية في مصر. فبعد سنوات من وجود البهائيين القادمين من الخارج، بدأت تعاليم حضرة بهاء الله تجد صدىً في قلوب المصريين أنفسهم.
+          </p>
+          <div style="margin: 3rem 0;">
+            <img src="assets/bahais-in-egypt/protsaid 1906.png" alt="بهائيون في بورسعيد عام 1906" style="width: 100%; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <p class="history-image-caption">مجموعة من الأحباء في مدينة بورسعيد - عام 1906م</p>
+          </div>
+          <h3>أول مؤمن من أهل مصر</h3>
+          <p>
+            في عام 1900م، سجل التاريخ أول مؤمن بهائي مصري، وهو <strong>الحبيب علي أفندي إبراهيم</strong>. كان يعمل في جمرك بورسعيد، وكان إيمانه بمثابة الباكورة التي تفتحت بعدها براعم الإيمان في شتى أرجاء القطر المصري.
+          </p>
+          <p>
+            بحلول عام 1910م، كانت المراكز البهائية قد بدأت تتشكل في المدن الكبرى مثل القاهرة والإسكندرية والمنصورة وبورسعيد. وفي عام 1916م، امتد نور الهداية إلى إيتاي البارود بمديرية البحيرة، مما عكس الانتشار التدريجي والهادئ للجامعة في نسيج المجتمع المصري.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-separator"></div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-main">الجامعة البهائية في مصر</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html#about">البهائيون في مصر</a>
+          <a href="index.html#beliefs">ما يؤمنون به</a>
+          <a href="index.html#contributions">مساهماتنا</a>
+          <a href="index.html#history">التاريخ</a>
+          <a href="index.html#faq">الأسئلة الشائعة</a>
+          <a href="index.html#contact">تواصل معنا</a>
+        </nav>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">
+          &copy; 2026 الجامعة البهائية في مصر — جميع الحقوق محفوظة
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Hamburger Menu
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+      const overlay = document.getElementById("mobile-nav-overlay");
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.toggle("open");
+        overlay.classList.toggle("open");
+        hamburger.classList.toggle("active");
+      });
+      function closeMobileNav() {
+        mobileNav.classList.remove("open");
+        overlay.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
