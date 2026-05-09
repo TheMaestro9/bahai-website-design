@@ -1,0 +1,55 @@
+/* ================================================================
+   RESPONSIVE & REDUCED MOTION
+   ================================================================ */
+@media (max-width: 900px) {
+    .header-nav { display: none; }
+    .hamburger { display: flex; }
+    .split-section { grid-template-columns: 1fr; }
+    .split-reversed { direction: rtl; }
+    .split-image { height: 300px; }
+    .split-content { padding: 3rem 2rem; }
+    .beliefs-grid { grid-template-columns: 1fr 1fr; }
+    .media-grid { grid-template-columns: 1fr 1fr; }
+    .nav-tiles { grid-template-columns: 1fr; }
+    .nav-tile:first-child { border-inline-start: none; border-bottom: 1px solid var(--divider); }
+    .milestone-box { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    /* Keep font-size at 16px minimum to prevent iOS auto-zoom */
+    html { font-size: 16px; }
+    .hero-content { padding: 0 1.5rem 5rem; }
+    .hero-quote { font-size: 1.6rem; }
+    .beliefs-grid { grid-template-columns: 1fr; }
+    .media-grid { grid-template-columns: 1fr; }
+    .history-hero { height: 260px; }
+    .history-hero-overlay { padding: 2rem; }
+    .history-hero-title { font-size: 1.8rem; }
+    .interview-item { grid-template-columns: 2rem 1fr; }
+    .interview-arrow { display: none; }
+}
+
+/* ================================================================
+   REDUCED MOTION — Respect user preference (WCAG 2.1)
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .hero-bg { transform: none !important; }
+    .split-section,
+    .beliefs-grid,
+    .belief-item,
+    .history-block,
+    .milestone-box,
+    .faq-item,
+    .media-card,
+    .interview-item,
+    .article-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

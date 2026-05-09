@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
+import './Home.css';
 
 export default function Home() {
   const [currentWord, setCurrentWord] = useState(0);

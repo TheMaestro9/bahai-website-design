@@ -1,4 +1,5 @@
 import useReveal from '../hooks/useReveal';
+import './History.css';
 
 export default function History() {
   useReveal(".history-block, .content-section");
