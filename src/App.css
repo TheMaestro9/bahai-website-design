@@ -870,7 +870,7 @@ strong { color: var(--text-dark); font-weight: 700; }
 .faq-item summary::-webkit-details-marker { display: none; }
 
 .faq-item summary::after {
-    content: 'ï¼‹';
+    content: '←';
     color: var(--coral);
     font-size: 1.2rem;
     transition: transform .3s;
