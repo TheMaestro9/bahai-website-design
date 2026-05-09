@@ -1362,7 +1362,7 @@ strong { color: var(--text-dark); font-weight: 700; }
     gap: 0.8rem;
 }
 
-.header-logo .logo-link::before {
+/* .header-logo .logo-link::before {
     content: '';
     display: block;
     width: 40px;
@@ -1371,7 +1371,7 @@ strong { color: var(--text-dark); font-weight: 700; }
     background-size: contain;
     background-repeat: no-repeat;
     transition: filter 0.3s;
-}
+} */
 
 .site-header:not(.scrolled) .header-logo .logo-link::before {
     filter: brightness(0) invert(1); /* White in hero */
