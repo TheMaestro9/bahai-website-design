@@ -42,7 +42,7 @@ export default function History() {
             مع مطلع القرن العشرين، بدأت مرحلة جديدة في تاريخ الجامعة البهائية في مصر. فبعد سنوات من وجود البهائيين القادمين من الخارج، بدأت تعاليم حضرة بهاء الله تجد صدىً في قلوب المصريين أنفسهم.
           </p>
           <div style={{ margin: '3rem 0' }}>
-            <img src="assets/bahais-in-egypt/protsaid 1906.png" alt="بهائيون في بورسعيد عام 1906" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+            <img src="assets/bahais-in-egypt/portsaid-1906.png" alt="بهائيون في بورسعيد عام 1906" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
             <p className="history-image-caption">مجموعة من الأحباء في مدينة بورسعيد - عام 1906م</p>
           </div>
           <h3>أول مؤمن من أهل مصر</h3>
@@ -63,7 +63,7 @@ export default function History() {
             بدأ العمل المنظم لتأسيس المؤسسات البهائية في مصر مبكراً. في يوليو 1915م، قام المحفل الروحاني في مصر بتسجيل نظامه الداخلي المكون من 53 مادة، وهو ما عكس رغبة الجامعة في العمل وفق أطر مؤسسية واضحة منذ البداية.
           </p>
           <div style={{ margin: '3rem 0' }}>
-            <img src="assets/bahais-in-egypt/first bahai mo2tamar 1924.png" alt="أول مؤتمر بهائي في مصر 1924" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+            <img src="assets/bahais-in-egypt/first-conference-1924.png" alt="أول مؤتمر بهائي في مصر 1924" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
             <p className="history-image-caption">المندوبون في أول مؤتمر بهائي مركزي بمصر - عام 1924م</p>
           </div>
           <p>
@@ -99,7 +99,7 @@ export default function History() {
             في عام 1934م، خطت الجامعة البهائية خطوة هامة في مسار الاندماج القانوني والاجتماعي. فقد وضع المحفل الروحاني المركزي دستوراً للأحوال الشخصية مستمداً من الشريعة البهائية، وتم تقديمه لمجلس الوزراء المصري الذي أجاز تسجيله في المحكمة المختلطة بالقاهرة في ديسمبر 1934م.
           </p>
           <div style={{ margin: '3rem 0', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '2rem', alignItems: 'center' }}>
-            <img src="assets/bahais-in-egypt/3abd el gleel beek sa3d.png" alt="عبد الجليل بك سعد" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }} />
+            <img src="assets/bahais-in-egypt/abd-el-gleel.png" alt="عبد الجليل بك سعد" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }} />
             <div>
               <p>
                 بفضل المجهودات المضيئة لـ <strong>عبد الجليل بك سعد</strong>، نجح البهائيون في الحصول على مرسوم ملكي في نوفمبر 1940م بتخصيص قطعة أرض بمنطقة البساتين بالقاهرة لتكون مقبرة للطائفة البهائية.
