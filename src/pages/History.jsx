@@ -122,7 +122,7 @@ export default function History() {
             في أكتوبر 1941م، وضع المحفل المركزي حجر الأساس لـ "حظيرة القدس" (المركز الإداري والروحاني) في منطقة العباسية بالقاهرة، لتكون مقراً لإدارة شؤون الجامعة ومركزاً لأنشطتها المجتمعية.
           </p>
           <div style={{ margin: '3rem 0' }}>
-            <img src="/assets/bahais-in-egypt/7azeret-el-kods.png" alt="حظيرة القدس بالقاهرة" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+            <img src="assets/bahais-in-egypt/7azeret-el-kods.png" alt="حظيرة القدس بالقاهرة" style={{ width: '100%', borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
             <p className="history-image-caption">أحد المراكز البهائية في مصر (حظيرة القدس)</p>
           </div>
           <p>
