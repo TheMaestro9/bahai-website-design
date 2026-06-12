@@ -123,7 +123,40 @@ export function getBadiDate(date = new Date()) {
     monthName,
     year,
     weekdayName,
-    formatted: `${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب.هـ`,
+    formatted: `${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب`,
     fullFormatted: `${weekdayName}، ${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب.هـ`
   };
 }
+
+export function getHolyDaysForYear(badiYear) {
+  const gregorianYear = Object.keys(BADI_YEARS_DATA).find(
+    (key) => BADI_YEARS_DATA[key].yearBE === Number(badiYear)
+  );
+  if (!gregorianYear) {
+    throw new Error(`Baha'i year ${badiYear} is out of the lookup table range.`);
+  }
+
+  const yearData = BADI_YEARS_DATA[gregorianYear];
+  const nawRuzDate = new Date(yearData.nawRuz);
+  
+  const addDays = (days) => {
+    const d = new Date(nawRuzDate.getTime());
+    d.setDate(d.getDate() + days);
+    return d.toISOString().split('T')[0];
+  };
+
+  return [
+    { name: 'عيد النوروز (رأس السنة البهائية)', badiDate: '١ بهاء', gregorianDate: yearData.nawRuz, workSuspended: true, desc: 'بداية السنة البهائية وعيد الربيع الطبيعي.' },
+    { name: 'اليوم الأول من عيد الرضوان', badiDate: '١٣ جلال', gregorianDate: addDays(31), workSuspended: true, desc: 'إعلان بهاء الله لدعوته في حديقة الرضوان ببغداد.' },
+    { name: 'اليوم التاسع من عيد الرضوان', badiDate: '٢ جمال', gregorianDate: addDays(39), workSuspended: true, desc: 'ذكرى دخول عائلة بهاء الله لحديقة الرضوان.' },
+    { name: 'اليوم الثاني عشر من عيد الرضوان', badiDate: '٥ جمال', gregorianDate: addDays(42), workSuspended: true, desc: 'ذكرى مغادرة بهاء الله للحديقة متجهاً إلى إسطنبول.' },
+    { name: 'إعلان دعوة الباب', badiDate: '٨ عظمة', gregorianDate: addDays(64), workSuspended: true, desc: 'ذكرى إعلان الباب لرسالته المبشرة بالبهائية في شيراز.' },
+    { name: 'صعود بهاء الله', badiDate: '١٣ عظمة', gregorianDate: addDays(69), workSuspended: true, desc: 'ذكرى صعود مؤسس الدين البهائي في البهجة بعكا.' },
+    { name: 'استشهاد الباب', badiDate: '١٧ رحمة', gregorianDate: addDays(111), workSuspended: true, desc: 'ذكرى إعدام الباب رمياً بالرصاص في تبريز بإيران.' },
+    { name: 'مولد الباب', badiDate: 'تاريخ متغير', gregorianDate: yearData.birthBab, workSuspended: true, desc: 'المولد التوأم الأول (ولد الباب في شيراز عام ١٨١٩).' },
+    { name: 'مولد بهاء الله', badiDate: 'تاريخ متغير', gregorianDate: yearData.birthBaha, workSuspended: true, desc: 'المولد التوأم الثاني (ولد بهاء الله في طهران عام ١٨١٧).' },
+    { name: 'يوم الميثاق', badiDate: '٤ قول', gregorianDate: addDays(250), workSuspended: false, desc: 'الاحتفال بتعيين عبد البهاء مركزاً للعهد والميثاق.' },
+    { name: 'صعود عبد البهاء', badiDate: '٦ قول', gregorianDate: addDays(252), workSuspended: false, desc: 'ذكرى صعود عبد البهاء في حيفا عام ١٩٢١.' }
+  ].sort((a, b) => new Date(a.gregorianDate) - new Date(b.gregorianDate));
+}
+

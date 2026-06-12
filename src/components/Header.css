@@ -72,6 +72,7 @@
     color: rgba(255,255,255,0.9);
     transition: var(--transition);
     touch-action: manipulation;
+    white-space: nowrap;
 }
 
 .header-nav a:hover { color: white; background: rgba(255,255,255,0.15); }
@@ -175,13 +176,26 @@
     border: 1px solid rgba(255, 255, 255, 0.15);
     font-family: var(--font-sans);
     transition: all 0.3s ease;
-    cursor: help;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.header-badi-date:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
 }
 
 .site-header.scrolled .header-badi-date {
     background: var(--blue-pale, #f0f7ff);
     border-color: rgba(0, 102, 204, 0.15);
     box-shadow: 0 2px 8px rgba(0, 102, 204, 0.04);
+}
+
+.site-header.scrolled .header-badi-date:hover {
+    background: var(--blue-pale, #e1efff);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.08);
 }
 
 .header-badi-date .badi-label {
@@ -216,6 +230,15 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-sans);
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobile-badi-date:hover, .mobile-badi-date:active {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: scale(0.98);
 }
 
 .mobile-badi-date .badi-label {
@@ -231,12 +254,19 @@
 }
 
 /* Responsive Header adaptation */
-@media (max-width: 991px) {
-    .header-badi-date {
-        display: none; /* Hide in header on tablet/mobile to avoid layout issues */
+@media (max-width: 1200px) {
+    .header-nav a {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.82rem;
     }
     .header-logo {
         gap: 0.8rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header-badi-date {
+        display: none; /* Hide in header on tablet/mobile to avoid layout issues */
     }
 }
 

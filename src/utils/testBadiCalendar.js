@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import { getBadiDate, toArabicNumerals } from './badiCalendar.js';
+import { getBadiDate, toArabicNumerals, getHolyDaysForYear } from './badiCalendar.js';
 
 console.log('Running Baha\'i Calendar tests...');
 
@@ -68,5 +68,32 @@ const resultAlaStart = getBadiDate(dateAlaStart);
 assert.strictEqual(resultAlaStart.day, 1);
 assert.strictEqual(resultAlaStart.monthName, 'العلاء');
 console.log('✓ Month 19 (\'Alá\') start passed.');
+
+// Test getHolyDaysForYear calculation for B.E. 183 (2026-2027)
+const holyDays183 = getHolyDaysForYear(183);
+assert.strictEqual(holyDays183.length, 11);
+
+// Check if Naw-Rúz is March 21, 2026
+const nawRuz183 = holyDays183.find(h => h.name.includes('النوروز'));
+assert.strictEqual(nawRuz183.gregorianDate, '2026-03-21');
+assert.strictEqual(nawRuz183.workSuspended, true);
+
+// Check if first day of Ridván is April 21, 2026
+const ridvan183 = holyDays183.find(h => h.name.includes('الأول من عيد الرضوان'));
+assert.strictEqual(ridvan183.gregorianDate, '2026-04-21');
+
+// Check Twin Birthdays for 2026 (Birth of Báb: Nov 10, Birth of Bahá'u'lláh: Nov 11)
+const birthBab183 = holyDays183.find(h => h.name.includes('مولد الباب'));
+assert.strictEqual(birthBab183.gregorianDate, '2026-11-10');
+
+const birthBaha183 = holyDays183.find(h => h.name.includes('مولد بهاء الله'));
+assert.strictEqual(birthBaha183.gregorianDate, '2026-11-11');
+
+// Check Day of the Covenant is November 26, 2026 (March 21 + 250 days)
+const covenant183 = holyDays183.find(h => h.name.includes('الميثاق'));
+assert.strictEqual(covenant183.gregorianDate, '2026-11-26');
+assert.strictEqual(covenant183.workSuspended, false);
+
+console.log('✓ getHolyDaysForYear tests passed.');
 
 console.log('All tests passed successfully!');

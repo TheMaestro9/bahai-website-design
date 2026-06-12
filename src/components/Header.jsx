@@ -56,13 +56,14 @@ export default function Header() {
               </div>
             </Link>
             {badiDate && (
-              <div 
+              <Link 
+                to="/calendar" 
                 className="header-badi-date" 
-                title="يتم تحديث التاريخ البهائي في تمام الساعة 6:00 مساءً بالتوقيت المحلي"
+                title="اضغط لعرض تفاصيل التقويم البهائي (يتحدث يومياً الساعة ٦:٠٠ مساءً)"
               >
                 <span className="badi-label">التاريخ البهائي</span>
                 <span className="badi-value">{badiDate}</span>
-              </div>
+              </Link>
             )}
           </div>
           <nav className="header-nav">
@@ -91,10 +92,10 @@ export default function Header() {
       {/* Mobile Nav Drawer */}
       <div className={`mobile-nav ${isOpen ? 'open' : ''}`} id="mobile-nav">
         {badiDate && (
-          <div className="mobile-badi-date">
+          <Link to="/calendar" className="mobile-badi-date" onClick={closeMenu}>
             <span className="badi-label">التاريخ البهائي:</span>
             <span className="badi-value">{badiDate}</span>
-          </div>
+          </Link>
         )}
         <ul>
           <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>

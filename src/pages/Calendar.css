@@ -1,0 +1,435 @@
+/* ================================================================
+   CALENDAR PAGE STYLING
+   ================================================================ */
+.calendar-page {
+    min-height: 100vh;
+    background: #faf9f6; /* Soft warm cream */
+    color: #2b2b2b;
+    padding-bottom: 5rem;
+}
+
+/* Hero Section */
+.calendar-hero {
+    position: relative;
+    height: 380px;
+    background-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1600'); /* High quality abstract sky/light texture */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white, #ffffff);
+    padding: 0 1rem;
+}
+
+.calendar-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(2, 48, 89, 0.85), rgba(120, 90, 40, 0.6)); /* Deep blue & gold overlay */
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: 'Amiri', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f7e7c4; /* Soft warm gold */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Body wrapper */
+.calendar-body-wrapper {
+    max-width: 1100px;
+    margin: -60px auto 0;
+    position: relative;
+    z-index: 5;
+    padding: 0 1.5rem;
+}
+
+/* Today's Card */
+.today-card-section {
+    margin-bottom: 3.5rem;
+}
+
+.today-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(197, 160, 89, 0.25); /* Subtle gold border */
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.today-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c5a059, #e0c080, #c5a059); /* Gold top stripe */
+}
+
+.card-tag {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #c5a059;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    background: rgba(197, 160, 89, 0.08);
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+}
+
+.today-badi-text {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: #0c365a; /* Deep blue-gray */
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.today-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-family: 'Cairo', sans-serif;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.meta-label {
+    font-size: 0.8rem;
+    color: #6c7a89;
+    font-weight: 600;
+}
+
+.meta-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.meta-separator {
+    width: 1px;
+    height: 40px;
+    background: #e1e1e1;
+}
+
+/* Holy Days Section */
+.holydays-section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2.2rem;
+    color: #0c365a;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.section-desc {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.section-desc.text-center {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.year-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Cairo', sans-serif;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    border: 1px solid #e1e8ed;
+}
+
+.year-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.year-dropdown {
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #c5a059;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding-left: 0.5rem;
+}
+
+/* Holy Days List */
+.holydays-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.holyday-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.holyday-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    border-color: rgba(197, 160, 89, 0.2);
+}
+
+.holyday-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.holyday-title-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.holyday-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.45rem;
+    color: #0c365a;
+    font-weight: 700;
+}
+
+.holyday-badi-date {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #c5a059;
+    background: rgba(197, 160, 89, 0.08);
+    padding: 0.15rem 0.65rem;
+    border-radius: 4px;
+}
+
+.suspension-badge {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+}
+
+.suspension-badge.suspended {
+    color: #9a6a15;
+    background: #fdf5e6;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.suspension-badge.non-suspended {
+    color: #475569;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+}
+
+.holyday-desc {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.holyday-gregorian {
+    display: flex;
+    gap: 0.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.85rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 0.75rem;
+}
+
+.gregorian-label {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.gregorian-value {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* Baha'i Months Reference Grid */
+.months-reference-section {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid #eaeaea;
+}
+
+.months-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.month-grid-item {
+    background: #fafaf9;
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px solid #f0efeb;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.month-grid-item:hover {
+    background: #fdfcf7;
+    border-color: rgba(197, 160, 89, 0.25);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.month-num {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.month-grid-item:hover .month-num {
+    color: #c5a059;
+    border-color: rgba(197, 160, 89, 0.3);
+}
+
+.month-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.month-name-ar {
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    color: #0c365a;
+    font-weight: 700;
+}
+
+.month-meaning {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.month-range {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 0.15rem;
+}
+
+.months-note {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .today-badi-text {
+        font-size: 1.8rem;
+    }
+    
+    .today-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .meta-separator {
+        display: none;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .holyday-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .suspension-badge {
+        align-self: flex-start;
+    }
+}
