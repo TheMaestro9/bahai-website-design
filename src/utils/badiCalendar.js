@@ -124,7 +124,7 @@ export function getBadiDate(date = new Date()) {
     year,
     weekdayName,
     formatted: `${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب`,
-    fullFormatted: `${weekdayName}، ${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب.هـ`
+    fullFormatted: `${weekdayName}، ${toArabicNumerals(day)} ${monthName} ${toArabicNumerals(year)} ب`
   };
 }
 

@@ -6,6 +6,18 @@ export default function Calendar() {
   const [todayBadi, setTodayBadi] = useState(null);
   const [selectedYear, setSelectedYear] = useState(183); // Defaults to B.E. 183 (2026)
   const [holyDays, setHolyDays] = useState([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isDropdownOpen) return;
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.custom-dropdown')) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [isDropdownOpen]);
 
   useEffect(() => {
     // Scroll to top on mount
@@ -119,19 +131,35 @@ export default function Calendar() {
             </div>
             
             <div className="year-selector-container">
-              <label htmlFor="year-select" className="year-label">العام البهائي:</label>
-              <select
-                id="year-select"
-                className="year-dropdown"
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(Number(e.target.value))}
-              >
-                {availableYears.map((yr) => (
-                  <option key={yr} value={yr}>
-                    {toArabicNumerals(yr)} ب.هـ
-                  </option>
-                ))}
-              </select>
+              <span className="year-label">العام البهائي:</span>
+              <div className="custom-dropdown">
+                <button 
+                  className="dropdown-trigger" 
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  aria-haspopup="listbox"
+                  aria-expanded={isDropdownOpen}
+                >
+                  {toArabicNumerals(selectedYear)} ب
+                </button>
+                {isDropdownOpen && (
+                  <ul className="dropdown-options" role="listbox">
+                    {availableYears.map((yr) => (
+                      <li 
+                        key={yr} 
+                        className={`dropdown-option ${yr === selectedYear ? 'selected' : ''}`}
+                        role="option"
+                        aria-selected={yr === selectedYear}
+                        onClick={() => {
+                          setSelectedYear(yr);
+                          setIsDropdownOpen(false);
+                        }}
+                      >
+                        {toArabicNumerals(yr)} ب
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           </div>
 

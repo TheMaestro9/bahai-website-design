@@ -188,8 +188,14 @@
     background: white;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    border: 1px solid #e1e8ed;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.year-selector-container:focus-within, .year-selector-container:hover {
+    border-color: rgba(197, 160, 89, 0.4);
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.08);
 }
 
 .year-label {
@@ -198,15 +204,100 @@
     color: #475569;
 }
 
-.year-dropdown {
+/* Custom Dropdown Styling */
+.custom-dropdown {
+    position: relative;
+    font-family: 'Cairo', sans-serif;
+}
+
+.dropdown-trigger {
+    background: none;
     border: none;
     font-size: 0.95rem;
     font-weight: 700;
     color: #c5a059;
-    background: none;
     cursor: pointer;
     outline: none;
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 0.25rem;
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-trigger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.95rem;
+    height: 0.95rem;
+    background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a059' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-trigger[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-options {
+    position: absolute;
+    top: calc(100% + 0.5rem); /* Opens down */
+    left: 0;
+    right: 0;
+    min-width: 120px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px; /* Border radius */
+    max-height: 200px; /* Max height */
+    overflow-y: auto; /* Scrollable list */
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 0.25rem 0;
+    margin: 0;
+}
+
+/* Scrollbar styling for custom options list */
+.dropdown-options::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+}
+
+.dropdown-option {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    text-align: right; /* RTL alignment */
+}
+
+.dropdown-option:hover {
+    background: #faf9f6;
+    color: #c5a059;
+}
+
+.dropdown-option.selected {
+    background: #fdfcf7;
+    color: #c5a059;
+    font-weight: 700;
 }
 
 /* Holy Days List */
