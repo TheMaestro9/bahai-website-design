@@ -12,7 +12,7 @@
 .calendar-hero {
     position: relative;
     height: 380px;
-    background-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1600'); /* High quality abstract sky/light texture */
+    background-image: url('/bahai-website-design/assets/bahais-in-egypt/calendar-header-image-v3.jpg'); /* Local assets header image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -38,7 +38,7 @@
 }
 
 .hero-title {
-    font-family: 'Amiri', serif;
+    font-family: var(--font-sans);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -102,7 +102,7 @@
 }
 
 .today-badi-text {
-    font-family: 'Amiri', serif;
+    font-family: var(--font-sans);
     font-size: 2.5rem;
     color: #0c365a; /* Deep blue-gray */
     margin-bottom: 1.5rem;
@@ -158,7 +158,7 @@
 }
 
 .section-title {
-    font-family: 'Amiri', serif;
+    font-family: var(--font-sans);
     font-size: 2.2rem;
     color: #0c365a;
     font-weight: 700;
@@ -248,7 +248,7 @@
 }
 
 .holyday-name {
-    font-family: 'Amiri', serif;
+    font-family: var(--font-sans);
     font-size: 1.45rem;
     color: #0c365a;
     font-weight: 700;
@@ -372,7 +372,7 @@
 }
 
 .month-name-ar {
-    font-family: 'Amiri', serif;
+    font-family: var(--font-sans);
     font-size: 1.25rem;
     color: #0c365a;
     font-weight: 700;
