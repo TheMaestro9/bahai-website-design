@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 import './History.css';
 
@@ -56,7 +57,25 @@ export default function History() {
         </div>
       </section>
 
-      {/* SECTION 3: ADMINISTRATIVE ORDER */}
+      {/* SECTION 3: ABDUL-BAHA VISITS */}
+      <section className="content-section">
+        <h2 className="section-heading">الزيارات التاريخية لحضرة عبد البهاء عباس لمصر</h2>
+        <div className="history-block">
+          <p>
+            بين عامي 1910م و1913م، شرفت مصر بزيارات تاريخية متكررة لحضرة عبد البهاء عباس، الابن الأرشد لحضرة بهاء الله ومركز عهده وميثاقه. كانت مصر المحطة الأولى والمنطلق لرحلاته التاريخية الشهيرة إلى أوروبا وأمريكا الشمالية.
+          </p>
+          <p>
+            خلال إقاماته الثلاث في الإسكندرية والقاهرة وبورسعيد، التقى حضرته بأبرز رجالات الفكر والعلم والأدب وممثلي الصحافة المصرية، ودارت بينهم حوارات فكرية وروحية عميقة غيرت دفة الرأي العام وأرست أسس التآخي والوحدة الإنسانية.
+          </p>
+          <div style={{ margin: '2.5rem 0', textAlign: 'center' }}>
+            <Link to="/abdulbaha-visits" className="read-more-link" style={{ fontSize: '1.1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              اقرأ تفاصيل زيارات حضرة عبد البهاء لمصر ولقاءاته التاريخية ←
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: ADMINISTRATIVE ORDER */}
       <section className="content-section">
         <h2 className="section-heading">تأسيس المحافل وبداية التنظيم الإداري</h2>
         <div className="history-block">
@@ -75,7 +94,7 @@ export default function History() {
 
       <div className="section-separator"></div>
 
-      {/* SECTION 4: HISTORIC JUDGMENT */}
+      {/* SECTION 5: HISTORIC JUDGMENT */}
       <section className="content-section">
         <h2 className="section-heading">الحكم التاريخي: الاستقلال الديني</h2>
         <div className="history-block">
@@ -92,7 +111,7 @@ export default function History() {
         </div>
       </section>
 
-      {/* SECTION 5: PERSONAL STATUS & CEMETERIES */}
+      {/* SECTION 6: PERSONAL STATUS & CEMETERIES */}
       <section className="content-section">
         <h2 className="section-heading">الأحوال الشخصية وتخصيص المقابر</h2>
         <div className="history-block">
@@ -115,7 +134,7 @@ export default function History() {
 
       <div className="section-separator"></div>
 
-      {/* SECTION 6: PROPERTIES & CELEBRATIONS */}
+      {/* SECTION 7: PROPERTIES & CELEBRATIONS */}
       <section className="content-section">
         <h2 className="section-heading">حظيرة القدس ومشرق الأذكار</h2>
         <div className="history-block">
