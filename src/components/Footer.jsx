@@ -10,7 +10,8 @@ export default function Footer() {
         </div>
         <nav className="footer-nav">
           <Link to="/#about">البهائيون في مصر</Link>
-          <Link to="/#beliefs">ما يؤمنون به</Link>
+          <Link to="/beliefs">ما يؤمنون به</Link>
+          <Link to="/beliefs/covenant">الميثاق الإلهي</Link>
           <Link to="/#contributions">مساهماتنا</Link>
           <Link to="/history">التاريخ</Link>
           <Link to="/calendar">التقويم</Link>

@@ -10,7 +10,7 @@ export default function AbdulBahaVisits() {
       {/* HERO SECTION */}
       <section className="visits-hero">
         <img
-          src="assets/bahais-in-egypt/abdul-baha.jpg"
+          src="assets/bahais-in-egypt/abdulbaha-visits/abdul-baha.jpg"
           alt="حضرة عبد البهاء عباس"
           className="visits-bg-img"
         />

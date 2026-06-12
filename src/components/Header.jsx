@@ -69,7 +69,7 @@ export default function Header() {
           <nav className="header-nav">
             <ul>
               <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>
-              <NavLink to="/#beliefs" hash="#beliefs">ما يؤمنون به</NavLink>
+              <NavLink to="/beliefs">ما يؤمنون به</NavLink>
               <NavLink to="/#contributions" hash="#contributions">مساهماتهم</NavLink>
               <NavLink to="/history">التاريخ</NavLink>
               <NavLink to="/#faq" hash="#faq">الأسئلة الشائعة</NavLink>
@@ -99,7 +99,7 @@ export default function Header() {
         )}
         <ul>
           <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>
-          <NavLink to="/#beliefs" hash="#beliefs">ما يؤمنون به</NavLink>
+          <NavLink to="/beliefs">ما يؤمنون به</NavLink>
           <NavLink to="/#contributions" hash="#contributions">مساهماتهم</NavLink>
           <NavLink to="/history">التاريخ</NavLink>
           <NavLink to="/#faq" hash="#faq">الأسئلة الشائعة</NavLink>

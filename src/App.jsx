@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import History from './pages/History';
 import Calendar from './pages/Calendar';
 import AbdulBahaVisits from './pages/AbdulBahaVisits';
+import Beliefs from './pages/Beliefs';
+import Covenant from './pages/Covenant';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="history" element={<History />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="abdulbaha-visits" element={<AbdulBahaVisits />} />
+          <Route path="beliefs" element={<Beliefs />} />
+          <Route path="beliefs/covenant" element={<Covenant />} />
         </Route>
       </Routes>
     </HashRouter>

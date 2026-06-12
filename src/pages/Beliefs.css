@@ -1,0 +1,252 @@
+/* ================================================================
+   BELIEFS HUB PAGE
+   ================================================================ */
+.beliefs-page-wrapper {
+    background: var(--white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.beliefs-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.beliefs-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.beliefs-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,78,138,0.95) 0%, rgba(26,78,138,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 4rem 5rem;
+    gap: 1rem;
+}
+
+.beliefs-hero-title {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: white;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Container */
+.beliefs-page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Intro Section */
+.beliefs-intro-section {
+    padding: 5rem 0;
+}
+
+.belief-intro-card {
+    background: white;
+    padding: 3.5rem;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+    border: 1px solid var(--divider);
+}
+
+/* Content Timeline alternate rows */
+.beliefs-content-timeline {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.belief-section {
+    display: flex;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.belief-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.belief-text-col {
+    flex: 1.1;
+}
+
+.belief-num {
+    font-family: var(--font-sans);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--blue-light);
+    opacity: 0.75;
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.belief-text-col h2 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--text-dark);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+}
+
+.belief-graphic-col {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.graphic-quote-box {
+    background: var(--blue-pale);
+    border-right: 4px solid var(--blue-deep);
+    padding: 2.5rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.015);
+    width: 100%;
+}
+
+.graphic-quote-box blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--blue-deep);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.graphic-quote-box cite {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--text-light);
+    display: block;
+    font-style: italic;
+}
+
+.beliefs-section-divider {
+    height: 1px;
+    background: var(--divider);
+    margin: 6rem 0;
+}
+
+/* Covenant Banner card */
+.covenant-intro-banner {
+    padding: 7.5rem 0;
+}
+
+.covenant-card-wrapper {
+    background: white;
+    padding: 4.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--divider);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.04);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.covenant-banner-title {
+    font-family: var(--font-sans);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: var(--blue-deep);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.covenant-banner-text {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 2.5rem;
+}
+
+.go-to-covenant-btn {
+    display: inline-block;
+    background: var(--coral);
+    color: white;
+    padding: 1.1rem 3rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 6px 18px rgba(201,74,80,0.25);
+    text-align: center;
+}
+
+.go-to-covenant-btn:hover {
+    background: var(--coral-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(201,74,80,0.35);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Animations Reveal */
+.belief-section, .belief-intro-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.belief-section.visible, .belief-intro-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .belief-section, .belief-section.reverse {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+    
+    .belief-text-col, .belief-graphic-col {
+        flex: auto;
+        width: 100%;
+    }
+    
+    .graphic-quote-box {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .beliefs-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .beliefs-hero-overlay {
+        padding: 3rem 2rem;
+    }
+    
+    .belief-intro-card {
+        padding: 2rem;
+    }
+    
+    .covenant-card-wrapper {
+        padding: 2.5rem 2rem;
+    }
+    
+    .go-to-covenant-btn {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
