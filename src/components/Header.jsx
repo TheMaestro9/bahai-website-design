@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import { getBadiDate } from '../utils/badiCalendar';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [badiDate, setBadiDate] = useState('');
   const location = useLocation();
 
   useEffect(() => {
@@ -13,6 +15,20 @@ export default function Header() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const updateDate = () => {
+      try {
+        const dateInfo = getBadiDate(new Date());
+        setBadiDate(dateInfo.formatted);
+      } catch (error) {
+        console.error('Error calculating Baha\'i date:', error);
+      }
+    };
+    updateDate();
+    const interval = setInterval(updateDate, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -39,6 +55,15 @@ export default function Header() {
                 <span className="logo-sub">الموقع الرسمي</span>
               </div>
             </Link>
+            {badiDate && (
+              <div 
+                className="header-badi-date" 
+                title="يتم تحديث التاريخ البهائي في تمام الساعة 6:00 مساءً بالتوقيت المحلي"
+              >
+                <span className="badi-label">التاريخ البهائي</span>
+                <span className="badi-value">{badiDate}</span>
+              </div>
+            )}
           </div>
           <nav className="header-nav">
             <ul>
@@ -65,6 +90,12 @@ export default function Header() {
 
       {/* Mobile Nav Drawer */}
       <div className={`mobile-nav ${isOpen ? 'open' : ''}`} id="mobile-nav">
+        {badiDate && (
+          <div className="mobile-badi-date">
+            <span className="badi-label">التاريخ البهائي:</span>
+            <span className="badi-value">{badiDate}</span>
+          </div>
+        )}
         <ul>
           <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>
           <NavLink to="/#beliefs" hash="#beliefs">ما يؤمنون به</NavLink>

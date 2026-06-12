@@ -155,3 +155,88 @@
 .site-header:not(.scrolled) .header-logo .logo-link::before {
     filter: brightness(0) invert(1); /* White in hero */
 }
+
+/* ================================================================
+   BAHA'I CALENDAR BADGE
+   ================================================================ */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-badi-date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+    cursor: help;
+}
+
+.site-header.scrolled .header-badi-date {
+    background: var(--blue-pale, #f0f7ff);
+    border-color: rgba(0, 102, 204, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.04);
+}
+
+.header-badi-date .badi-label {
+    font-size: 0.62rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+
+.site-header.scrolled .header-badi-date .badi-label {
+    color: var(--text-light, #666);
+}
+
+.header-badi-date .badi-value {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.site-header.scrolled .header-badi-date .badi-value {
+    color: var(--blue-deep, #004488);
+}
+
+/* Mobile Nav Date Display */
+.mobile-badi-date {
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-sans);
+}
+
+.mobile-badi-date .badi-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.mobile-badi-date .badi-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Responsive Header adaptation */
+@media (max-width: 991px) {
+    .header-badi-date {
+        display: none; /* Hide in header on tablet/mobile to avoid layout issues */
+    }
+    .header-logo {
+        gap: 0.8rem;
+    }
+}
+
