@@ -248,20 +248,37 @@
     border-bottom: 1px solid var(--divider);
     padding-bottom: 1.2rem;
     margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
-.opinion-header h4 {
+.opinion-author-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--blue-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.opinion-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion-meta h4 {
     font-family: var(--font-sans);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--text-dark);
     font-weight: 700;
 }
 
-.opinion-header span {
+.opinion-meta span {
     font-size: 0.85rem;
     color: var(--text-light);
     display: block;
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
 }
 
 .opinion-quote {

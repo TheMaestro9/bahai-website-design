@@ -31,7 +31,7 @@ export default function AbdulBahaVisits() {
               استطاع عباس أفندي - عبد البهاء - أن يوسّع نطاق الجامعة البهائية إلى حدٍ كبيرٍ بزيارته عدة بلدانٍ في أوروبا وأمريكا الشمالية ومصر بين عامي 1910م و1913م، لتعزيز ونشر رسالة وتعاليم الدين البهائي التي تروّج للسلام العالمي ووحدة الجنس البشري.
             </p>
             <p>
-              وكان قد عينه والده (حضرة بهاء الله - مؤسس الدين البهائي) في وصيته لكي يليه في تدبير أمور الجامعة البهائية، وليكون مركزاً لعهده وميثاقه والمفسر الوحيد لتعاليمه وكتاباته وأحكامه. وقد اتخذ لقب "عبد البهاء" وصار يُعرف به بعد وفاة والده خلال فترة ولايته التي امتدّت من عام 1892م حتى وفاته عام 1921م.
+              وكان قد عينه والده (حضرة بهاء الله - مؤسس الدين البهائي) في وصيته لكي يليه في تدبير أمور الجامعة البهائية، وليكون مركزاً لعهده وميثاقه والمفسر الوحيد لتعاليم وكتاباته وأحكامه. وقد اتخذ لقب "عبد البهاء" وصار يُعرف به بعد وفاة والده خلال فترة ولايته التي امتدّت من عام 1892م حتى وفاته عام 1921م.
             </p>
           </div>
         </div>
@@ -187,8 +187,15 @@ export default function AbdulBahaVisits() {
             {/* opinion 1 */}
             <div className="opinion-card">
               <div className="opinion-header">
-                <h4>الأمير شكيب أرسلان</h4>
-                <span>الأديب والكاتب المعروف</span>
+                <img
+                  src="assets/bahais-in-egypt/abdulbaha-visits/prince-shkip-arslan.webp"
+                  alt="الأمير شكيب أرسلان"
+                  className="opinion-author-img"
+                />
+                <div className="opinion-meta">
+                  <h4>الأمير شكيب أرسلان</h4>
+                  <span>الأديب والكاتب المعروف</span>
+                </div>
               </div>
               <div className="opinion-body">
                 <p className="opinion-quote">
@@ -201,8 +208,15 @@ export default function AbdulBahaVisits() {
             {/* opinion 2 */}
             <div className="opinion-card">
               <div className="opinion-header">
-                <h4>الإمام محمد عبده</h4>
-                <span>عبر تلميذه محمد رشيد رضا صاحب "المنار"</span>
+                <img
+                  src="assets/bahais-in-egypt/abdulbaha-visits/mohamed abdo.webp"
+                  alt="الإمام محمد عبده"
+                  className="opinion-author-img"
+                />
+                <div className="opinion-meta">
+                  <h4>الإمام محمد عبده</h4>
+                  <span>عبر تلميذه محمد رشيد رضا صاحب "المنار"</span>
+                </div>
               </div>
               <div className="opinion-body">
                 <p className="opinion-quote">
@@ -215,8 +229,15 @@ export default function AbdulBahaVisits() {
             {/* opinion 3 */}
             <div className="opinion-card">
               <div className="opinion-header">
-                <h4>عبد الرحمن البرقوقي</h4>
-                <span>صاحب مجلة "البيان" الأدبية</span>
+                <img
+                  src="assets/bahais-in-egypt/abdulbaha-visits/abdulrahman-el barkoki.jpg"
+                  alt="عبد الرحمن البرقوقي"
+                  className="opinion-author-img"
+                />
+                <div className="opinion-meta">
+                  <h4>عبد الرحمن البرقوقي</h4>
+                  <span>صاحب مجلة "البيان" الأدبية</span>
+                </div>
               </div>
               <div className="opinion-body">
                 <p className="opinion-quote">
@@ -229,8 +250,15 @@ export default function AbdulBahaVisits() {
             {/* opinion 4 */}
             <div className="opinion-card">
               <div className="opinion-header">
-                <h4>عبد المسيح الأنطاكي</h4>
-                <span>صاحب مجلة "العمران" بالقاهرة</span>
+                <img
+                  src="assets/bahais-in-egypt/abdulbaha-visits/el-antakyjpg.jpg"
+                  alt="عبد المسيح الأنطاكي"
+                  className="opinion-author-img"
+                />
+                <div className="opinion-meta">
+                  <h4>عبد المسيح الأنطاكي</h4>
+                  <span>صاحب مجلة "العمران" بالقاهرة</span>
+                </div>
               </div>
               <div className="opinion-body">
                 <p className="opinion-quote">
