@@ -339,18 +339,52 @@ export default function Home() {
           <h3 className="media-subtitle" style={{ marginTop: '4rem' }}>لقاءات مع البهائيين المصريين</h3>
           <div className="interviews-list">
             {[
-              "إبراهيم عيسى مع غادة علاء ومحمد بن موسى — البهائية",
-              "الساحة مع م. بهاء إسحاق — بهائي في مصر، حكاية ٣ أجيال",
-              "ما علاقة الدين البهائي بالطائفة الشيعية وإسرائيل؟",
-              "مصر: لماذا يعاني البهائيون لدفن موتاهم؟",
-              "اعرف البهائية — غادة علاء وبهاء إسحاق مع أحمد سعد زايد",
-              "أسرار الديانة البهائية — د. سيامك ساساني وأ. غادة علاء",
-              "سيرة أسرة مصرية بهائية",
-              "لقاء المتحدث الإعلامي للبهائيين في مصر بعد رفض المحكمة تخصيص مقابر"
-            ].map((text, i) => (
-              <a key={i} href="#" className="interview-item">
+              {
+                title: "إبراهيم عيسى مع غادة علاء ومحمد بن موسى — البهائية",
+                url: "https://www.youtube.com/watch?v=8nCbMl_76Xo"
+              },
+              {
+                title: "الساحة مع م. بهاء إسحاق — بهائي في مصر.. حكاية ٣ أجيال",
+                url: "https://www.youtube.com/watch?v=jaz0jNwfz8s"
+              },
+              {
+                title: "ما علاقة الدين البهائي بالطائفة الشيعية وإسرائيل؟",
+                url: "https://www.youtube.com/watch?v=6-_AqkWckwc"
+              },
+              {
+                title: "مصر: لماذا يعاني البهائيون لدفن موتاهم؟",
+                url: "https://www.youtube.com/watch?v=ZfjYYyZbGjY"
+              },
+              {
+                title: "اعرف البهائية ومن البهائيين — غادة علاء وبهاء إسحاق مع أحمد سعد زايد",
+                url: "https://www.youtube.com/watch?v=b7YSy6io0C4"
+              },
+              {
+                title: "البهائيون في إسرائيل",
+                url: "https://www.youtube.com/watch?v=tbj1LFJhvBE"
+              },
+              {
+                title: "أسرار الديانة البهائية — د. سيامك ساساني وأ. غادة علاء",
+                url: "https://www.youtube.com/watch?v=MGpDFxOR73k"
+              },
+              {
+                title: "سيرة أسرة مصرية بهائية",
+                url: "https://www.youtube.com/watch?v=VzOsUOQCkTI"
+              },
+              {
+                title: "بتوقيت مصر: لقاء المتحدث الإعلامي للبهائيين في مصر بعد رفض المحكمة تخصيص مقابر",
+                url: "https://www.youtube.com/watch?v=mbVe4dNha_M"
+              }
+            ].map((item, i) => (
+              <a
+                key={i}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="interview-item"
+              >
                 <span className="interview-num">{i + 1}</span>
-                <span className="interview-text">{text}</span>
+                <span className="interview-text">{item.title}</span>
                 <span className="interview-arrow">←</span>
               </a>
             ))}
