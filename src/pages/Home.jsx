@@ -399,13 +399,59 @@ export default function Home() {
           <h2 className="section-heading centered">البهائيون في مصر — على الصعيد الدولي</h2>
           <div className="articles-list">
             {[
-              { tag: "الأمم المتحدة", title: "خبراء الأمم المتحدة يتناولون انتهاكات حقوق البهائيين في مصر" },
-              { tag: "مجلس حقوق الإنسان", title: "بيان حول مصر في الدورة 59 لمجلس حقوق الإنسان الأممي" },
-              { tag: "مجلس حقوق الإنسان", title: "بيان حول مصر في الدورة 58 لمجلس حقوق الإنسان الأممي" },
-              { tag: "حرية الدين", title: "دول أعضاء في الأمم المتحدة تحث مصر على احترام حرية الدين والمعتقد" },
-              { tag: "التنمية", title: "الجامعة البهائية في COP27 تستعرض أنشطة التنمية البهائية في مصر" }
+              {
+                tag: "الأمم المتحدة",
+                title: "خبراء الأمم المتحدة يتناولون انتهاكات حقوق البهائيين في مصر في تدخّل غير مسبوق",
+                url: "https://www.bic.org/news/un-experts-address-egypt-rights-violations-against-bahai-community-unprecedented-intervention"
+              },
+              {
+                tag: "مجلس حقوق الإنسان",
+                title: "بيان حول مصر في الدورة 59 لمجلس حقوق الإنسان التابع للأمم المتحدة",
+                url: "https://www.bic.org/statements/statement-egypt-during-59th-un-human-rights-council"
+              },
+              {
+                tag: "مجلس حقوق الإنسان",
+                title: "بيان حول مصر في الدورة 58 لمجلس حقوق الإنسان التابع للأمم المتحدة",
+                url: "https://www.bic.org/statements/statement-egypt-during-58th-un-human-rights-council"
+              },
+              {
+                tag: "حرية المعتقد",
+                title: "وسط تصاعد الاضطهاد، دول أعضاء في الأمم المتحدة تحث مصر على احترام حرية الدين أو المعتقد",
+                url: "https://www.bic.org/news/amid-worsening-persecution-bahais-un-member-states-urge-egypt-respect-freedom-religion-or-belief-during-human-rights-review"
+              },
+              {
+                tag: "المراجعة الدورية الشاملة",
+                title: "ضرورة المساءلة بشأن اضطهاد البهائيين في الاستعراض الدوري الشامل لحقوق الإنسان في مصر",
+                url: "https://www.bic.org/news/egypt-must-be-held-accountable-persecuting-bahais-upcoming-un-human-rights-review"
+              },
+              {
+                tag: "بيان دولي",
+                title: "جبهة جديدة خطيرة: الجامعة البهائية العالمية تعرب عن قلقها إزاء استهداف البهائيين في مصر",
+                url: "https://www.bic.org/news/dangerous-new-front-bahai-international-community-expresses-concern-over-involvement-egyptian-authorities-targeting-bahais"
+              },
+              {
+                tag: "منتدى الأقليات",
+                title: "بيان الجامعة البهائية العالمية في الدورة 17 لمنتدى الأمم المتحدة المعني بقضايا الأقليات",
+                url: "https://www.bic.org/statements/statement-bahai-international-community-17th-session-united-nations-forum-minority-issues"
+              },
+              {
+                tag: "حقوق الإنسان",
+                title: "بيان صادر عن الجامعة البهائية العالمية بشأن أوضاع حقوق الإنسان في مصر",
+                url: "https://www.bic.org/statements/statement-bahai-international-community-regarding-human-rights-egypt"
+              },
+              {
+                tag: "COP27 والتنمية",
+                title: "مكتب الجامعة البهائية بالقاهرة يستعرض الأنشطة التنموية للبهائيين في مصر خلال COP 27",
+                url: "https://www.bic.org/news/bic-cairo-cop-27-shares-egyptian-bahai-communitys-development-activities"
+              }
             ].map((article, i) => (
-              <a key={i} href="https://www.bic.org" target="_blank" className="article-item">
+              <a
+                key={i}
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="article-item"
+              >
                 <span className="article-tag">{article.tag}</span>
                 <h4>{article.title}</h4>
               </a>
