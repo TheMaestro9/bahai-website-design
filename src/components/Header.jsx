@@ -55,16 +55,6 @@ export default function Header() {
                 <span className="logo-sub">الموقع الرسمي</span>
               </div>
             </Link>
-            {badiDate && (
-              <Link 
-                to="/calendar" 
-                className="header-badi-date" 
-                title="اضغط لعرض تفاصيل التقويم البهائي (يتحدث يومياً الساعة ٦:٠٠ مساءً)"
-              >
-                <span className="badi-label">التاريخ البهائي</span>
-                <span className="badi-value">{badiDate}</span>
-              </Link>
-            )}
           </div>
           <nav className="header-nav">
             <ul>
@@ -76,16 +66,28 @@ export default function Header() {
               <NavLink to="/#contact" hash="#contact">تواصل معنا</NavLink>
             </ul>
           </nav>
-          <button 
-            className={`hamburger ${isOpen ? 'active' : ''}`} 
-            id="hamburger" 
-            aria-label={isOpen ? "إغلاق القائمة" : "فتح القائمة"} 
-            aria-expanded={isOpen} 
-            aria-controls="mobile-nav"
-            onClick={toggleMenu}
-          >
-            <span></span><span></span><span></span>
-          </button>
+          <div className="header-actions">
+            {badiDate && (
+              <Link 
+                to="/calendar" 
+                className="header-badi-date" 
+                title="اضغط لعرض تفاصيل التقويم البهائي (يتحدث يومياً الساعة ٦:٠٠ مساءً)"
+              >
+                <span className="badi-label">التاريخ البهائي</span>
+                <span className="badi-value">{badiDate}</span>
+              </Link>
+            )}
+            <button 
+              className={`hamburger ${isOpen ? 'active' : ''}`} 
+              id="hamburger" 
+              aria-label={isOpen ? "إغلاق القائمة" : "فتح القائمة"} 
+              aria-expanded={isOpen} 
+              aria-controls="mobile-nav"
+              onClick={toggleMenu}
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
         </div>
       </header>
 

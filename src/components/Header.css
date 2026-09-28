@@ -157,6 +157,13 @@
     filter: brightness(0) invert(1); /* White in hero */
 }
 
+/* Header Actions (Calendar badge & hamburger on the left) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* ================================================================
    BAHA'I CALENDAR BADGE
    ================================================================ */
@@ -259,14 +266,12 @@
         padding: 0.4rem 0.5rem;
         font-size: 0.82rem;
     }
-    .header-logo {
-        gap: 0.8rem;
+}
+
+@media (max-width: 900px) {
+    .header-badi-date {
+        display: none; /* In mobile drawer instead */
     }
 }
 
-@media (max-width: 1080px) {
-    .header-badi-date {
-        display: none; /* Hide in header on tablet/mobile to avoid layout issues */
-    }
-}
 
