@@ -58,7 +58,7 @@ export default function Header() {
           </div>
           <nav className="header-nav">
             <ul>
-              <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>
+              <NavLink to="/about">البهائيون في مصر</NavLink>
               <NavLink to="/beliefs">ما يؤمنون به</NavLink>
               <NavLink to="/#contributions" hash="#contributions">مساهماتهم</NavLink>
               <NavLink to="/history">التاريخ</NavLink>
@@ -100,7 +100,7 @@ export default function Header() {
           </Link>
         )}
         <ul>
-          <NavLink to="/#about" hash="#about">البهائيون في مصر</NavLink>
+          <NavLink to="/about">البهائيون في مصر</NavLink>
           <NavLink to="/beliefs">ما يؤمنون به</NavLink>
           <NavLink to="/#contributions" hash="#contributions">مساهماتهم</NavLink>
           <NavLink to="/history">التاريخ</NavLink>

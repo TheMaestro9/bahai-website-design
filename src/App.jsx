@@ -6,6 +6,7 @@ import Calendar from './pages/Calendar';
 import AbdulBahaVisits from './pages/AbdulBahaVisits';
 import Beliefs from './pages/Beliefs';
 import Covenant from './pages/Covenant';
+import About from './pages/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
           <Route path="history" element={<History />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="abdulbaha-visits" element={<AbdulBahaVisits />} />

@@ -86,6 +86,12 @@ export default function Home() {
           <p>
             ويؤمن البهائيون بأن لكل فرد دورًا في بناء مجتمعه، وأن التقدم الحقيقي يتحقق عندما تتكامل الجهود الفردية والجماعية في خدمة الصالح العام.
           </p>
+          <div style={{ marginTop: '1.5rem' }}>
+            <Link to="/about" className="read-more-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span>المزيد عن الجامعة البهائية في مصر</span>
+              <span aria-hidden="true">←</span>
+            </Link>
+          </div>
         </div>
       </section>
 
