@@ -97,7 +97,12 @@ body {
 
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
-p { color: var(--text-mid); line-height: 1.85; margin-bottom: 1.1rem; }
+p {
+    font-size: 1.15rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
 p:last-child { margin-bottom: 0; }
 strong { color: var(--text-dark); font-weight: 700; }
 
@@ -137,11 +142,37 @@ strong { color: var(--text-dark); font-weight: 700; }
     font-size: 1.15rem;
     color: var(--text-mid);
     max-width: 700px;
-    line-height: 1.8;
+    line-height: 1.85;
     margin-bottom: 0;
 }
 
 .section-lead.centered { text-align: center; margin: 0 auto; }
+
+.section-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    border-inline-start: 3px solid var(--coral);
+    padding-inline-start: 0.85rem;
+    margin-bottom: 1.75rem;
+}
+
+.section-subtitle-spaced {
+    margin-top: 4rem;
+}
+
+/* Typography utilities */
+.font-sans { font-family: var(--font-sans); }
+.font-serif { font-family: var(--font-serif); }
+
+.lead-text,
+.paragraph-lead,
+.text-lead {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+}
 
 /* Drop Cap */
 .dropcap::first-letter {

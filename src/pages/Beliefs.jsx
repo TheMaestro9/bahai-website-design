@@ -61,7 +61,7 @@ export default function Beliefs() {
       {/* HERO SECTION */}
       <section className="beliefs-hero">
         <img
-          src="assets/sea.jpg"
+          src="assets/beliefs/sea.jpg"
           alt="ما يؤمن به البهائيّون"
           className="beliefs-bg-img"
         />

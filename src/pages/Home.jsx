@@ -320,7 +320,9 @@ export default function Home() {
       <section className="media-section papyrus-bg" id="media" aria-label="المركز الإعلامي">
         <div className="media-inner">
           <span className="section-tag centered">المركز الإعلامي</span>
-          <h3 className="media-subtitle">مناجاة — فيديوهات روحية</h3>
+          <h2 className="section-heading centered">تسجيلات ومرئيات عن الجامعة البهائية</h2>
+
+          <h3 className="section-subtitle">مناجاة — فيديوهات روحية</h3>
           <div className="media-grid">
             {[
               { id: "UWuXlMMeUiI", title: "مناجاة — ١" },
@@ -336,7 +338,7 @@ export default function Home() {
             ))}
           </div>
 
-          <h3 className="media-subtitle" style={{ marginTop: '4rem' }}>لقاءات مع البهائيين المصريين</h3>
+          <h3 className="section-subtitle section-subtitle-spaced">لقاءات مع البهائيين المصريين</h3>
           <div className="interviews-list">
             {[
               {
@@ -452,8 +454,12 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="article-item"
               >
-                <span className="article-tag">{article.tag}</span>
-                <h4>{article.title}</h4>
+                <span className="article-num">{i + 1}</span>
+                <div className="article-content">
+                  <span className="article-tag">{article.tag}</span>
+                  <span className="article-title">{article.title}</span>
+                </div>
+                <span className="article-arrow">←</span>
               </a>
             ))}
           </div>
