@@ -15,12 +15,9 @@ export default function Figures() {
   return (
     <div className="figures-page full-page-view">
       {/* FULL-WIDTH HERO SECTION */}
-      <section className="figures-hero papyrus-bg">
+      <section className="figures-hero">
         <div className="figures-hero-full">
-          <Link to="/about" className="figures-back-link">
-            <span>← العودة إلى البهائيون في مصر</span>
-          </Link>
-          <span className="section-tag light">عطاء وطني وإنساني</span>
+
           <h1 className="figures-hero-title">نماذج بارزة</h1>
           <p className="figures-hero-subtitle">
             شخصيات مصرية ملهمة أثرت الفكر والفن والآداب، وجسدت قيم المحبة والإبداع وخدمة الصالح العام
@@ -351,14 +348,6 @@ export default function Figures() {
 
         </div>
       </section>
-
-      {/* CLOSING INSPIRATIONAL DIVIDER */}
-      <div className="quote-divider">
-        <blockquote>
-          "إِنَّ الإِنْسَانَ بِجَوْهَرِهِ وَفَضْلِهِ لا بِزِينَتِهِ وَمَالِهِ؛ فَاعْمَلُوا مَا يَبْقَى أَثَرُهُ فِي الآفَاقِ."
-        </blockquote>
-        <cite>— من الآثار البهائية الشريفة</cite>
-      </div>
     </div>
   );
 }
