@@ -88,31 +88,7 @@
   color: var(--text-dark);
 }
 
-.about-quote-box {
-  background: var(--blue-pale);
-  border-right: 4px solid var(--coral);
-  padding: 1.6rem 2rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-top: 1rem;
-}
 
-.about-quote-box blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--blue-deep);
-  line-height: 1.7;
-}
-
-.about-quote-box cite {
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  color: var(--text-mid);
-  font-style: normal;
-  font-weight: 600;
-}
 
 /* ================================================================
    SECTION 2: COMMUNITY BUILDING IN ACTION

@@ -160,31 +160,7 @@
   margin-bottom: 2.5rem;
 }
 
-.overview-quote-box {
-  background: var(--blue-pale);
-  border-right: 4px solid var(--coral);
-  padding: 2rem 2.5rem;
-  border-radius: 0 10px 10px 0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
-}
 
-.overview-quote-box blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  color: var(--blue-deep);
-  line-height: 1.8;
-  margin-bottom: 0.6rem;
-  font-weight: 700;
-}
-
-.overview-quote-box cite {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--coral);
-  font-style: normal;
-  display: block;
-  font-weight: 600;
-}
 
 /* ================================================================
    4. THEMATIC TOPICS (استكشاف مواضيع مختارة)
@@ -477,13 +453,7 @@
     line-height: 1.85;
   }
 
-  .overview-quote-box {
-    padding: 1.5rem;
-  }
 
-  .overview-quote-box blockquote {
-    font-size: 1.15rem;
-  }
 
   .card-content {
     padding: 1.6rem 1.5rem;
