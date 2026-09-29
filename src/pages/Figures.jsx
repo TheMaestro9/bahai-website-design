@@ -3,7 +3,7 @@ import useReveal from '../hooks/useReveal';
 import './Figures.css';
 
 export default function Figures() {
-  useReveal('.figures-reveal, .figure-card, .showcase-item');
+  useReveal('.figures-reveal, .figure-card, .showcase-item, .bicar-editorial-row');
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -53,7 +53,7 @@ export default function Figures() {
           <div className="figure-header-row figures-reveal">
             <div className="figure-portrait-wrapper">
               <img
-                src="assets/nmazeg/h-bicar/personal-image.jpg"
+                src="assets/nmazeg/h-bicar/personal-image-1.jpg"
                 alt="الفنان حسين بيكار"
                 className="figure-main-portrait"
                 loading="lazy"
@@ -76,121 +76,134 @@ export default function Figures() {
             </div>
           </div>
 
-          {/* BICAR HIGHLIGHTS GRID */}
-          <div className="figure-cards-grid">
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">رسالة الفن للجميع</span>
+          {/* BICAR EDITORIAL STORY SECTIONS */}
+          <div className="bicar-story-flow">
+            
+            {/* 1. Journalism & Egyptian Environments */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">الصحافة ورسالة الفن</span>
+                <h3 className="bicar-editorial-title">جسر الفن إلى القارئ وتخليد البيئات المصرية</h3>
+                <p>
+                  في منتصف الخمسينات نُصّب رئيساً لقسم التصوير النظامي بالكلية لأربع سنوات، إلى أن طلب منه الصحفي الكبير مصطفى أمين أن يتفرغ للصحافة فوافق؛ إذ كان بيكار يؤمن بعمق بأن الصحافة هي جسره لإيصال الفن والجمال إلى كل قارئ بسيط لا يعرف صالات العرض ذات الجمهور النخبوي.
+                </p>
+                <p>
+                  وعلى مدى خمسين عاماً، حقق حسين بيكار طفرة نوعية في الصحافة المصرية برسومه المصورة التي صاحبت تحقيقات صحفية كبديل حي عن الصور الفوتوغرافية، وأغلفة مجلة «آخر ساعة»، وقصص الأطفال. وكانت لمقالاته النقدية أثراً في إثراء ثقافة أجيال من الهواة والمتخصصين، كما شكلت أزجاله المصاحبة لرسمه كل أسبوع أصداء وشغفاً للجمهور الذي ينتظره أسبوعياً بكل لهفة، حتى أصبح المواطن البسيط عاشقاً لرسوماته وكلماته التي تطرب الوجدان.
+                </p>
+                <p>
+                  خلدت أعماله مظاهر البيئات المصرية المتنوعة من النوبة إلى الريف والنيل وإلى الصيد في السواحل، وتفاصيل حياة الفلاح والفلاحة المصرية، مع ظهور المرأة كعنصر رئيسي في معظم لوحاته انطلاقاً من إيمانه الراسخ بدورها الفعال في المجتمع.
+                </p>
               </div>
-              <h3 className="card-title">جسر الفن إلى القارئ البسيط</h3>
-              <p className="card-desc">
-                في منتصف الخمسينات تولى رئاسة قسم التصوير النظامي بالكلية لأربع سنوات، حتى طلب منه الصحفي الكبير مصطفى أمين التفرغ للصحافة فاستجاب فوراً؛ إذ كان بيكار مؤمناً بعمق بأن الصحافة هي جسره الأمثل لنقل الجمال والذائقة الفنية لكل قارئ بسيط لا يرتاد صالات العرض النخبوية.
-              </p>
-              <p className="card-desc">
-                وعلى مدار خمسين عاماً، أحدث طفرة في الصحافة المصرية برسومه التعبيرية المصاحبة للتحقيقات، وأغلفة مجلة «آخر ساعة»، وقصص الأطفال، إلى جانب مقالاته النقدية وأزجاله الأسبوعية التي تعلق بها الملايين.
-              </p>
-            </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src="assets/nmazeg/h-bicar/art-work1.jpg"
+                    alt="أصالة الريف والمرأة المصرية في أعمال بيكار"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  لوحة تجسد روح الريف وعطاء المرأة المصرية بألوان دافئة متناغمة
+                </span>
+              </div>
+            </article>
 
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">ملحمة التراث</span>
+            {/* 2. Portrait Mastery & Fluid Harmony (Reversed) */}
+            <article className="bicar-editorial-row editorial-reverse figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">البورتريه والإنسانية</span>
+                <h3 className="bicar-editorial-title">براعة فن البورتريه والأسلوب الفريد</h3>
+                <p>
+                  برع بيكار في فن البورتريه حتى أصبح تقليداً عند المشاهير وكبار الشخصيات ليحظى كل منهم بجزء من وقته لرسم بورتريه له. وقد طور بيكار أسلوبه في رسم البورتريه، حيث نجح في الوصول إلى صيغة فنية بديعة تحترم ملامح الإنسان وتبرزها في أفضل حالاتها.
+                </p>
+                <p>
+                  اشتهر بيكار بأسلوبه الفريد الذي يمزج بين الاحترام العميق للعنصر الإنساني في لوحاته، وخطوطه الانسيابية، وألوانه الشفيفة؛ مما يخلق هارمونية حالمة تجمع بين تقبل وتفاعل الجمهور العادي وتقدير النخبة والمثقفين.
+                </p>
               </div>
-              <h3 className="card-title">لوحات «العجيبة الثامنة» وإنقاذ معبد أبي سمبل</h3>
-              <p className="card-desc">
-                في عام ١٩٦٨م كلفه وزير الثقافة د. ثروت عكاشة برسم لوحات فيلم «العجيبة الثامنة» للمخرج الكندي جون فيني لتوثيق ملحمة إنقاذ معبد أبي سمبل من الغرق. تفرغ بيكار عامين كاملين لرسم ٨٠ لوحة بألوان الجواش تجاوز طول بعضها ٤ أمتار، مجسداً مراحل بناء المعبد منذ تصاميم مهندسي مصر القديمة حتى نقله الحديث، وعُرض الفيلم عالمياً في روما وبرلين ولاقى إعجاباً دولياً واسعاً.
-              </p>
-            </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src="assets/nmazeg/h-bicar/art-wrok2.jpg"
+                    alt="بورتريه بريشة الفنان حسين بيكار"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  بورتريه شخصي يجسد صفاء الخطوط الانسيابية والألوان الشفيفة والهارمونية الحالمة
+                </span>
+              </div>
+            </article>
 
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">الإنسانية والأسلوب</span>
+            {/* 3. The Eighth Wonder & Abu Simbel */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">ملحمة التراث الحضاري</span>
+                <h3 className="bicar-editorial-title">لوحات «العجيبة الثامنة» وتوثيق إنقاذ معبد أبي سمبل</h3>
+                <p>
+                  في عام ١٩٦٨م كلف وزير الثقافة د. ثروت عكاشة الفنان حسين بيكار برسم لوحات فيلم «العجيبة الثامنة» للمخرج الكندي جون فيني، الذي يحكي قصة بناء معبد أبي سمبل وإنقاذه التاريخي من الغرق.
+                </p>
+                <p>
+                  تفرغ بيكار عامين كاملين لرسم ثمانين لوحة بألوان الجواش تجاوزت أطوال بعضها أربعة أمتار، صوّر من خلالها قصة المعبد وتاريخه منذ عرض مهندسي مصر القديمة تصميماته على الملك رمسيس الثاني وزوجته، وموقع المعبد وطرق بنائه الفريدة، حتى عملية نقله وإنقاذه الحديثة.
+                </p>
+                <p>
+                  عُرض الفيلم في مدن وبلدان عديدة مثل روما وبرلين بالإضافة إلى مصر، ونال إعجاباً وتقديراً دولياً واسعاً لمكانة مصر الحضارية وإبداع ريشة بيكار.
+                </p>
               </div>
-              <h3 className="card-title">عميد فن البورتريه والهوية المصرية</h3>
-              <p className="card-desc">
-                طور بيكار صيغة فنية بديعة في فن البورتريه تحترم ملامح الإنسان وتبرز جوهره النبيل، حتى أصبح رسم البورتريه بريشته تقليداً ومقصداً لكبار الشخصيات والمفكرين.
-              </p>
-              <p className="card-desc">
-                خلدت أعماله البيئات المصرية الأصيلة من النوبة إلى الريف وسواحل الصيد، وبرزت المرأة المصرية في لوحاته كعنصر رئيسي تعبيراً عن إيمانه الراسخ بدورها الفعال ورقي مكانتها في المجتمع.
-              </p>
-            </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src="assets/nmazeg/h-bicar/abu-simbel.jpg"
+                    alt="توثيق معبد أبي سمبل وملحمة العجيبة الثامنة"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  لوحة تجسد شموخ معبد أبي سمبل على ضفاف النيل — من ملحمة «العجيبة الثامنة»
+                </span>
+              </div>
+            </article>
 
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">شغف الموسيقى</span>
+            {/* 4. Passion for Music & Al-Tanbourina (Reversed) */}
+            <article className="bicar-editorial-row editorial-reverse figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">شغف الموسيقى والابتكار</span>
+                <h3 className="bicar-editorial-title">عازف الأوتار ومبتكر آلة «الطنبورينا»</h3>
+                <p>
+                  ظل بيكار شغوفاً بالموسيقى طوال عمره؛ فتعلم وأجاد العزف على مختلف الآلات الوترية مثل العود والبزق والطنبور، وكانت أنغام الموسيقى تتنفس في تراكيب لوحاته وانسجام إيقاعاتها البصرية.
+                </p>
+                <p>
+                  ولم يقتصر على العزف، بل توّج هذا الشغف باختراع وابتكار آلة موسيقية فريدة بقياسات صوتية وفيزيائية خاصة به أسماها <strong>«الطنبورينا»</strong>، لتكتمل لوحته الفنية بأنغام الروح المصرية الأصيلة.
+                </p>
               </div>
-              <h3 className="card-title">عازف الأوتار ومبتكر «الطنبورينا»</h3>
-              <p className="card-desc">
-                لم يفارقه عشق النغم طوال حياته، فأتقن العزف على مختلف الآلات الوترية كالعود والبزق والطنبور، وتوج هذا الشغف بابتكار آلة موسيقية فريدة بمقاييس صوتية خاصة به أطلق عليها اسم <strong>«الطنبورينا»</strong>، لتكتمل لوحته الفنية بأنغام الروح.
-              </p>
-            </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src="assets/nmazeg/h-bicar/personal-image.jpg"
+                    alt="عازف الموسيقى ورمزية الأصالة النوبية"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  بيكار والعود
+                </span>
+              </div>
+            </article>
+
           </div>
-        </div>
 
-        {/* FULL-BLEED ARTWORKS SHOWCASE BREAK-OUT */}
-        <div className="artworks-showcase-full figures-reveal">
-          <div className="showcase-header">
-            <span className="section-tag centered">معرض مختارات</span>
-            <h3 className="section-heading centered">من إبداعات ريشة بيكار الخالدة</h3>
-            <p className="section-lead centered">
-              نماذج من أعماله التشكيلية التي تميزت بالخطوط الانسيابية، والألوان الشفيفة، والهارمونية الحالمة
-            </p>
-          </div>
-
-          <div className="artworks-grid-full">
-            <div className="artwork-card">
-              <div className="artwork-image-box">
-                <img
-                  src="assets/nmazeg/h-bicar/art-work1.jpg"
-                  alt="عمل فني لحسين بيكار"
-                  loading="lazy"
-                />
-              </div>
-              <div className="artwork-meta">
-                <span className="artwork-caption">روح الريف والتقاليد المصرية بألوان رقيقة متناغمة</span>
-              </div>
-            </div>
-
-            <div className="artwork-card">
-              <div className="artwork-image-box">
-                <img
-                  src="assets/nmazeg/h-bicar/art-wrok2.jpg"
-                  alt="لوحة زيتية لحسين بيكار"
-                  loading="lazy"
-                />
-              </div>
-              <div className="artwork-meta">
-                <span className="artwork-caption">العنصر الإنساني والمشاعر الحالمة في خطوط انسيابية بديعة</span>
-              </div>
-            </div>
-
-            <div className="artwork-card">
-              <div className="artwork-image-box">
-                <img
-                  src="assets/nmazeg/h-bicar/art-work3.jpg"
-                  alt="لوحة فنية لحسين بيكار"
-                  loading="lazy"
-                />
-              </div>
-              <div className="artwork-meta">
-                <span className="artwork-caption">رمزية الأصالة النوبية والمصرية والانسجام الروحي</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* HONORS & AWARDS BANNER */}
-        <div className="figure-full-layout">
+          {/* HONORS & AWARDS BANNER */}
           <div className="honors-card figures-reveal">
-            <h4 className="honors-title">أبرز الأوسمة والجوائز التقديرية</h4>
+            <h4 className="honors-title">أبرز الأوسمة والجوائز والمعارض الدولية</h4>
             <div className="honors-pills">
+              <span className="honor-pill">معارض فنية متتابعة طافت لوحاته بها شتى بلاد العالم</span>
+              <span className="honor-pill">حفر رسومه على الكريستال بمصنع ستوبن جلاس بأمريكا (١٩٥٨م)</span>
               <span className="honor-pill">وسام الاعتزاز من المغرب (١٩٤١م)</span>
               <span className="honor-pill">ميدالية الشرف الذهبية للمعرض الزراعي الصناعي (١٩٤٩م)</span>
-              <span className="honor-pill">اختياره لحفر رسومه على الكريستال بمصنع ستوبن جلاس بأمريكا (١٩٥٨م)</span>
               <span className="honor-pill">وسام العلوم والفنون من الطبقة الأولى من الرئيس جمال عبد الناصر (١٩٦٧م)</span>
-              <span className="honor-pill">وسام العلوم والفنون من الطبقة الأولى (١٩٧٢م)</span>
+              <span className="honor-pill">وسام العلوم والفنون من الطبقة الأولى من الحكومة المصرية (١٩٧٢م)</span>
               <span className="honor-pill">جائزة الدولة التقديرية مع وسام الاستحقاق من الرئيس السادات (١٩٨٠م)</span>
               <span className="honor-pill">جائزة مبارك للفنون من المجلس الأعلى للثقافة (٢٠٠٠م)</span>
-              <span className="honor-pill">جائزة سوزان مبارك لأدب الطفل (٢٠٠٠م)</span>
+              <span className="honor-pill">جائزة خاصة من جوائز سوزان مبارك لأدب الطفل (٢٠٠٠م)</span>
               <span className="honor-pill">إهداء مكتبته الخاصة لمكتبة الإسكندرية كمنارة للأجيال</span>
             </div>
           </div>
@@ -234,116 +247,99 @@ export default function Figures() {
             </div>
           </div>
 
-          {/* SOMAYA HIGHLIGHTS GRID */}
-          <div className="figure-cards-grid">
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">التتويج الأدبي</span>
+          {/* SOMAYA EDITORIAL STORY SECTIONS */}
+          <div className="bicar-story-flow">
+            
+            {/* 1. Literary Achievement & Naguib Mahfouz Medal */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">التتويج الأدبي والرواية</span>
+                <h3 className="bicar-editorial-title">«أوراق النرجس» وميدالية نجيب محفوظ للأدب</h3>
+                <p>
+                  دخلت سمية رمضان الساحة الأدبية في تسعينيات القرن العشرين حين نشرت أولى مجموعاتها القصصية بعنوان «خشب ونحاس» (١٩٩٥م)، ثم مجموعتها القصصية «منازل القمر» (١٩٩٩م). ولكن شهرتها الأدبية ذاعت عقب نشر روايتها الفذة «أوراق النرجس» (٢٠٠١م) التي ما لبثت أن فازت بجائزة «ميدالية نجيب محفوظ الأدبية» في العام ذاته، وتُرجمت إلى اللغة الإنجليزية وصدرت عن دار نشر الجامعة الأمريكية بالقاهرة عام ٢٠٠٢م.
+                </p>
+                <p>
+                  وجاء في حيثيات فوز الرواية بجائزة نجيب محفوظ: «هناك خيط في الرواية يكتنف مشاهدها المتفرقة ويوحّد نصها المتشظي ويقدم الدور الخلاق للكتابة والإبداع والأدب في تشكيل الذات وتجديدها على مستوى الفرد والجماعة... تطرح رواية سمية رمضان أسئلة أكثر مما تطرح حلولاً، لكن هذه الأسئلة ذاتها مؤشر إلى أهمية إعادة تكوين أنفسنا ومقاومة التحجر والتصحر؛ وفي هذا تتقاطع مع أديبنا الكبير نجيب محفوظ... وقد أضاءت سمية رمضان بعملها عتمة الأفق ومنحتنا رواية معاناة فردية مثيرة لعواطفنا وأمثولة وطنية مثيرة لتأملنا».
+                </p>
               </div>
-              <h3 className="card-title">«أوراق النرجس» وميدالية نجيب محفوظ</h3>
-              <p className="card-desc">
-                دخلت الساحة الأدبية بمجموعتيها القصصيتين «خشب ونحاس» (١٩٩٥م) و«منازل القمر» (١٩٩٩م)، وذاعت شهرتها عقب نشر روايتها الفذة «أوراق النرجس» (٢٠٠١م) التي فازت بجائزة «ميدالية نجيب محفوظ الأدبية» في العام ذاته، وتُرجمت إلى الإنجليزية وصدرت عن دار نشر الجامعة الأمريكية بالقاهرة.
-              </p>
-              <p className="card-desc">
-                نجحت في مزج تيار الوعي بالقضايا الجوهرية للمجتمع، وصياغة أدوات سردية مستحدثة أسهمت في إثراء ما عرف نقدياً بـ «بلاغة النساء».
-              </p>
-            </div>
-
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">العطاء الأكاديمي</span>
-              </div>
-              <h3 className="card-title">أستاذة النقد وبناء الأجيال</h3>
-              <p className="card-desc">
-                كرّست سنوات طويلة للتدريس في قسم النقد الفني بالمعهد العالي للنقد الفني بأكاديمية الفنون بالقاهرة؛ فتخرجت على يديها أجيال متعاقبة من النقاد والمثقفين الذين نهلوا من سعة أفقها ومنهجيتها الصارمة المفعمة بالإنسانية.
-              </p>
-              <p className="card-desc">
-                كما أثرت المكتبة العربية بترجمات رائدة لأعمال كبار المفكرين مثل إدوارد سعيد وليلى أبو لغد، وتعد ترجمتها لكتاب فرجينيا وولف الشهير «غرفة تخص المرء وحده» الصادر عن المشروع القومي للترجمة من أبرز العلامات الثقافية.
-              </p>
-            </div>
-
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">الرؤية والروحانية</span>
-              </div>
-              <h3 className="card-title">«طريق المستقبل: رؤية بهائية»</h3>
-              <p className="card-desc">
-                جمعتها بالفنان حسين بيكار علاقة روحية عميقة واهتمام مشترك بالفن التشكيلي، حتى رسم لها بورتريه شخصي بديع. انعكست هذه الرحلة على قناعتها العميقة بالفلسفة والعقيدة البهائية.
-              </p>
-              <p className="card-desc">
-                أفردت كتابها الرائد «طريق المستقبل: رؤية بهائية» (دار مدبولي، ٢٠٠٨م) لتقديم المبادئ البهائية برؤية نابعة من الداخل؛ مركزة على قيم الصدق، والعدالة الاجتماعية، والمساواة بين الجنسين، والتكامل المنهجي بين العلم والدين مستندة إلى النصوص البهائية الأصيلة.
-              </p>
-            </div>
-
-            <div className="figure-card figures-reveal">
-              <div className="card-badge-line">
-                <span className="card-badge">شهادة مضيئة</span>
-              </div>
-              <h3 className="card-title">ثقافةٌ وبساطة.. قوةٌ ورقّة</h3>
-              <p className="card-desc">
-                وصفتها إحدى رائدات الفكر المستنير بكلمات مؤثرة:
-                <br />
-                <span className="tribute-quote">«إنها أجمل إنسان يمكن أن تصادفه في حياتك: ثقافةٌ وبساطة، قوةٌ ورقّة، علمٌ وعذوبةٌ... زهرةٌ مصريةٌ مشرقة اجتمع على حبّها الناسُ جميعُهم.»</span>
-              </p>
-              <p className="card-desc">
-                وكانت سمية رمضان تردد بتواضع العالم المبدع: «في وقت ما، كنت أعتقد أنه لا فرق بين من يكتب ومن لا يكتب سوى شغف بعض الناس بالتدوين، ولم يخطر ببالي أن أسهم أنا في الإبداع وإنتاج الفن».
-              </p>
-            </div>
-          </div>
-
-          {/* SOMAYA VISUALS & BOOK SHOWCASE */}
-          <div className="somaya-showcase figures-reveal">
-            <div className="somaya-showcase-grid">
-              
-              <div className="somaya-book-card">
-                <div className="book-cover-wrap">
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box book-frame">
                   <img
                     src="assets/nmazeg/s-ramadan/book-by-ramadan.jpg"
-                    alt="غلاف كتاب طريق المستقبل: رؤية بهائية - د. سمية رمضان"
+                    alt="غلاف رواية أوراق النرجس للدكتورة سمية رمضان"
                     loading="lazy"
                   />
                 </div>
-                <div className="book-details">
-                  <span className="book-tag">إصدار مميز</span>
-                  <h4 className="book-title">طريق المستقبل: رؤية بهائية</h4>
-                  <p className="book-pub">دار مدبولي للنشر والتوزيع — القاهرة (٢٠٠٨م)</p>
-                  <p className="book-summary">
-                    كتاب يستعرض تاريخ ومبادئ الجامعة البهائية برؤية نابعة من داخلها؛ جامعاً بين القيم الأخلاقية، والعدالة، والمساواة بين الجنسين، والتوافق بين العلم والدين في بناء المدنية الإنسانية.
-                  </p>
-                </div>
+                <span className="bicar-media-caption">
+                  غلاف رواية «أوراق النرجس» الفائزة بجائزة نجيب محفوظ للرواية العربية عام ٢٠٠١م
+                </span>
               </div>
+            </article>
 
-              <div className="somaya-gallery-col">
-                <div className="somaya-photo-box">
-                  <img
-                    src="assets/nmazeg/s-ramadan/_DSC5432.JPG"
-                    alt="د. سمية رمضان في ندوة فكرية"
-                    loading="lazy"
-                  />
-                  <span className="photo-caption">حضور ثقافي فاعل وإشعاع فكري في الندوات والمؤتمرات</span>
-                </div>
-                <div className="somaya-photo-box">
+            {/* 2. Stream of Consciousness, Academic Leadership & Global Thought */}
+            <article className="bicar-editorial-row editorial-reverse figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">تيار الوعي والنقد الأكاديمي</span>
+                <h3 className="bicar-editorial-title">بلاغة النساء وترجمة الفكر المعاصر</h3>
+                <p>
+                  حظيت سمية رمضان بمكانة بارزة ضمن جيل التسعينيات من الكاتبات والكتّاب في مصر ممن اتسمت كتاباتهم بطرح قضايا فكرية تنطلق من التجربة الذاتية. وتميزت بإيصال «تيار الوعي» إلى القارئ، حيث نجحت في مزج الدراما بالقضايا الحيوية وصياغة أدوات فنية وأدبية مستحدثة أسهمت في خلق تيار جديد في الكتابة الإبداعية عُرف نقدياً بـ «بلاغة النساء» وصحفياً بـ «كتابة البنات».
+                </p>
+                <p>
+                  ومن جانب آخر، أثرت الساحة عبر عملها الأكاديمي كأستاذة في قسم النقد الفني بالمعهد العالي للنقد الفني بأكاديمية الفنون بالقاهرة؛ فتخرجت على يديها أجيال متعاقبة من النقاد والمثقفين. كما ساهمت في ترجمة العديد من الأعمال الفكرية والأدبية لمفكرين معاصرين مثل إدوارد سعيد وليلى أبو لغد، وتعد ترجمتها لكتاب فرجينيا وولف الشهير «غرفة تخص المرء وحده» الصادر عن المشروع القومي للترجمة من أبرز العلامات الثقافية.
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
                   <img
                     src="assets/nmazeg/s-ramadan/persoanl-conferance.jpg"
-                    alt="د. سمية رمضان في مشاركة أكاديمية"
+                    alt="د. سمية رمضان متحدثة في مؤتمر أكاديمي"
                     loading="lazy"
                   />
-                  <span className="photo-caption">مشاركة بحثية ملهمة في قضايا النقد والأدب والمرأة</span>
                 </div>
+                <span className="bicar-media-caption">
+                  د. سمية رمضان متحدثة في ندوة فكرية حول قضايا الأدب والنقد المعاصر والمرأة
+                </span>
               </div>
+            </article>
 
-            </div>
+            {/* 3. The Spiritual Dimension & Bicar Connection */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">الفلسفة والبعد الروحي</span>
+                <h3 className="bicar-editorial-title">العلاقة ببيكار وكتاب «طريق المستقبل: رؤية بهائية»</h3>
+                <p>
+                  أما الجانب الأقل شهرة، وإن كان لا يقل أهمية وعمقاً، فهو اهتمامها الوثيق بالفن التشكيلي واقترابها من الفنان حسين بيكار الذي رسم لها لوحة شخصية بديعة (بورتريه). وكانت هذه العلاقة الروحية والفكرية جسراً انعكس على رؤيتها للحياة واقتناعها بالفلسفة والعقيدة البهائية.
+                </p>
+                <p>
+                  أفردت د. سمية رمضان لهذا البعد أحد كتبها المرجعية وهو كتاب «طريق المستقبل: رؤية بهائية» الصادر عن دار مدبولي بالقاهرة (٢٠٠٨م)، حيث أوضحت تاريخ ومبادئ البهائية برؤية نابعة من داخلها؛ وركزت على قيم الصدق، والتسامح، والعدالة الاجتماعية، والمساواة التامة بين الجنسين، والتكامل بين العلم والدين مستندة إلى النصوص الدينية البهائية.
+                </p>
+                <p>
+                  وكانت تردد بتواضع العالم المبدع: «في وقت ما، كنت أعتقد أنه لا فرق بين من يكتب ومن لا يكتب سوى شغف بعض الناس بالتدوين، ولم يخطر ببالي أن أسهم أنا في الإبداع وإنتاج الفن».
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src="assets/nmazeg/s-ramadan/_DSC5432.JPG"
+                    alt="د. سمية رمضان أمام البورتريه الشخصي بريشة حسين بيكار"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  د. سمية رمضان أمام البورتريه الشخصي بريشة الفنان حسين بيكار وميدالية نجيب محفوظ
+                </span>
+              </div>
+            </article>
+
           </div>
 
-          {/* JURY QUOTE BOX */}
-          <div className="jury-highlight-box figures-reveal">
-            <div className="jury-quote-icon">❝</div>
-            <blockquote className="jury-quote-text">
-              "هناك خيط في الرواية يكتنف مشاهدها المتفرقة ويوحّد نصها المتشظي ويقدم الدور الخلاق للكتابة والإبداع والأدب في تشكيل الذات وتجديدها على مستوى الفرد والجماعة... سمية رمضان أضاءت بعملها عتمة الأفق ومنحتنا رواية معاناة فردية مثيرة لعواطفنا وأمثولة وطنية مثيرة لتأملنا."
+          {/* TRIBUTE & MEMORIAL BANNER */}
+          <div className="honors-card somaya-tribute-card figures-reveal">
+            <h4 className="honors-title">شهادة محبة وتقدير</h4>
+            <blockquote className="tribute-full-quote">
+              «إنها أجمل إنسان يمكن أن تصادفه في حياتك: ثقافةٌ وبساطة، قوةٌ ورقّة، علمٌ وعذوبةٌ... زهرةٌ مصريةٌ مشرقة اجتمع على حبّها الناسُ جميعُهم.»
             </blockquote>
-            <cite className="jury-quote-cite">
-              — من حيثيات لجنة تحكيم جائزة نجيب محفوظ للرواية العربية (٢٠٠١م)
-            </cite>
+            <cite className="tribute-author">— شهادة إحدى رائدات الفكر المستنير في سيرة د. سمية رمضان</cite>
           </div>
 
         </div>

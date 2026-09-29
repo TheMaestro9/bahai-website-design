@@ -294,81 +294,111 @@
 }
 
 /* ================================================================
-   3. FULL-BLEED ARTWORKS SHOWCASE BREAK-OUT
+   3. BICAR EDITORIAL STORYTELLING FLOW (NO CARD BOXES)
    ================================================================ */
-.artworks-showcase-full {
-  width: 100vw;
-  position: relative;
-  inset-inline-start: 50%;
-  inset-inline-end: 50%;
-  margin-inline-start: -50vw;
-  margin-inline-end: -50vw;
-  background: var(--warm-bg);
-  border-top: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
-  padding: 6rem 4vw;
-  margin-top: 2rem;
-  margin-bottom: 4.5rem;
-}
-
-.showcase-header {
-  max-width: 900px;
-  margin: 0 auto 3.5rem;
-  text-align: center;
-}
-
-.artworks-grid-full {
-  max-width: 1560px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-}
-
-.artwork-card {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
-  border: 1px solid var(--divider);
+.bicar-story-flow {
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  gap: 5.5rem;
+  margin: 4.5rem 0 5.5rem;
 }
 
-.artwork-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(26, 78, 138, 0.16);
+.bicar-editorial-row {
+  display: grid;
+  grid-template-columns: 1.15fr 460px;
+  gap: 4.5rem;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
-.artwork-image-box {
+.bicar-editorial-row.editorial-reverse {
+  grid-template-columns: 460px 1.15fr;
+}
+
+.bicar-editorial-row.editorial-reverse .bicar-editorial-media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.bicar-editorial-row.editorial-reverse .bicar-editorial-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.bicar-editorial-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bicar-editorial-content .section-tag {
+  margin-bottom: 0.85rem;
+}
+
+.bicar-editorial-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--blue-deep);
+  line-height: 1.35;
+  margin-bottom: 1.5rem;
+}
+
+.bicar-editorial-content p {
+  font-size: 1.15rem;
+  line-height: 2.05;
+  color: var(--text-dark);
+  margin-bottom: 1.25rem;
+}
+
+.bicar-editorial-content p:last-child {
+  margin-bottom: 0;
+}
+
+.bicar-editorial-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.bicar-frame-box {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 420px;
+  border-radius: 14px;
   overflow: hidden;
-  background: #f0f0f0;
+  box-shadow: 0 14px 34px rgba(26, 78, 138, 0.14);
+  background: #f4f6f8;
+  border: 4px solid var(--white);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.artwork-image-box img {
+.bicar-frame-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(26, 78, 138, 0.2);
+}
+
+.bicar-frame-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform 0.6s ease;
 }
 
-.artwork-card:hover .artwork-image-box img {
-  transform: scale(1.05);
+.bicar-frame-box:hover img {
+  transform: scale(1.03);
 }
 
-.artwork-meta {
-  padding: 1.5rem 1.25rem;
+.bicar-media-caption {
+  font-size: 0.92rem;
+  color: var(--text-mid);
   text-align: center;
-}
-
-.artwork-caption {
-  font-size: 1.02rem;
-  color: var(--text-dark);
-  line-height: 1.65;
-  font-weight: 600;
+  font-style: italic;
+  padding: 0 0.5rem;
+  line-height: 1.55;
 }
 
 /* ================================================================
@@ -419,147 +449,37 @@
 }
 
 /* ================================================================
-   5. SOMAYA VISUALS & BOOK SHOWCASE (EXPANDED FLUID)
+   5. SOMAYA STYLING ENHANCEMENTS
    ================================================================ */
-.somaya-showcase {
-  margin-bottom: 4.5rem;
+.book-frame img {
+  object-fit: contain;
+  padding: 0.75rem;
+  background: #faf8f5;
 }
 
-.somaya-showcase-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 3rem;
-  align-items: stretch;
-}
-
-.somaya-book-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 3rem;
-  border: 1px solid var(--divider);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
-  display: flex;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.book-cover-wrap {
-  width: 200px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.book-cover-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.book-details {
-  flex: 1;
-}
-
-.book-tag {
-  display: inline-block;
-  background: var(--coral);
-  color: var(--white);
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.3rem 0.85rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.book-title {
-  font-family: var(--font-sans);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--blue-deep);
-  margin-bottom: 0.5rem;
-}
-
-.book-pub {
-  font-size: 1rem;
-  color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 1.25rem;
-}
-
-.book-summary {
-  font-size: 1.1rem;
-  color: var(--text-mid);
-  line-height: 1.9;
-  margin-bottom: 0;
-}
-
-.somaya-gallery-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-}
-
-.somaya-photo-box {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--divider);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
-}
-
-.somaya-photo-box img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.photo-caption {
-  display: block;
-  padding: 1rem 1.25rem;
-  font-size: 0.95rem;
-  color: var(--text-mid);
-  font-weight: 600;
+.somaya-tribute-card {
   text-align: center;
-  background: var(--warm-bg);
-}
-
-/* Jury Quote Box */
-.jury-highlight-box {
-  background: var(--white);
-  border-radius: 14px;
+  margin-top: 2rem;
   padding: 3.5rem 4rem;
-  border-inline-start: 6px solid var(--coral);
-  box-shadow: 0 12px 35px rgba(28, 43, 58, 0.07);
-  position: relative;
-  margin-top: 1rem;
 }
 
-.jury-quote-icon {
-  font-size: 3.5rem;
-  line-height: 1;
-  color: var(--coral);
-  opacity: 0.5;
-  margin-bottom: 0.75rem;
-}
-
-.jury-quote-text {
+.tribute-full-quote {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  color: var(--text-dark);
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
   line-height: 2;
-  margin-bottom: 1.5rem;
+  color: var(--white);
+  font-style: italic;
+  margin: 1.5rem auto 1.25rem;
+  max-width: 920px;
 }
 
-.jury-quote-cite {
+.tribute-author {
   display: block;
   font-family: var(--font-sans);
   font-size: 1.05rem;
-  color: var(--blue-mid);
-  font-weight: 700;
+  color: var(--blue-light);
   font-style: normal;
+  font-weight: 600;
 }
 
 /* ================================================================
@@ -571,12 +491,13 @@
     gap: 3rem;
   }
 
-  .artworks-grid-full {
-    grid-template-columns: repeat(2, 1fr);
+  .bicar-editorial-row {
+    grid-template-columns: 1fr 390px;
+    gap: 3rem;
   }
 
-  .somaya-showcase-grid {
-    grid-template-columns: 1fr;
+  .bicar-editorial-row.editorial-reverse {
+    grid-template-columns: 390px 1fr;
   }
 }
 
@@ -591,19 +512,30 @@
     margin: 0 auto;
   }
 
-  .figure-cards-grid {
-    grid-template-columns: 1fr;
+  .bicar-story-flow {
+    gap: 4rem;
+    margin: 3.5rem 0 4rem;
   }
 
-  .artworks-grid-full {
+  .bicar-editorial-row,
+  .bicar-editorial-row.editorial-reverse {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .bicar-editorial-row.editorial-reverse .bicar-editorial-media,
+  .bicar-editorial-row.editorial-reverse .bicar-editorial-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .bicar-frame-box {
+    height: 350px;
+    max-width: 550px;
+    margin: 0 auto;
   }
 
   .honors-card {
-    padding: 2.5rem 2rem;
-  }
-
-  .jury-highlight-box {
     padding: 2.5rem 2rem;
   }
 }
@@ -617,21 +549,25 @@
     padding: 4rem 1.25rem;
   }
 
-  .artworks-showcase-full {
-    padding: 4rem 1.25rem;
+  .bicar-story-flow {
+    gap: 3rem;
+    margin: 2.5rem 0 3rem;
   }
 
-  .somaya-book-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1.5rem;
+  .bicar-editorial-title {
+    font-size: 1.45rem;
   }
 
-  .book-cover-wrap {
-    width: 150px;
+  .bicar-editorial-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
   }
 
-  .jury-quote-text {
-    font-size: 1.2rem;
+  .bicar-frame-box {
+    height: 240px;
+  }
+
+  .somaya-tribute-card {
+    padding: 2.5rem 1.5rem;
   }
 }
