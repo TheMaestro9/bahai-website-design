@@ -320,7 +320,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="assets/nmazeg/s-ramadan/_DSC5432.JPG"
+                    src="assets/nmazeg/s-ramadan/somaya-bicar-portrait.jpg"
                     alt="د. سمية رمضان أمام البورتريه الشخصي بريشة حسين بيكار"
                     loading="lazy"
                   />
