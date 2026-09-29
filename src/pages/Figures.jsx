@@ -15,7 +15,7 @@ export default function Figures() {
   return (
     <div className="figures-page full-page-view">
       {/* FULL-WIDTH HERO SECTION */}
-      <section className="figures-hero">
+      <section className="figures-hero papyrus-bg">
         <div className="figures-hero-full">
 
           <h1 className="figures-hero-title">نماذج بارزة</h1>

@@ -14,11 +14,10 @@
    1. HERO SECTION (FULL WIDTH)
    ================================================================ */
 .figures-hero {
-  position: relative;
   width: 100%;
   padding: 6rem 4vw 4.5rem;
-  background: linear-gradient(135deg, var(--blue-deep) 0%, #113460 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: var(--warm-bg);
+  border-bottom: 1px solid var(--divider);
   text-align: center;
 }
 
@@ -35,7 +34,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--blue-light);
+  color: var(--blue-mid);
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 1.75rem;
@@ -43,7 +42,7 @@
 }
 
 .figures-back-link:hover {
-  color: var(--white);
+  color: var(--blue-deep);
   transform: translateX(4px);
 }
 
@@ -51,7 +50,7 @@
   font-family: var(--font-sans);
   font-size: clamp(2.5rem, 5vw, 3.8rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--blue-deep);
   line-height: 1.2;
   margin-top: 1rem;
   margin-bottom: 1.25rem;
@@ -59,7 +58,7 @@
 
 .figures-hero-subtitle {
   font-size: clamp(1.15rem, 2vw, 1.35rem);
-  color: var(--blue-pale);
+  color: var(--text-mid);
   line-height: 1.8;
   max-width: 850px;
   margin: 0 auto 3rem;
@@ -77,37 +76,35 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--white);
+  color: var(--blue-deep);
+  border: 1.5px solid var(--blue-mid);
   padding: 0.9rem 2rem;
   border-radius: 50px;
   font-family: var(--font-sans);
   font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(26, 78, 138, 0.08);
   transition: var(--transition);
 }
 
 .quick-nav-pill .pill-dates {
   font-size: 0.9rem;
-  color: var(--blue-light);
+  color: var(--text-light);
   font-weight: 500;
 }
 
 .quick-nav-pill:hover {
-  background: var(--white);
-  color: var(--blue-deep);
-  border-color: var(--white);
+  background: var(--blue-deep);
+  color: var(--white);
+  border-color: var(--blue-deep);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(26, 78, 138, 0.2);
 }
 
 .quick-nav-pill:hover .pill-dates {
-  color: var(--text-mid);
+  color: var(--blue-light);
 }
 
 /* ================================================================
