@@ -23,24 +23,66 @@ export default function About() {
         </div>
       </section>
 
-      {/* SECTION 1: IDENTITY & CITIZENSHIP */}
+      {/* SECTION 1: THE BAHAI FAITH (من نحن: الديانة البهائية) */}
       <section className="content-section about-intro-section">
         <div className="about-container">
           <div className="about-single-column about-reveal">
-            <span className="section-tag">الهوية والمواطنة</span>
-            <h2 className="section-heading">جزء لا يتجزأ من نسيج الوطن</h2>
+            <span className="section-tag">من نحن</span>
+            <h2 className="section-heading">الديانة البهائية</h2>
+            
             <p className="dropcap">
-              البهائيون المصريون هم أبناء هذه الأرض العريقة؛ نشأوا على ضفاف نيلها الخالد وتشبعوا بثقافتها وقيمها الأصيلة. ويرى البهائيون في انتمائهم لمصر واجباً أخلاقياً وروحياً يترجم في صورة مشاركة بناءة في تنمية المجتمع وخدمة الصالح العام.
+              الدّين البهائيّ هو ديانة توحيديّة تقوم على تعاليم كلّ من حضرة الباب وحضرة بهاء الله، كلّ منهما تلقّى وحيًا مباشرًا من الله. تؤمن البهائيّة بصحّة وحقيقة جميع الدّيانات العالميّة الرّئيسيّة الأخرى، لكنها ليست طائفة أو فرعًا لأيّ منها. ينعكس طابعها المستقلّ في نظرتها الفريدة للعالم، وفي الهيكل المجتمعيّ الذي يستند على الكتب المقدّسة والأحكام الدّينيّة والتّقويم الخاصّ بها.
             </p>
+            
             <p>
-              تنطلق رؤية الجامعة البهائية من الإيمان بأن تقدم أي مجتمع يتطلب تضافر جهود جميع أبنائه بمختلف مشاربهم وخلفياتهم. فالمواطنة الصالحة في المفهوم البهائي تتجاوز مجرد الحقوق والواجبات القانونية لتصبح التزاماً ذاتياً بالسعي الحثيث لترسيخ التآخي، والعدل، والنزاهة، والتعاون المثمر.
+              يؤمن البهائيّون بأنّ الله، خالق الأكوان، قام بتعليم البشريّة عبر التّاريخ عن طريق إرسال الأنبياء أو الرّسل ومن جملتهم إبراهيم وموسى ويسوع المسيح ومحمد، وكريشنا وبوذا وزرادشت عليهم السّلام الّذين أسّسوا أديان العالم الرّئيسيّة.
             </p>
-            <div className="pull-quote boxed">
-              <blockquote>
-                "عَمِّرُوا بِلادَ اللَّهِ بِالْمَحَبَّةِ وَالائْتِلافِ وَالْمَوَدَّةِ وَالاتِّحَادِ."
-              </blockquote>
-              <cite>— حضرة بهاء الله</cite>
+            
+            <p>
+              كما يؤمن البهائيّون أنّ جميع الأديان تأتي من نفس المصدر، وهي جزء من عمليّة تعليميّة واحدة مستمرّة. يعترف البهائيّون بوجود رسولين لهذا العصر هما حضرة الباب وحضرة بهاء الله.
+            </p>
+
+            <div className="about-sub-block">
+              <h3 className="about-sub-heading">وحدة الجنس البشريّ</h3>
+              <p>
+                رسالة حضرة بهاء الله موجّهة إلى عالمٍ تنتشر فيه معرفة القراءة والكتابة على نطاقٍ واسعٍ، ويجمع بين التّطوّر الاجتماعيّ والتّقدّم التّكنولوجي ممّا جعل الوقت مناسبًا وضروريًّا لمعالجة المشكلات في سياقٍ عالميّ.
+              </p>
+              <p>
+                الهدف الرّئيس لتعاليمه هو وحدة الجنس البشريّ، والقضاء على التّعصّبات والحواجز الّتي تفرّق البشريّة، وأنّ وحدة جميع الشّعوب يجب أن تنشأ من خلال تطوّر النّظام الاجتماعيّ.
+              </p>
             </div>
+
+            <div className="about-principles-block">
+              <h3 className="about-sub-heading">المبادئ الرئيسية</h3>
+              <div className="principles-mini-grid">
+                <div className="principle-pill">
+                  <span className="principle-bullet">◈</span>
+                  <span>القضاء على التّعصبات</span>
+                </div>
+                <div className="principle-pill">
+                  <span className="principle-bullet">◈</span>
+                  <span>المساواة بين الرّجال والنّساء</span>
+                </div>
+                <div className="principle-pill">
+                  <span className="principle-bullet">◈</span>
+                  <span>ضرورة التّعليم العمومي</span>
+                </div>
+                <div className="principle-pill">
+                  <span className="principle-bullet">◈</span>
+                  <span>أهميّة العدالة الاجتماعيّة</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="about-callout-box">
+              <p>
+                وفقًا للتّعاليم البهائيّة، تعتمد صحّة المجتمع وتقدّمه على تأدية العائلة لمهامها على نحو سليم يقوم على زواج لا يبيح تعدّد الزّوجات ويكون فيه الرّجل والمرأة شريكين متساويين. وصف حضرة بهاء الله الزّواج بأنّه “حصنًا للنّجاح والفلاح” وحدّد تربية الأطفال على أنّها الأساس، وإن لم تكن الهدف الوحيد من الزّواج. على البهائيّين واجب تلبية احتياجات عائلاتهم من خلال الاشتغال بعمل شريف مربح وتوفير التّربية الأخلاقيّة والأكاديميّة لأبنائهم.
+              </p>
+            </div>
+
+            <p>
+              على الصّعيد الشّخصيّ، حثّ حضرة بهاء الله كلّ فرد على تنميّة مواهبه وقدراته الّتي وهبها الله له وتعلّم حرفة أو مهنة، مضيفًا أنّ العمل الّذي يؤدّى بروح الخدمة للآخرين مقبول لدى الله ويعتبر شكلًا من أشكال العبادة. في حين حذّر من مخاطر غرور العلم والمجادلات عديمة الجدوى، كما شجّع على استخدام العقل، مشيرًا إلى أنّه لا ينبغي أن يكون هناك تناقض بين العلم والدّين، لأنّهما نهجان متكاملان في البحث عن الحقيقة.
+            </p>
           </div>
         </div>
       </section>
@@ -49,66 +91,7 @@ export default function About() {
         <div className="site-symbol"></div>
       </div>
 
-      {/* SECTION 2: COMMUNITY BUILDING IN ACTION */}
-      <section className="content-section about-action-section">
-        <div className="about-container">
-          <div className="about-section-header centered about-reveal">
-            <span className="section-tag centered">بناء المجتمع في الممارسة</span>
-            <h2 className="section-heading centered">مسارات بناء القدرات وخدمة الأحياء السكنية</h2>
-            <p className="section-lead centered">
-              يفتح البهائيون أبواب أنشطتهم ومبادراتهم لجميع جيرانهم وأصدقائهم في القرى والمدن المصرية، بهدف تنمية الطاقات الإنسانية وتعزيز روابط المحبة:
-            </p>
-          </div>
-
-          <div className="about-cards-grid">
-            <div className="about-feature-card about-reveal">
-              <div className="feature-card-header">
-                <span className="card-badge">الأجيال الصاعدة</span>
-              </div>
-              <h3 className="card-title">صفوف تنمية روحانيات الأطفال</h3>
-              <p className="card-desc">
-                تُعنى هذه الصفوف بغرس القيم الإنسانية النبيلة كالأمانة والصدق والعدل والكرم، ومساعدة الأطفال على إدراك نبل جوهرهم الإنساني وتنمية محبتهم للآخرين.
-              </p>
-            </div>
-
-            <div className="about-feature-card about-reveal">
-              <div className="feature-card-header">
-                <span className="card-badge">طاقات الشباب</span>
-              </div>
-              <h3 className="card-title">برنامج التمكين الأخلاقي للناشئة</h3>
-              <p className="card-desc">
-                يمكّن الفتيان والفتيات من توجيه طاقاتهم وقدراتهم الفكرية والروحية لخدمة مجتمعاتهم المحلية عبر مشاريع خدمية تعزز التضامن الاجتماعي.
-              </p>
-            </div>
-
-            <div className="about-feature-card about-reveal">
-              <div className="feature-card-header">
-                <span className="card-badge">الحوار والتعلم</span>
-              </div>
-              <h3 className="card-title">حلقات دراسية لتطوير المهارات</h3>
-              <p className="card-desc">
-                حلقات مفتوحة لجميع الراغبين في التعلم الجماعي والتفكير المشترك في كيفية تطبيق المبادئ الروحانية على تحديات الحياة العملية والتنمية المستدامة.
-              </p>
-            </div>
-
-            <div className="about-feature-card about-reveal">
-              <div className="feature-card-header">
-                <span className="card-badge">الروحانيات المشتركة</span>
-              </div>
-              <h3 className="card-title">جلسات التأمل والدعاء المشترك</h3>
-              <p className="card-desc">
-                لقاءات دورية تجمع القلوب في أجواء من الطمأنينة والمناجاة، تتلى فيها الأدعية والآيات الكريمة، مما يوحد النفوس ويقوي الروابط الأخوية.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-separator">
-        <div className="site-symbol"></div>
-      </div>
-
-      {/* SECTION 3: HISTORICAL BRIDGE */}
+      {/* SECTION 2: HISTORICAL BRIDGE */}
       <section className="content-section about-history-bridge">
         <div className="about-container">
           <div className="about-single-column about-reveal">
@@ -136,52 +119,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* SECTION 4: GUIDING PRINCIPLES */}
-      <section className="content-section about-principles-section">
-        <div className="about-container">
-          <div className="about-section-header centered about-reveal">
-            <span className="section-tag centered">الرؤية والمنهج</span>
-            <h2 className="section-heading centered">مبادئ ترشد العمل المجتمعي</h2>
-          </div>
-
-          <div className="principles-mini-grid about-reveal">
-            <div className="principle-pill">
-              <span className="principle-bullet">◈</span>
-              <div>
-                <strong>المشورة الصادقة:</strong>
-                <span> اتخاذ القرارات من خلال التفكير الجماعي الحر البعيد عن فرض الرأي أو الخلافات الحزبية.</span>
-              </div>
-            </div>
-            <div className="principle-pill">
-              <span className="principle-bullet">◈</span>
-              <div>
-                <strong>النزاهة والتفاني:</strong>
-                <span> اعتبار العمل المتقن والخدمة الصادقة للمجتمع شكلاً رفيعاً من أشكال العبادة.</span>
-              </div>
-            </div>
-            <div className="principle-pill">
-              <span className="principle-bullet">◈</span>
-              <div>
-                <strong>المساواة والتكامل:</strong>
-                <span> الإيمان الكامل بالمساواة بين المرأة والرجل كجناحي طائر واحد ينهض به المجتمع.</span>
-              </div>
-            </div>
-            <div className="principle-pill">
-              <span className="principle-bullet">◈</span>
-              <div>
-                <strong>وحدة الإنسانية:</strong>
-                <span> التنوع الديني والثقافي في مصر هو مصدر ثراء وقوة متى ما أُحيط بروح الاحترام المتبادل.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <div className="section-separator">
         <div className="site-symbol"></div>
       </div>
 
-      {/* SECTION 5: PROMINENT FIGURES (نماذج بارزة) */}
+      {/* SECTION 2: PROMINENT FIGURES (نماذج بارزة) */}
       <section className="content-section about-figures-section">
         <div className="about-container">
           <div className="about-section-header centered about-reveal">
@@ -240,14 +182,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* CLOSING QUOTE */}
-      <div className="quote-divider">
-        <blockquote>
-          "يَا أَهْلَ الإِنْشَاءِ، عَمِّرُوا أَرْجَاءَ الْوُجُودِ بِالاتِّفَاقِ وَالْوِحْدَةِ."
-        </blockquote>
-        <cite>— حضرة بهاء الله</cite>
-      </div>
     </div>
   );
 }

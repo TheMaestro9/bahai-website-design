@@ -1,0 +1,75 @@
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+/* Sizes */
+.ui-badge-sm {
+  padding: 0.22rem 0.55rem;
+  font-size: 0.75rem;
+}
+
+.ui-badge-md {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.84rem;
+}
+
+.ui-badge-lg {
+  padding: 0.45rem 1rem;
+  font-size: 0.92rem;
+}
+
+/* Variants using design tokens */
+.ui-badge-default {
+  background-color: var(--blue-pale);
+  color: var(--blue-deep);
+  border-color: rgba(26, 78, 138, 0.15);
+}
+
+.ui-badge-primary {
+  background-color: var(--blue-deep);
+  color: var(--white);
+}
+
+.ui-badge-accent {
+  background-color: rgba(201, 74, 80, 0.1);
+  color: var(--coral);
+  border-color: rgba(201, 74, 80, 0.25);
+}
+
+.ui-badge-outline {
+  background-color: transparent;
+  color: var(--text-mid);
+  border-color: var(--divider);
+}
+
+.ui-badge-subtle {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--text-mid);
+}
+
+/* Interactive */
+.ui-badge-interactive {
+  cursor: pointer;
+  background: none;
+}
+
+.ui-badge-interactive:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+.ui-badge-interactive.active {
+  background-color: var(--blue-deep);
+  color: var(--white);
+  border-color: var(--blue-deep);
+  box-shadow: 0 4px 12px rgba(26, 78, 138, 0.25);
+}

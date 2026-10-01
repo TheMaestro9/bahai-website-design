@@ -13,10 +13,11 @@ export default function Footer() {
           <Link to="/figures">نماذج بارزة</Link>
           <Link to="/beliefs">ما يؤمنون به</Link>
           <Link to="/beliefs/covenant">الميثاق الإلهي</Link>
-          <Link to="/#contributions">مساهماتنا</Link>
+          <Link to="/contributions">مساهماتهم</Link>
           <Link to="/history">التاريخ</Link>
           <Link to="/calendar">التقويم</Link>
           <Link to="/#faq">الأسئلة الشائعة</Link>
+          <Link to="/questions">تساؤلات وحقائق</Link>
           <Link to="/#contact">تواصل معنا</Link>
           <a href="https://www.bahai.org/ar" target="_blank" rel="noopener">
             الموقع العالمي

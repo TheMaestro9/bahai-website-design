@@ -187,6 +187,12 @@ export default function Home() {
             <li>أنشطة للشباب والبالغين تركز على التعلم الجماعي</li>
             <li>مبادرات مجتمعية لتعزيز التماسك الاجتماعي وخدمة البيئة</li>
           </ul>
+          <div style={{ marginTop: '1.5rem' }}>
+            <Link to="/contributions" className="read-more-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+              <span>المزيد عن مساهمات الجامعة البهائية في بناء المجتمع</span>
+              <span aria-hidden="true">←</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -398,6 +404,63 @@ export default function Home() {
                 <span className="interview-arrow">←</span>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ & INQUIRIES SECTION */}
+      <section className="faq-section" id="faq" aria-label="الأسئلة الشائعة وتساؤلات وحقائق">
+        <div className="faq-inner">
+          <span className="section-tag centered">تساؤلات وحقائق</span>
+          <h2 className="section-heading centered">إجابات مباشرة ودراسات فكرية موثقة</h2>
+          <p className="section-lead centered">
+            إجابات موجزة عن أبرز التساؤلات المثارة، مع روابط مباشرة لمقالات بحثية تأصيلية بقلم الباحث كمال الأخناوي.
+          </p>
+
+          <div className="faq-preview-grid">
+            {[
+              {
+                question: "هل الدين البهائي مذهب إسلامي أم دين سماوي قائم بذاته؟",
+                answer: "الدين البهائي ليس مذهباً إسلامياً ولا فرقة شيعية أو سنية، بل دين سماوي عالمي مستقل تماماً، له كتبه المقدسة وشرائعه وأماكن عبادته المستقلة.",
+                slug: "is-bahai-an-islamic-sect",
+                tag: "الإسلام والبهائية"
+              },
+              {
+                question: "ما هو موقف الدين البهائي من العمل السياسي والانتماءات الحزبية؟",
+                answer: "يحرّم الدين البهائي على أتباعه الخوض في النزاعات السياسية الحزبية؛ فمهمة البهائيين هي خدمة المجتمع الشاملة، وبناء الوحدة الإنسانية، وإشاعة السلام.",
+                slug: "non-involvement-in-politics",
+                tag: "الشبهات والردود"
+              },
+              {
+                question: "لماذا تقع المراكز البهائية في حيفا وعكا، وما حقيقة المزاعم حول إسرائيل؟",
+                answer: "وجود الأماكن المقدسة في عكا وحيفا يعود لنفي حضرة بهاء الله سجيناً من قِبل السلطنة العثمانية عام ١٨٦٨م، أي قبل قيام دولة إسرائيل بثمانين عاماً.",
+                slug: "alleged-relation-with-israel",
+                tag: "الشبهات والردود"
+              },
+              {
+                question: "كيف يفهم البهائيون مقام «خاتم النبيين» ﷺ في القرآن الكريم؟",
+                answer: "يجلّ البهائيون سيدنا محمداً ﷺ كخاتم النبيين الذي ختم به دور النبوءات، ولا يعني الختم حجب الرحمة الإلهية إلى الأبد أو امتناع تجدد الرسالات الإلهية.",
+                slug: "khatam-al-nubuwah",
+                tag: "العقيدة والمفاهيم"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="faq-preview-card">
+                <div className="faq-card-tag">{item.tag}</div>
+                <h3 className="faq-card-question">{item.question}</h3>
+                <p className="faq-card-answer">{item.answer}</p>
+                <Link to={`/questions/${item.slug}`} className="faq-card-link">
+                  <span>قراءة المقال كاملاً</span>
+                  <span aria-hidden="true">←</span>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="faq-cta-wrapper">
+            <Link to="/questions" className="btn-faq-all">
+              <span>استكشف جميع التساؤلات والمقالات الـ ٢٩</span>
+              <span aria-hidden="true">←</span>
+            </Link>
           </div>
         </div>
       </section>

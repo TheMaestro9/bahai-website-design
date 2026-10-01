@@ -698,3 +698,107 @@
 }
 
 .articles-inner { max-width: var(--max-w); margin: 0 auto; }
+
+/* ---- FAQ & INQUIRIES SECTION ---- */
+.faq-section {
+    background: var(--warm-bg);
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--divider);
+    direction: rtl;
+}
+
+.faq-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.faq-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 2.5rem;
+}
+
+.faq-preview-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--divider);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.faq-preview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(26, 78, 138, 0.08);
+    border-color: rgba(26, 78, 138, 0.25);
+}
+
+.faq-card-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--coral);
+    margin-bottom: 0.75rem;
+}
+
+.faq-card-question {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--blue-deep);
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+}
+
+.faq-card-answer {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-mid);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.faq-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--blue-deep);
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.faq-card-link:hover {
+    color: var(--coral);
+    gap: 0.6rem;
+}
+
+.faq-cta-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn-faq-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--blue-deep);
+    color: var(--white);
+    padding: 0.9rem 2.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(26, 78, 138, 0.25);
+}
+
+.btn-faq-all:hover {
+    background: var(--blue-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(26, 78, 138, 0.35);
+}

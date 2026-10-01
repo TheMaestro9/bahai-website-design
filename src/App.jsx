@@ -8,6 +8,9 @@ import Beliefs from './pages/Beliefs';
 import Covenant from './pages/Covenant';
 import About from './pages/About';
 import Figures from './pages/Figures';
+import Contributions from './pages/Contributions';
+import Questions from './pages/Questions';
+import ArticleDetail from './pages/ArticleDetail';
 
 function App() {
   return (
@@ -16,12 +19,17 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="contributions" element={<Contributions />} />
+          <Route path="what-we-do" element={<Contributions />} />
           <Route path="figures" element={<Figures />} />
           <Route path="history" element={<History />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="abdulbaha-visits" element={<AbdulBahaVisits />} />
           <Route path="beliefs" element={<Beliefs />} />
           <Route path="beliefs/covenant" element={<Covenant />} />
+          <Route path="questions" element={<Questions />} />
+          <Route path="questions/:slug" element={<ArticleDetail />} />
+          <Route path="articles/:slug" element={<ArticleDetail />} />
         </Route>
       </Routes>
     </HashRouter>

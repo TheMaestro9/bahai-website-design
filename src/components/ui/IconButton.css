@@ -1,0 +1,67 @@
+.ui-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  outline: none;
+  background: transparent;
+  color: var(--text-mid);
+  padding: 0;
+}
+
+.ui-icon-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(26, 78, 138, 0.35);
+}
+
+.ui-icon-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.ui-icon-btn-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.ui-icon-btn-md {
+  width: 38px;
+  height: 38px;
+}
+
+.ui-icon-btn-lg {
+  width: 46px;
+  height: 46px;
+}
+
+/* Variants */
+.ui-icon-btn-default {
+  background-color: var(--warm-bg);
+  border-color: var(--divider);
+  color: var(--text-dark);
+}
+
+.ui-icon-btn-default:hover {
+  background-color: var(--blue-pale);
+  color: var(--blue-deep);
+  border-color: var(--blue-light);
+  transform: translateY(-1px);
+}
+
+.ui-icon-btn-primary {
+  background-color: var(--blue-deep);
+  color: var(--white);
+}
+
+.ui-icon-btn-primary:hover {
+  background-color: var(--blue-mid);
+  transform: translateY(-1px);
+}
+
+.ui-icon-btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: var(--blue-deep);
+}
