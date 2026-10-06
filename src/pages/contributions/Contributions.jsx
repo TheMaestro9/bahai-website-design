@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useReveal from '../hooks/useReveal';
+import useReveal from '../../hooks/useReveal';
 import './Contributions.css';
 
 export default function Contributions() {

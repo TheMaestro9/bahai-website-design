@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useReveal from '../hooks/useReveal';
+import useReveal from '../../hooks/useReveal';
+import Button from '../../components/ui/Button';
 import './Home.css';
 
 export default function Home() {
@@ -274,6 +275,18 @@ export default function Home() {
               <p>وحدة الجنس البشري، المساواة، نبذ التعصب، التوافق بين العلم والدين، وخدمة المجتمع.</p>
             </details>
           </div>
+
+          <div className="faq-cta-wrapper">
+            <Button
+              to="/questions"
+              variant="primary"
+              size="md"
+              icon="arrow-left"
+              iconPosition="left"
+            >
+              استكشف المزيد من الأسئلة والتساؤلات الشائعة
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -409,7 +422,7 @@ export default function Home() {
       </section>
 
       {/* FAQ & INQUIRIES SECTION */}
-      <section className="faq-section" id="faq" aria-label="الأسئلة الشائعة وتساؤلات وحقائق">
+      <section className="faq-section" id="questions-preview" aria-label="الأسئلة الشائعة وتساؤلات وحقائق">
         <div className="faq-inner">
           <span className="section-tag centered">تساؤلات وحقائق</span>
           <h2 className="section-heading centered">إجابات مباشرة ودراسات فكرية موثقة</h2>
@@ -457,10 +470,15 @@ export default function Home() {
           </div>
 
           <div className="faq-cta-wrapper">
-            <Link to="/questions" className="btn-faq-all">
-              <span>استكشف جميع التساؤلات والمقالات الـ ٢٩</span>
-              <span aria-hidden="true">←</span>
-            </Link>
+            <Button
+              to="/questions"
+              variant="primary"
+              size="md"
+              icon="arrow-left"
+              iconPosition="left"
+            >
+              استكشف جميع التساؤلات والمقالات الـ ٢٩
+            </Button>
           </div>
         </div>
       </section>

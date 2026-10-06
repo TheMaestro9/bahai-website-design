@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { getQuestionBySlug, questionsData } from '../data/questionsData';
-import Badge from '../components/ui/Badge';
-import Button from '../components/ui/Button';
-import IconButton from '../components/ui/IconButton';
-import SvgIcon from '../components/ui/SvgIcon';
-import './ArticleDetail.css';
+import { getQuestionBySlug, questionsData } from '../../data/questionsData';
+import Badge from '../../components/ui/Badge';
+import Button from '../../components/ui/Button';
+import IconButton from '../../components/ui/IconButton';
+import SvgIcon from '../../components/ui/SvgIcon';
+import './QuestionDetail.css';
 
-export default function ArticleDetail() {
+export default function QuestionDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);

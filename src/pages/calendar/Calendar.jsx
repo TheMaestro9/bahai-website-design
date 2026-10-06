@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getBadiDate, getHolyDaysForYear, toArabicNumerals, BADI_YEARS_DATA } from '../utils/badiCalendar';
+import { getBadiDate, getHolyDaysForYear, toArabicNumerals, BADI_YEARS_DATA } from '../../utils/badiCalendar';
 import './Calendar.css';
 
 export default function Calendar() {

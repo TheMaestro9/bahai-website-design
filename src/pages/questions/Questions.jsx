@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { questionsData, categoriesList } from '../data/questionsData';
-import Badge from '../components/ui/Badge';
-import Button from '../components/ui/Button';
-import IconButton from '../components/ui/IconButton';
-import SvgIcon from '../components/ui/SvgIcon';
+import { questionsData, categoriesList } from '../../data/questionsData';
+import Badge from '../../components/ui/Badge';
+import Button from '../../components/ui/Button';
+import IconButton from '../../components/ui/IconButton';
+import SvgIcon from '../../components/ui/SvgIcon';
 import './Questions.css';
 
 export default function Questions() {

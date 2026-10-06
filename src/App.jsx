@@ -1,16 +1,16 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Home from './pages/Home';
-import History from './pages/History';
-import Calendar from './pages/Calendar';
-import AbdulBahaVisits from './pages/AbdulBahaVisits';
-import Beliefs from './pages/Beliefs';
-import Covenant from './pages/Covenant';
-import About from './pages/About';
-import Figures from './pages/Figures';
-import Contributions from './pages/Contributions';
-import Questions from './pages/Questions';
-import QuestionDetail from './pages/QuestionDetail';
+import Home from './pages/home/Home';
+import History from './pages/history/History';
+import AbdulBahaVisits from './pages/history/AbdulBahaVisits';
+import Calendar from './pages/calendar/Calendar';
+import Beliefs from './pages/beliefs/Beliefs';
+import Covenant from './pages/beliefs/Covenant';
+import About from './pages/about/About';
+import Figures from './pages/about/Figures';
+import Contributions from './pages/contributions/Contributions';
+import Questions from './pages/questions/Questions';
+import QuestionDetail from './pages/questions/QuestionDetail';
 
 function App() {
   return (
