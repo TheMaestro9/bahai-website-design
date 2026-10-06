@@ -61,9 +61,6 @@ export default function Questions() {
       <section className="questions-hero">
         <div className="container">
           <div className="questions-hero-content">
-            <Badge variant="accent" size="lg" icon="sparkles" className="questions-hero-badge">
-              تساؤلات وحقائق • درء الشبهات
-            </Badge>
             <h1 className="questions-hero-title">
               تساؤلات وحقائق حول الدين البهائي
             </h1>
