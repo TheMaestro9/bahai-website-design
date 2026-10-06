@@ -216,9 +216,8 @@ METADATA_MAP = {
 
 def clean_paragraph_text(text):
     text = re.sub(r'HYPERLINK\s+\"[^\"]+\"', '', text)
-    text = re.sub(r'[\r\n\t]+', ' ', text)
-    # Remove excessive spaces
-    text = re.sub(r'\s{2,}', ' ', text)
+    # Remove excessive horizontal spaces while keeping text clean
+    text = re.sub(r'[ \t\f\v\u00a0]+', ' ', text)
     return text.strip()
 
 def extract_docx(filepath):
@@ -226,17 +225,25 @@ def extract_docx(filepath):
         tree = ET.fromstring(z.read('word/document.xml'))
         paragraphs = []
         for p in tree.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'):
-            texts = [node.text for node in p.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t') if node.text]
-            p_text = ''.join(texts).strip()
-            p_text = clean_paragraph_text(p_text)
-            # Skip empty, "المصدر: ...", or single word dividers
-            if not p_text:
-                continue
-            if p_text.startswith('المصدر:'):
-                continue
-            if p_text in ['* * * * * * * * * *', '---', '***']:
-                continue
-            paragraphs.append(p_text)
+            parts = []
+            for elem in p.iter():
+                tag = elem.tag.split('}')[-1]
+                if tag == 't' and elem.text:
+                    parts.append(elem.text)
+                elif tag in ('br', 'cr'):
+                    parts.append('\n')
+            p_text = ''.join(parts).strip()
+            if p_text:
+                for line in p_text.split('\n'):
+                    l = clean_paragraph_text(line)
+                    # Skip empty, "المصدر: ...", or divider lines
+                    if not l:
+                        continue
+                    if l.startswith('المصدر:'):
+                        continue
+                    if re.match(r'^[\*\-\s_—–=]+$', l):
+                        continue
+                    paragraphs.append(l)
         return paragraphs
 
 def main():

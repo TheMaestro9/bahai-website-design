@@ -48,83 +48,83 @@ export default function QuestionDetail() {
   };
 
   const isQuoteParagraph = (p) => {
+    const trimmed = p.trim();
     return (
-      (p.startsWith('"') && p.endsWith('"')) ||
-      (p.startsWith('«') && p.endsWith('»')) ||
-      p.includes('سورة') ||
-      p.includes('(كولوسي')
+      (trimmed.startsWith('"') || trimmed.startsWith('«') || trimmed.startsWith('“')) &&
+      (trimmed.endsWith('"') || trimmed.endsWith('»') || trimmed.endsWith('”') || /["»”]/.test(trimmed.slice(1)))
     );
   };
 
+  const isCopyrightParagraph = (p) => {
+    const trimmed = p.trim();
+    return (
+      trimmed.includes('DeenBahai.org') ||
+      trimmed.includes('جميع حقوق النشر محفوظة') ||
+      /copyright\s*©/i.test(trimmed)
+    );
+  };
+
+  const isHeadingParagraph = (p, idx) => {
+    if (idx === 0) return false;
+    const trimmed = p.trim();
+    if (isCopyrightParagraph(trimmed)) return false;
+    if (trimmed.length >= 60) return false;
+    if (trimmed.endsWith('.') || trimmed.endsWith('!') || trimmed.endsWith('؟')) return false;
+    // Exclude numbered or alphabetical list items (e.g., "١-", "1-", "أ -")
+    if (/^([0-9٠-٩]+|[أ-ي])\s*[-–.]/.test(trimmed)) return false;
+    return true;
+  };
+
+  const bodyParagraphs = article.paragraphs.filter((p) => !isCopyrightParagraph(p));
+  const hasCopyright = article.paragraphs.some((p) => isCopyrightParagraph(p));
+
   return (
     <article className="article-detail-page papyrus-bg" id="main-content">
-      {/* Top Breadcrumb & Navigation */}
-      <div className="article-top-nav">
-        <div className="container article-nav-container">
-          <nav className="article-breadcrumbs" aria-label="مسار التصفح">
-            <Link to="/">الرئيسية</Link>
-            <span className="crumb-sep">/</span>
-            <Link to="/questions">تساؤلات وحقائق</Link>
-            <span className="crumb-sep">/</span>
-            <span className="crumb-current">{article.title}</span>
-          </nav>
-
-          <Button
-            to="/questions"
-            variant="outline"
-            size="sm"
-            icon="arrow-right"
-            iconPosition="right"
-            className="back-btn"
-          >
-            العودة للتساؤلات
-          </Button>
-        </div>
-      </div>
-
-      {/* Main Article Container */}
-      <div className="container article-main-container">
-        <div className="article-card-wrapper">
-          {/* Header */}
-          <header className="article-header">
-            <div className="article-header-meta-top">
-              <Badge variant="default" size="md" icon="tag">
+      {/* Hero Section */}
+      <section className="article-hero">
+        <div className="container">
+          <div className="article-hero-content">
+            <div className="article-hero-meta-top">
+              <Badge variant="subtle" size="md" icon="tag" className="article-hero-badge">
                 {article.category}
               </Badge>
-              <span className="article-read-time">
+              <span className="article-hero-read-time">
                 <SvgIcon name="clock" size={14} />
                 وقت القراءة: {article.readTime}
               </span>
             </div>
 
-            <h1 className="article-headline">{article.title}</h1>
+            <h1 className="article-hero-title">{article.title}</h1>
 
-            <div className="article-byline">
-              <div className="author-info">
-                <div className="author-avatar">
-                  <SvgIcon name="user" size={18} />
-                </div>
-                <div className="author-text">
-                  <span className="author-name">بقلم: {article.author}</span>
-                  <span className="author-title">باحث في الدراسات البهائية وتاريخ الأديان</span>
-                </div>
-              </div>
-
-              <div className="article-quick-actions">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  icon={copied ? 'check' : 'copy'}
-                  iconPosition="right"
-                  onClick={handleCopy}
-                  className={copied ? 'copied-btn' : ''}
-                >
-                  {copied ? 'تم نسخ الرابط!' : 'نسخ الرابط'}
-                </Button>
-              </div>
+            <div className="article-hero-actions">
+              <Button
+                to="/questions"
+                variant="outline"
+                size="sm"
+                icon="arrow-right"
+                iconPosition="right"
+                className="hero-action-btn"
+              >
+                العودة للتساؤلات
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                icon={copied ? 'check' : 'copy'}
+                iconPosition="right"
+                onClick={handleCopy}
+                className={`hero-action-btn ${copied ? 'copied-btn' : ''}`}
+              >
+                {copied ? 'تم نسخ الرابط!' : 'نسخ الرابط'}
+              </Button>
             </div>
-          </header>
+          </div>
+        </div>
+      </section>
 
+      {/* Main Article Container */}
+      <div className="container article-main-container">
+        <div className="article-card-wrapper">
           {/* Core Question & Concise Answer Box */}
           <div className="article-question-highlight">
             <div className="question-highlight-header">
@@ -143,7 +143,7 @@ export default function QuestionDetail() {
               <span className="ornament-line"></span>
             </div>
 
-            {article.paragraphs.map((p, idx) => {
+            {bodyParagraphs.map((p, idx) => {
               if (isQuoteParagraph(p)) {
                 return (
                   <blockquote key={idx} className="article-quote-block">
@@ -154,7 +154,7 @@ export default function QuestionDetail() {
               }
 
               // Check if paragraph is short header-like text
-              if (p.length < 60 && !p.endsWith('.') && !p.endsWith('!') && !p.endsWith('؟') && idx > 0) {
+              if (isHeadingParagraph(p, idx)) {
                 return (
                   <h3 key={idx} className="article-subheading">
                     {p}
@@ -168,6 +168,14 @@ export default function QuestionDetail() {
                 </p>
               );
             })}
+
+            {hasCopyright && (
+              <div className="article-copyright-line">
+                <span>Copyright © DeenBahai.org</span>
+                <span className="copyright-sep">—</span>
+                <span>جميع حقوق النشر محفوظة</span>
+              </div>
+            )}
           </section>
 
           {/* Article Footer & Actions */}
