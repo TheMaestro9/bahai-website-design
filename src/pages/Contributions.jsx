@@ -4,11 +4,21 @@ import useReveal from '../hooks/useReveal';
 import './Contributions.css';
 
 export default function Contributions() {
-  useReveal('.contrib-reveal, .content-section');
+  useReveal('.contrib-reveal, .contrib-section');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -125;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="contributions-page">
@@ -32,15 +42,27 @@ export default function Contributions() {
       <nav className="contrib-nav-bar" aria-label="أقسام الصفحة">
         <div className="contrib-container">
           <div className="contrib-nav-links">
-            <a href="#social-action" className="contrib-nav-item">
+            <a
+              href="#social-action"
+              className="contrib-nav-item"
+              onClick={(e) => scrollToSection(e, 'social-action')}
+            >
               <span className="nav-num">١</span>
               <span>العمل الاجتماعي</span>
             </a>
-            <a href="#ruhi-institute" className="contrib-nav-item">
+            <a
+              href="#ruhi-institute"
+              className="contrib-nav-item"
+              onClick={(e) => scrollToSection(e, 'ruhi-institute')}
+            >
               <span className="nav-num">٢</span>
               <span>معهد روحي</span>
             </a>
-            <a href="#discourses" className="contrib-nav-item">
+            <a
+              href="#discourses"
+              className="contrib-nav-item"
+              onClick={(e) => scrollToSection(e, 'discourses')}
+            >
               <span className="nav-num">٣</span>
               <span>المشاركة في الحوارات السائدة</span>
             </a>
@@ -51,36 +73,21 @@ export default function Contributions() {
       {/* ================================================================
           SECTION 1: SOCIAL ACTION (العمل الاجتماعي)
           ================================================================ */}
-      <section className="content-section contrib-section" id="social-action">
+      <section className="contrib-section" id="social-action">
         <div className="contrib-container">
           <div className="contrib-header-block contrib-reveal">
-            <span className="section-tag">أولاً</span>
             <h2 className="section-heading">العمل الاجتماعي</h2>
-            <p className="section-lead">
-              مبادرات قاعدية تنبع من طاقات السكان وتجمع بين التقدم المادي والتطور الأخلاقي والروحاني
-            </p>
           </div>
 
-          {/* Social Action Narrative Overview (Balanced 2 columns) */}
-          <div className="social-intro-grid contrib-reveal">
-            <div className="social-narrative-card">
-              <h3 className="card-subhead">الجذور والمبادرات القاعدية</h3>
-              <p className="dropcap">
-                منذ بدايات الدّين البهائيّ، كان هناك دائمًا بُعد اجتماعيّ قويّ لأنشطة المجتمع. تمّ تنفيذ آلاف المشاريع على مدار السّنين في جميع أنحاء العالم في مجالات النّهوض بالمرأة، والحفاظ على البيئة، والتّعليم ومحو الأمّيّة، والنّظافة والصّحّة، والزّراعة وتربية الأسماك. معظمها كان عبارة عن مبادرات صغيرة على مستوى القاعدة الشّعبيّة مستوحاة من التّعاليم البهائيّة تستخدم قدرات السّكان المعنيّين وتعنى بهم مباشرة.
-              </p>
-            </div>
+          {/* Social Action Narrative Overview */}
+          <div className="social-lead-card contrib-reveal">
+            <p>
+              منذ بدايات الدّين البهائيّ، كان هناك دائمًا بُعد اجتماعيّ قويّ لأنشطة المجتمع. تمّ تنفيذ آلاف المشاريع على مدار السّنين في جميع أنحاء العالم في مجالات النّهوض بالمرأة، والحفاظ على البيئة، والتّعليم ومحو الأمّيّة، والنّظافة والصّحّة، والزّراعة وتربية الأسماك. معظمها كان عبارة عن مبادرات صغيرة على مستوى القاعدة الشّعبيّة مستوحاة من التّعاليم البهائيّة تستخدم قدرات السّكان المعنيّين وتعنى بهم مباشرة.
+            </p>
 
-            <div className="social-philosophy-card">
-              <h3 className="card-subhead">فلسفة العمل والشمولية</h3>
-              <div className="quote-highlight-block">
-                <blockquote>
-                  "العمل الاجتماعيّ البهائيّ مبنيّ على مفهوم أنّ مفتاح التّقدّم المادّيّ يكمن في قدرات الرّوح البشريّة، وأنّ التّقدّم المادّيّ يجب أن يعزّز التّطوّر الأخلاقيّ والرّوحانيّ أيضًا."
-                </blockquote>
-              </div>
-              <p>
-                وبما أنّ القضاء على جميع أشكال التّعصّب والتّمييز هو هدف أساسيّ، يجب أن تعود الفوائد من العمل الاجتماعيّ الّتي بدأها المجتمع البهائيّ على المجتمع الأوسع بغضّ النّظر عن الانتماء الدّينيّ.
-              </p>
-            </div>
+            <p>
+              العمل الاجتماعيّ البهائيّ مبنيّ على مفهوم أنّ مفتاح التّقدّم المادّيّ يكمن في قدرات الرّوح البشريّة، وأنّ التّقدّم المادّيّ يجب أن يعزّز التّطوّر الأخلاقيّ والرّوحانيّ أيضًا. وبما أنّ القضاء على جميع أشكال التّعصّب والتّمييز هو هدف أساسيّ، يجب أن تعود الفوائد من العمل الاجتماعيّ الّتي بدأها المجتمع البهائيّ على المجتمع الأوسع بغضّ النّظر عن الانتماء الدّينيّ.
+            </p>
           </div>
 
           {/* 5-Pillar Showcase: Spacious, Full-Width Multi-Column Grid */}
@@ -99,7 +106,6 @@ export default function Contributions() {
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>النهوض بالمرأة</h4>
-                    <span className="pillar-top-badge">ميدان حيوي</span>
                   </div>
                   <p>تعزيز المساواة بين الجنسين وتمكين المرأة للمشاركة الفاعلة في تنمية المجتمع وبناء المستقبل.</p>
                 </div>
@@ -112,7 +118,6 @@ export default function Contributions() {
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>الحفاظ على البيئة</h4>
-                    <span className="pillar-top-badge">بيئة مستدامة</span>
                   </div>
                   <p>مبادرات واعية للعناية بالطبيعة، التوعية البيئية، وترشيد الموارد وحماية المساحات الخضراء.</p>
                 </div>
@@ -125,7 +130,6 @@ export default function Contributions() {
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>التعليم ومحو الأمية</h4>
-                    <span className="pillar-top-badge">تنمية العقول</span>
                   </div>
                   <p>برامج تعليمية تفتح آفاق المعرفة وتطور المهارات الأساسية لجميع الفئات لتمكينهم من التعلم الذاتي.</p>
                 </div>
@@ -138,7 +142,6 @@ export default function Contributions() {
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>النظافة والصحة</h4>
-                    <span className="pillar-top-badge">جودة الحياة</span>
                   </div>
                   <p>نشر الوعي الصحي السليم وسبل الوقاية والعناية بالنظافة العامة للارتقاء بصحة المجتمع المحلي.</p>
                 </div>
@@ -151,7 +154,6 @@ export default function Contributions() {
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>الزراعة وتربية الأسماك</h4>
-                    <span className="pillar-top-badge">إنتاج محلي</span>
                   </div>
                   <p>مشاريع تطبيقية مستدامة تعتمد على إمكانيات البيئة المحلية وتساهم في تحقيق الأمن الغذائي وتوفير سبل العيش الكريمة.</p>
                 </div>
@@ -168,14 +170,10 @@ export default function Contributions() {
       {/* ================================================================
           SECTION 2: RUHI INSTITUTE (معهد روحي)
           ================================================================ */}
-      <section className="content-section contrib-section papyrus-bg" id="ruhi-institute">
+      <section className="contrib-section papyrus-bg" id="ruhi-institute">
         <div className="contrib-container">
           <div className="contrib-header-block contrib-reveal">
-            <span className="section-tag">ثانياً</span>
             <h2 className="section-heading">معهد روحي</h2>
-            <p className="section-lead">
-              مسار تعليمي متكامل ينظم برامج لمختلف الفئات العمرية من الطفولة حتى سن الرشد
-            </p>
           </div>
 
           <div className="ruhi-intro-banner contrib-reveal">
@@ -303,14 +301,10 @@ export default function Contributions() {
       {/* ================================================================
           SECTION 3: PARTICIPATION IN PREVAILING DISCOURSES
           ================================================================ */}
-      <section className="content-section contrib-section" id="discourses">
+      <section className="contrib-section" id="discourses">
         <div className="contrib-container">
           <div className="contrib-header-block contrib-reveal">
-            <span className="section-tag">ثالثاً</span>
             <h2 className="section-heading">المشاركة في الحوارات السائدة</h2>
-            <p className="section-lead">
-              الإسهام الإيجابي في مسيرة الفكر الإنساني والتعاون البنّاء مع كافة أطياف المجتمع
-            </p>
           </div>
 
           <div className="discourses-wrap contrib-reveal">
@@ -319,31 +313,15 @@ export default function Contributions() {
               <p className="dropcap">
                 يسعى أفراد الجامعة البهائية في مصر مشاركة الجميع في المساهمة للعمل معا جنبا الي جنب في بناء مجتمع يسوده العدل والمحبة والاتحاد، كما يتأملون في خلق بيئة تعزز الحرية والمساواة وذلك إيمانا منهم بقدرة كل فرد يبدي رغبة في تقدم المجتمع، وتكون هذه فرصة للتعلم سوياً كيفية التغلب على التحديات التي تواجه المجتمع.
               </p>
-              
-              <div className="quote-highlight-wide">
-                <blockquote>
-                  "فإنّ الهدف الأساسيّ للدّين البهائيّ هو تعزيز الوحدة والاتّحاد، ويؤمن البهائيّون أنّ هذه هي الطّريقة الوحيدة الّتي يمكن بها تحقيق التّقدّم الاجتماعيّ الحقيقيّ. وبالتّالي، فإنّهم في عملهم الاجتماعيّ وتصريحاتهم العامّة يتجنّبون بحذر الانحياز لأيّ جهة أو إلقاء اللّوم."
-                </blockquote>
-              </div>
-            </div>
-
-            {/* 2 Wide Balanced Principle Cards */}
-            <div className="discourses-dual-grid">
-              <div className="discourse-card">
-                <div className="discourse-icon-badge">⚖️</div>
-                <h3>احترام السلطات والمواطنة الإيجابية</h3>
-                <p>
-                  يحترم البهائيّون جميع السّلطات العامّة ويصوّتون في الانتخابات استنادًا إلى الكفاءة الشّخصيّة للمرشّحين، انطلاقاً من ولائهم لوطنهم وحرصهم على تقدمه واستقراره.
-                </p>
-              </div>
-
-              <div className="discourse-card">
-                <div className="discourse-icon-badge">🕊️</div>
-                <h3>الابتعاد عن التنافس السياسي الحزبي</h3>
-                <p>
-                  وفي نفس الوقت، وبما أنّ المنافسة والخصومة المتأصّلة في السّعي إلى السّلطة السّياسيّة هما بالضّرورة مثيران للفرقة والانقسام، فإنّ البهائيّين لا يترشّحون للمناصب السّياسيّة، ولا يقبلون التّعيينات السّياسيّة، ولا يدعمون أحزابًا أو فصائل سياسيّة معيّنة.
-                </p>
-              </div>
+              <p>
+                فإنّ الهدف الأساسيّ للدّين البهائيّ هو تعزيز الوحدة والاتّحاد، ويؤمن البهائيّون أنّ هذه هي الطّريقة الوحيدة الّتي يمكن بها تحقيق التّقدّم الاجتماعيّ الحقيقيّ. وبالتّالي، فإنّهم في عملهم الاجتماعيّ وتصريحاتهم العامّة يتجنّبون بحذر الانحياز لأيّ جهة أو إلقاء اللّوم.
+              </p>
+              <p>
+                يحترم البهائيّون جميع السّلطات العامّة ويصوّتون في الانتخابات استنادًا إلى الكفاءة الشّخصيّة للمرشّحين، انطلاقاً من ولائهم لوطنهم وحرصهم على تقدمه واستقراره.
+              </p>
+              <p>
+                وفي نفس الوقت، وبما أنّ المنافسة والخصومة المتأصّلة في السّعي إلى السّلطة السّياسيّة هما بالضّرورة مثيران للفرقة والانقسام، فإنّ البهائيّين لا يترشّحون للمناصب السّياسيّة، ولا يقبلون التّعيينات السّياسيّة، ولا يدعمون أحزابًا أو فصائل سياسيّة معيّنة.
+              </p>
             </div>
           </div>
 

@@ -4,6 +4,7 @@
    Tokens: --blue-deep, --blue-mid, --blue-pale, --coral, --warm-bg, etc.
    ================================================================ */
 
+
 .contributions-page {
   background: var(--white);
   position: relative;
@@ -11,12 +12,12 @@
   direction: rtl;
 }
 
-/* Full-width container edge-to-edge with generous responsive side padding */
+/* Constrained content container centered with responsive padding */
 .contrib-container {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 clamp(2rem, 5vw, 6rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* ================================================================
@@ -131,6 +132,9 @@
    COMMON SECTION STYLES
    ================================================================ */
 .contrib-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   padding: 6rem 0;
   scroll-margin-top: 110px;
 }
@@ -173,56 +177,24 @@
    SECTION 1: SOCIAL ACTION (العمل الاجتماعي)
    ================================================================ */
 
-/* 2-Column Balanced Narrative */
-.social-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  margin-bottom: 4rem;
-}
-
-.social-narrative-card,
-.social-philosophy-card {
+/* Social Action Narrative Lead Card */
+.social-lead-card {
   background: var(--white);
   border: 1px solid var(--divider);
   border-radius: 18px;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
-  box-shadow: 0 6px 20px rgba(26, 78, 138, 0.04);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: 0 6px 22px rgba(26, 78, 138, 0.04);
+  margin-bottom: 3.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 
-.card-subhead {
+.social-lead-card p {
   font-family: var(--font-sans);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--blue-deep);
-  border-bottom: 2px solid var(--blue-pale);
-  padding-bottom: 0.65rem;
-}
-
-.social-narrative-card p,
-.social-philosophy-card p {
-  font-family: var(--font-sans);
-  font-size: 1.12rem;
-  line-height: 2;
+  font-size: 1.15rem;
+  line-height: 2.05;
   color: var(--text-dark);
-}
-
-.quote-highlight-block {
-  background: var(--warm-bg);
-  border-inline-start: 4px solid var(--coral);
-  padding: 1.35rem 1.6rem;
-  border-radius: 0 10px 10px 0;
-}
-
-.quote-highlight-block blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.18rem;
-  line-height: 1.8;
-  color: var(--blue-deep);
-  font-style: italic;
 }
 
 /* 5 Pillars Title */
@@ -717,11 +689,6 @@
 }
 
 @media (max-width: 900px) {
-  .social-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .pillars-cards-grid {
     grid-template-columns: 1fr;
   }
