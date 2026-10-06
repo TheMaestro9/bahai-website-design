@@ -10,7 +10,7 @@ import About from './pages/About';
 import Figures from './pages/Figures';
 import Contributions from './pages/Contributions';
 import Questions from './pages/Questions';
-import ArticleDetail from './pages/ArticleDetail';
+import QuestionDetail from './pages/QuestionDetail';
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
           <Route path="beliefs" element={<Beliefs />} />
           <Route path="beliefs/covenant" element={<Covenant />} />
           <Route path="questions" element={<Questions />} />
-          <Route path="questions/:slug" element={<ArticleDetail />} />
-          <Route path="articles/:slug" element={<ArticleDetail />} />
+          <Route path="questions/:slug" element={<QuestionDetail />} />
+          <Route path="articles/:slug" element={<QuestionDetail />} />
         </Route>
       </Routes>
     </HashRouter>
