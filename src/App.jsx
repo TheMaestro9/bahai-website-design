@@ -7,7 +7,7 @@ import Calendar from './pages/calendar/Calendar';
 import Beliefs from './pages/beliefs/Beliefs';
 import Covenant from './pages/beliefs/Covenant';
 import About from './pages/about/About';
-import Figures from './pages/about/Figures';
+import Figures from './pages/contributions/Figures';
 import Contributions from './pages/contributions/Contributions';
 import Questions from './pages/questions/Questions';
 import QuestionDetail from './pages/questions/QuestionDetail';

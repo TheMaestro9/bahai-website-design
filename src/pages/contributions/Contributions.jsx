@@ -66,6 +66,14 @@ export default function Contributions() {
               <span className="nav-num">٣</span>
               <span>المشاركة في الحوارات السائدة</span>
             </a>
+            <a
+              href="#figures"
+              className="contrib-nav-item"
+              onClick={(e) => scrollToSection(e, 'figures')}
+            >
+              <span className="nav-num">٤</span>
+              <span>نماذج وشخصيات بارزة</span>
+            </a>
           </div>
         </div>
       </nav>
@@ -324,9 +332,75 @@ export default function Contributions() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div className="section-separator">
+        <div className="site-symbol"></div>
+      </div>
+
+      {/* ================================================================
+          SECTION 4: PROMINENT FIGURES (نماذج بارزة)
+          ================================================================ */}
+      <section className="contrib-section about-figures-section" id="figures">
+        <div className="contrib-container">
+          <div className="contrib-header-block centered contrib-reveal">
+            <span className="section-tag centered">إسهامات وطنية</span>
+            <h2 className="section-heading centered">نماذج وشخصيات بارزة</h2>
+            <p className="section-lead centered">
+              أبناء مخلصون لمصر أثروا الحياة الفنية والأدبية والفكرية، وجسدوا في مسيرتهم قيم التفاني والإبداع وخدمة الصالح العام
+            </p>
+          </div>
+
+          <div className="about-figures-grid contrib-reveal">
+            {/* BICAR PREVIEW CARD */}
+            <div className="about-figure-card">
+              <div className="about-figure-img-wrap">
+                <img 
+                  src="assets/nmazeg/h-bicar/personal-image.jpg" 
+                  alt="الفنان حسين بيكار" 
+                  loading="lazy" 
+                />
+                <span className="about-figure-badge">١٩١٣ — ٢٠٠٢م</span>
+              </div>
+              <div className="about-figure-content">
+                <h3 className="about-figure-name">الفنان حسين بيكار</h3>
+                <p className="about-figure-role">رائد الفن التشكيلي وعميد فن البورتريه في العالم العربي</p>
+                <p className="about-figure-desc">
+                  أحد أبرز رواد الجيل الثاني من التشكيليين المصريين، أحدث طفرة في الرسوم الصحفية وأغلفة المجلات، وخلد بريشته ملحمة إنقاذ معبد أبي سمبل، وعاش مؤمناً بأن الفن رسالة جمال لكل مواطن بسيط.
+                </p>
+              </div>
+            </div>
+
+            {/* SOMAYA PREVIEW CARD */}
+            <div className="about-figure-card">
+              <div className="about-figure-img-wrap">
+                <img 
+                  src="assets/nmazeg/s-ramadan/personal-look.jpg" 
+                  alt="د. سمية رمضان" 
+                  loading="lazy" 
+                />
+                <span className="about-figure-badge">١٩٥١ — ٢٠٢٤م</span>
+              </div>
+              <div className="about-figure-content">
+                <h3 className="about-figure-name">د. سمية رمضان</h3>
+                <p className="about-figure-role">أستاذة النقد الفني والحائزة على ميدالية نجيب محفوظ الأدبية</p>
+                <p className="about-figure-desc">
+                  كاتبة ومترجمة وأستاذة جامعية من مؤسسات ملتقى المرأة والذاكرة، أضاءت المشهد الأدبي بروايتها «أوراق النرجس» وكتابها «طريق المستقبل: رؤية بهائية»، مجسدة ثقافة وبساطة وعطاءً فكرياً راقياً.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-figures-cta contrib-reveal">
+            <Link to="/figures" className="about-btn-primary">
+              <span>استكشف السيرة الكاملة والمعرض الفني للنماذج البارزة</span>
+              <span className="btn-arrow" aria-hidden="true">←</span>
+            </Link>
+          </div>
 
           {/* BOTTOM INVITATION / REFLECTION */}
-          <div className="contrib-cta-box contrib-reveal">
+          <div className="contrib-cta-box contrib-reveal" style={{ marginTop: '4rem' }}>
             <div className="contrib-cta-inner">
               <h3>شراكة مجتمعية في خدمة الوطن</h3>
               <p>
