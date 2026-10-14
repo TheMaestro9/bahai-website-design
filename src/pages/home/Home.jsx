@@ -71,7 +71,7 @@ export default function Home() {
       <section className="split-section" id="about">
         <div className="split-image">
           <img
-            src="assets/img-about.png"
+            src="assets/the-bab-shrine-header.jpg"
             alt="البهائيون في مصر — مجتمع يعمل لخير الوطن"
             loading="lazy"
             width="550"
@@ -163,7 +163,7 @@ export default function Home() {
       <section className="split-section split-reversed" id="contributions">
         <div className="split-image">
           <img
-            src="assets/img-contributions.png"
+            src="assets/the-bahai-temple-delhi-india-robert-preston.jpg"
             alt="مساهمات البهائيين في بناء المجتمع المصري"
             loading="lazy"
             width="550"

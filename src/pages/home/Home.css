@@ -201,6 +201,8 @@
 
 .split-section:hover .split-image img { transform: scale(1.03); }
 
+
+
 .split-content {
     padding: 5rem 4rem;
     display: flex;
