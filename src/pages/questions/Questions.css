@@ -75,8 +75,8 @@
 }
 
 .search-input-wrapper:focus-within {
-  border-color: var(--blue-mid);
-  box-shadow: 0 6px 20px rgba(26, 78, 138, 0.12);
+  outline: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .search-icon {
@@ -87,12 +87,19 @@
 .search-input {
   width: 100%;
   border: none;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
   background: transparent;
   padding: 1rem 0;
   font-family: var(--font-sans);
   font-size: 1.05rem;
   color: var(--text-dark);
+}
+
+.search-input:focus,
+.search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .search-input::placeholder {
