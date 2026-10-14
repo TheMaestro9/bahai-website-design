@@ -108,9 +108,6 @@ export default function Contributions() {
 
             <div className="pillars-cards-grid">
               <div className="pillar-feature-card">
-                <div className="pillar-card-icon-wrap">
-                  <span className="pillar-header-icon">♀</span>
-                </div>
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>النهوض بالمرأة</h4>
@@ -120,9 +117,6 @@ export default function Contributions() {
               </div>
 
               <div className="pillar-feature-card">
-                <div className="pillar-card-icon-wrap">
-                  <span className="pillar-header-icon">🌿</span>
-                </div>
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>الحفاظ على البيئة</h4>
@@ -132,9 +126,6 @@ export default function Contributions() {
               </div>
 
               <div className="pillar-feature-card">
-                <div className="pillar-card-icon-wrap">
-                  <span className="pillar-header-icon">📖</span>
-                </div>
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>التعليم ومحو الأمية</h4>
@@ -144,9 +135,6 @@ export default function Contributions() {
               </div>
 
               <div className="pillar-feature-card">
-                <div className="pillar-card-icon-wrap">
-                  <span className="pillar-header-icon">🩺</span>
-                </div>
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>النظافة والصحة</h4>
@@ -156,9 +144,6 @@ export default function Contributions() {
               </div>
 
               <div className="pillar-feature-card span-full">
-                <div className="pillar-card-icon-wrap">
-                  <span className="pillar-header-icon">🌾</span>
-                </div>
                 <div className="pillar-card-body">
                   <div className="pillar-card-top">
                     <h4>الزراعة وتربية الأسماك</h4>
@@ -199,7 +184,6 @@ export default function Contributions() {
               <div className="flow-card-grid">
                 <div className="flow-card-main">
                   <div className="flow-card-title-row">
-                    <span className="flow-card-emoji">🌸</span>
                     <h3>صفوف الأطفال البهائيّة للتّربية الرّوحانيّة</h3>
                   </div>
                   <p className="flow-card-desc">
@@ -208,14 +192,12 @@ export default function Contributions() {
                 </div>
                 <div className="flow-card-side">
                   <div className="side-feature-box">
-                    <span className="side-feature-icon">✨</span>
                     <div>
                       <strong>غرس الفضائل:</strong>
                       <p>تنمية السجايا الأخلاقية كالمحبة والصدق والأمانة والتعاون عبر القصص والأنشطة الإبداعية.</p>
                     </div>
                   </div>
                   <div className="side-feature-box">
-                    <span className="side-feature-icon">🎓</span>
                     <div>
                       <strong>تأهيل المعلمين:</strong>
                       <p>إعداد مربين قادرين على خلق بيئة دافئة تشجع الطفل على اكتشاف إمكانياته الكامنة.</p>
@@ -227,11 +209,10 @@ export default function Contributions() {
 
             {/* STAGE 2: JUNIOR YOUTH (FEATURED WIDE CARD) */}
             <div className="ruhi-flow-card stage-jy featured-flow-card">
-              <div className="flow-card-badge accent">من سنّ ١٢ إلى ١٥ سنة</div>
+              <div className="flow-card-badge">من سنّ ١٢ إلى ١٥ سنة</div>
               <div className="jy-card-full-layout">
                 <div className="jy-main-intro">
                   <div className="flow-card-title-row">
-                    <span className="flow-card-emoji">🌱</span>
                     <div>
                       <h3>برنامج التّمكين الرّوحانيّ للشّباب النّاشئ</h3>
                       <p className="jy-subtitle">مرحلة الانتقال الحيوية وتشكيل الهوية الأخلاقية</p>
@@ -245,7 +226,6 @@ export default function Contributions() {
                 <div className="jy-pillars-grid">
                   <div className="jy-sub-pillar-box">
                     <div className="pillar-header-wrap">
-                      <span className="sub-pillar-bullet">◈</span>
                       <h4>تنمية المهارات اللغوية والمنهج العلمي</h4>
                     </div>
                     <p>
@@ -255,7 +235,6 @@ export default function Contributions() {
 
                   <div className="jy-sub-pillar-box">
                     <div className="pillar-header-wrap">
-                      <span className="sub-pillar-bullet">◈</span>
                       <h4>متاح لكافة الهيئات والمؤسسات التعليمية</h4>
                     </div>
                     <p>
@@ -272,7 +251,6 @@ export default function Contributions() {
               <div className="flow-card-grid">
                 <div className="flow-card-main">
                   <div className="flow-card-title-row">
-                    <span className="flow-card-emoji">📚</span>
                     <h3>سلسلة الدّورات الرّئيسيّة للأعمار من ١٥ عامًا فأكثر</h3>
                   </div>
                   <p className="flow-card-desc">
@@ -281,14 +259,12 @@ export default function Contributions() {
                 </div>
                 <div className="flow-card-side">
                   <div className="side-feature-box">
-                    <span className="side-feature-icon">🤝</span>
                     <div>
                       <strong>حلقات دراسية وتعلم جماعي:</strong>
                       <p>مسار تشاركي يستكشف المفاهيم الروحية ويحولها إلى مبادرات عملية ملموسة لخير المحيط.</p>
                     </div>
                   </div>
                   <div className="side-feature-box">
-                    <span className="side-feature-icon">⚡</span>
                     <div>
                       <strong>تنمية روح المبادرة:</strong>
                       <p>إعداد الشباب لتولي مسؤولية تقدم أحيائهم ومساعدة الأجيال الصاعدة على التطور والازدهار.</p>
@@ -345,7 +321,6 @@ export default function Contributions() {
       <section className="contrib-section about-figures-section" id="figures">
         <div className="contrib-container">
           <div className="contrib-header-block centered contrib-reveal">
-            <span className="section-tag centered">إسهامات وطنية</span>
             <h2 className="section-heading centered">نماذج وشخصيات بارزة</h2>
             <p className="section-lead centered">
               أبناء مخلصون لمصر أثروا الحياة الفنية والأدبية والفكرية، وجسدوا في مسيرتهم قيم التفاني والإبداع وخدمة الصالح العام
@@ -400,7 +375,7 @@ export default function Contributions() {
           </div>
 
           {/* BOTTOM INVITATION / REFLECTION */}
-          <div className="contrib-cta-box contrib-reveal" style={{ marginTop: '4rem' }}>
+          {/* <div className="contrib-cta-box contrib-reveal" style={{ marginTop: '4rem' }}>
             <div className="contrib-cta-inner">
               <h3>شراكة مجتمعية في خدمة الوطن</h3>
               <p>
@@ -416,7 +391,7 @@ export default function Contributions() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

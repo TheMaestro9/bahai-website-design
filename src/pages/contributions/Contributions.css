@@ -242,10 +242,7 @@
   border: 1px solid var(--divider);
   border-radius: 18px;
   padding: 1.75rem 2rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: center;
+  display: block;
   transition: var(--transition);
   box-shadow: 0 4px 16px rgba(26, 78, 138, 0.04);
 }
