@@ -24,7 +24,7 @@ export default function History() {
       <section className="content-section">
         <h2 className="section-heading">المرور المبارك لحضرة بهاء الله لأرض مصر</h2>
         <div className="history-block">
-          <p className="dropcap">
+          <p>
             في عام 1868م، شرفت أرض مصر بمرور مبارك وفريد لحضرة بهاء الله. فبينما كان في طريقه إلى المنفى الأخير في مدينة عكا، توقفت السفينة التي كانت تقله في ميناء الإسكندرية العريق.
           </p>
           <p>

@@ -294,7 +294,7 @@ export default function Contributions() {
           <div className="discourses-wrap contrib-reveal">
             {/* Top Discourse Intro Card */}
             <div className="discourses-lead-card">
-              <p className="dropcap">
+              <p>
                 يسعى أفراد الجامعة البهائية في مصر مشاركة الجميع في المساهمة للعمل معا جنبا الي جنب في بناء مجتمع يسوده العدل والمحبة والاتحاد، كما يتأملون في خلق بيئة تعزز الحرية والمساواة وذلك إيمانا منهم بقدرة كل فرد يبدي رغبة في تقدم المجتمع، وتكون هذه فرصة للتعلم سوياً كيفية التغلب على التحديات التي تواجه المجتمع.
               </p>
               <p>

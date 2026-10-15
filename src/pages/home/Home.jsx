@@ -51,7 +51,7 @@ export default function Home() {
       {/* INTRO SECTION */}
       <section className="intro-section" id="intro">
         <div className="intro-inner">
-          <p className="intro-body dropcap">
+          <p className="intro-body">
             على ضفاف النيل، وفي قلب أرض الكنانة، تمتد جذور الجامعة البهائية لأكثر من مائةٍ وثمانين عامًا. فقد كانت مصر، على مرّ العصور، في طليعة البلدان التي احتضنت رسالات الله، وتهيّأت لتلقّي نورها، ومن ثمّ احتضنت هذه الدعوة العالمية.
           </p>
           <p className="intro-body">
@@ -230,7 +230,7 @@ export default function Home() {
           </div>
 
           <div className="history-block">
-            <p className="dropcap">
+            <p>
               يمتد وجود البهائيين في مصر إلى أكثر من قرن ونصف، حيث كانت مصر من أوائل البلدان التي شهدت انتشار هذه الدعوة. وقد لعبت مصر دورًا مهمًا في تاريخ الديانة البهائية، نظرًا لموقعها الثقافي والجغرافي، مما جعلها مركزًا للتفاعل الفكري والديني في المنطقة.
             </p>
           </div>

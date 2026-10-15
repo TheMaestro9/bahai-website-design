@@ -27,7 +27,7 @@ export default function AbdulBahaVisits() {
       <section className="visits-intro-section papyrus-bg">
         <div className="visits-container">
           <div className="visits-block intro-card">
-            <p className="dropcap">
+            <p>
               استطاع عباس أفندي - عبد البهاء - أن يوسّع نطاق الجامعة البهائية إلى حدٍ كبيرٍ بزيارته عدة بلدانٍ في أوروبا وأمريكا الشمالية ومصر بين عامي 1910م و1913م، لتعزيز ونشر رسالة وتعاليم الدين البهائي التي تروّج للسلام العالمي ووحدة الجنس البشري.
             </p>
             <p>
