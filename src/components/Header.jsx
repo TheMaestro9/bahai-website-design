@@ -51,7 +51,7 @@ export default function Header() {
           <div className="header-logo">
             <Link to="/" className="logo-link">
               <div className="logo-text">
-                <span className="logo-main">الجامعة البهائية في مصر</span>
+                <span className="logo-main"> البهائية في مصر</span>
                 <span className="logo-sub">الموقع الرسمي</span>
               </div>
             </Link>
