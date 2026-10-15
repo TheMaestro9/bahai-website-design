@@ -71,7 +71,7 @@ export default function Home() {
       <section className="split-section" id="about">
         <div className="split-image">
           <img
-            src="assets/the-bab-shrine-header.jpg"
+            src="assets/bahais-in-egypt/children.png"
             alt="البهائيون في مصر — مجتمع يعمل لخير الوطن"
             loading="lazy"
             width="550"

@@ -124,7 +124,32 @@
 }
 
 @media (max-width: 640px) {
+    .site-footer {
+        padding: 2.75rem 1.25rem 2rem;
+    }
+
+    .footer-inner {
+        gap: 1.5rem;
+    }
+
+    .footer-nav {
+        gap: 0.6rem 1.2rem;
+    }
+
     .footer-references {
-        gap: 2.5rem;
+        gap: 1.75rem;
+        padding: 0;
+    }
+
+    .footer-ref-col {
+        flex: 1 1 100%;
+    }
+
+    .footer-ref-line {
+        margin: 0 auto 0.75rem;
+    }
+
+    .footer-ref-list {
+        gap: 0.6rem;
     }
 }

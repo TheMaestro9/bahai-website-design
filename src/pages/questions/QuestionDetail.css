@@ -384,17 +384,31 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .article-detail-page {
+    padding-bottom: 3rem;
+  }
+
   .article-hero {
-    padding: 6.5rem 1rem 2.5rem;
+    padding: 4.5rem 1.25rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-main-container {
+    padding: 0 1.25rem;
   }
 
   .article-card-wrapper {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
     border-radius: 14px;
   }
 
   .article-content-body {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.85;
   }
 }

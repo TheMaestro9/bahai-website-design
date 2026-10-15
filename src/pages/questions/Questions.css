@@ -358,12 +358,47 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .questions-page {
+    padding-bottom: 3rem;
+  }
+
   .questions-hero {
-    padding: 5.5rem 1rem 2.5rem;
+    padding: 4.5rem 1.25rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .questions-hero-title {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .questions-hero-desc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .questions-toolbar {
+    margin-bottom: 1.5rem;
+    gap: 1rem;
   }
 
   .questions-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .question-card {
+    padding: 1.35rem 1.2rem;
+    border-radius: 14px;
+  }
+
+  .question-card-title {
+    font-size: 1.25rem;
+  }
+
+  .question-card-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
   .questions-categories-tabs {
@@ -371,6 +406,11 @@
     padding-bottom: 0.5rem;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .questions-categories-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .category-tab-btn {

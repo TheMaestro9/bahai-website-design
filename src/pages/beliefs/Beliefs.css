@@ -436,31 +436,74 @@
 
 @media (max-width: 768px) {
   .beliefs-hero {
-    height: 42vh;
-    min-height: 320px;
+    height: 38vh;
+    min-height: 280px;
   }
 
   .beliefs-hero-overlay {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .beliefs-hero-title {
+    font-size: 1.85rem;
   }
 
   .beliefs-topics-bar {
-    top: 60px;
+    top: 56px;
+    padding: 0.55rem 0;
+  }
+
+  .beliefs-container {
+    padding: 0 1.25rem;
   }
 
   .overview-paragraph {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.85;
   }
 
+  .belief-overview-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+  }
 
+  .thematic-grid {
+    gap: 1.25rem;
+  }
 
   .card-content {
-    padding: 1.6rem 1.5rem;
+    padding: 1.35rem 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+  }
+
+  .card-desc {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .library-card {
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
+    margin-top: 2.25rem;
+  }
+
+  .library-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .library-content p {
+    font-size: 0.98rem;
   }
 
   .library-btn {
     width: 100%;
     justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
   }
 }

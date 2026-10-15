@@ -703,23 +703,195 @@
   }
 }
 
-@media (max-width: 600px) {
-  .pillar-feature-card {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1.5rem;
+@media (max-width: 768px) {
+  .contrib-hero {
+    height: 40vh;
+    min-height: 280px;
   }
 
   .contrib-hero-overlay {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .contrib-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .contrib-hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .contrib-nav-bar {
+    top: 56px;
+  }
+
+  .contrib-nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding: 0.55rem 1rem;
+    gap: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .contrib-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .contrib-nav-item {
+    flex-shrink: 0;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.88rem;
+    gap: 0.45rem;
+  }
+
+  .nav-num {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
   }
 
   .contrib-section {
-    padding: 3.5rem 0;
+    padding: 2.25rem 0 1.25rem;
+    scroll-margin-top: 90px;
+  }
+
+  .contrib-header-block {
+    margin: 0 auto 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .contrib-header-block h2 {
+    font-size: 1.75rem;
+  }
+
+  .contrib-container {
+    padding: 0 1.25rem;
+  }
+
+  .pillar-feature-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .card-body p {
+    font-size: 1.02rem;
+    line-height: 1.85;
+  }
+
+  .jy-intro-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+
+  .jy-pillars-grid {
+    gap: 1rem;
+  }
+
+  .jy-sub-pillar-box {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .jy-sub-pillar-box p {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .discourses-wrap {
+    gap: 1.5rem;
+  }
+
+  .discourses-lead-card {
+    padding: 1.35rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .discourses-lead-card p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+
+  .quote-highlight-wide {
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .quote-highlight-wide blockquote {
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .discourses-dual-grid {
+    gap: 1.25rem;
+  }
+
+  .discourse-card {
+    padding: 1.35rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .discourse-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .discourse-card p {
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .about-figures-section {
+    padding: 2.5rem 0;
+  }
+
+  .about-figures-grid {
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-figure-content {
+    padding: 1.25rem;
+  }
+
+  .about-figure-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
   .contrib-cta-box {
-    padding: 2.5rem 1.5rem;
+    padding: 2.25rem 1.25rem;
+    margin-top: 2.5rem;
+    border-radius: 16px;
+  }
+
+  .contrib-cta-inner h3 {
+    font-size: 1.6rem;
+  }
+
+  .contrib-cta-inner p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .contrib-cta-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .contrib-btn-primary,
+  .contrib-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
   }
 }
 

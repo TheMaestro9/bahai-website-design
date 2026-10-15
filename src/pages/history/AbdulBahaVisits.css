@@ -350,40 +350,61 @@
 
 @media (max-width: 768px) {
     .visits-hero {
-        height: 50vh;
-        min-height: 350px;
+        height: 40vh;
+        min-height: 280px;
     }
     
     .visits-hero-overlay {
-        padding: 3rem 2rem;
+        padding: 2rem 1.25rem 1.5rem;
+        gap: 0.6rem;
+    }
+
+    .visits-hero-title {
+        font-size: 1.85rem;
     }
     
     .back-link {
-        top: 1.5rem;
-        left: 1.5rem;
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.85rem;
+        font-size: 0.78rem;
+    }
+
+    .visits-container {
+        padding: 0 1.25rem;
+    }
+
+    .visits-intro-section {
+        padding: 2.25rem 0;
     }
     
     .intro-card {
-        padding: 2rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    .visits-timeline-section {
+        padding: 2.25rem 0;
     }
     
     .media-highlight-block {
-        padding: 1.5rem;
-        margin: 2.5rem 0;
+        padding: 1.25rem;
+        margin: 1.75rem 0;
+        border-radius: 10px;
     }
     
     .highlight-conversation-box {
-        padding: 2rem;
-        margin: 3rem 0;
+        padding: 1.35rem 1.2rem;
+        margin: 1.75rem 0;
+        border-radius: 12px;
     }
     
     .dialogue-block {
-        padding-right: 1rem;
+        padding-right: 0.75rem;
     }
     
     .opinion-card {
-        padding: 2rem;
+        padding: 1.35rem 1.2rem;
+        border-radius: 12px;
     }
 }

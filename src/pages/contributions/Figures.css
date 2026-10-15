@@ -545,32 +545,65 @@
 
 @media (max-width: 600px) {
   .figures-hero {
-    padding: 4rem 1.25rem 3rem;
+    padding: 4.5rem 1.25rem 2.25rem;
+  }
+
+  .figures-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .figures-hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0 auto 1.75rem;
+  }
+
+  .figures-quick-nav {
+    gap: 0.6rem;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .quick-nav-pill {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .figure-section {
-    padding: 4rem 1.25rem;
+    padding: 2.25rem 1.25rem;
+  }
+
+  .figure-portrait-wrapper {
+    max-width: 280px;
   }
 
   .bicar-story-flow {
-    gap: 3rem;
-    margin: 2.5rem 0 3rem;
+    gap: 2rem;
+    margin: 1.75rem 0 2rem;
   }
 
   .bicar-editorial-title {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
 
   .bicar-editorial-content p {
-    font-size: 1.05rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.8;
   }
 
   .bicar-frame-box {
-    height: 240px;
+    height: 220px;
+  }
+
+  .honors-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 14px;
   }
 
   .somaya-tribute-card {
-    padding: 2.5rem 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: 14px;
   }
 }
