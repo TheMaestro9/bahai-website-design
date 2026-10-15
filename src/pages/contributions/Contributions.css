@@ -759,7 +759,7 @@
 .about-figure-img-wrap {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 300px;
   overflow: hidden;
   background: #f0f0f0;
 }
@@ -768,6 +768,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 18%;
   transition: transform 0.5s ease;
 }
 
@@ -856,6 +857,10 @@
 @media (max-width: 768px) {
   .about-figures-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-figure-img-wrap {
+    height: 260px;
   }
 
   .about-btn-primary {
