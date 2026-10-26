@@ -40,7 +40,6 @@ export default function Footer() {
           <Link to="/contributions">مساهماتهم</Link>
           <Link to="/history">التاريخ</Link>
           <Link to="/calendar">التقويم</Link>
-          <Link to="/questions">الأسئلة الشائعة وتساؤلات وحقائق</Link>
           <Link to="/#contact">تواصل معنا</Link>
         </nav>
 
