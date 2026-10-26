@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
+import '../history/History.css'; // styles for the history preview section
 import './Home.css';
 
 export default function Home() {
