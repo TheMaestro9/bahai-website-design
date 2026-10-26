@@ -1,8 +1,8 @@
-:HL["/_next/static/chunks/026yq1z043_ob.css","style"]
+:HL["/_next/static/chunks/3asyzqef59r7z.css","style"]
 :HL["/_next/static/chunks/38vixn9vl_dim.css","style"]
 :HL["/_next/static/chunks/19bq8qsho7kef.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"bahai-view-of-islam","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"questions","h":64,"c":"$Q2"}]]
-0:{"b":"VfJo6DLi_itGEEZoE_4Al","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"dZLXJSCLD84YlBO45U32w","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
