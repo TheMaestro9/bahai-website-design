@@ -1041,3 +1041,10 @@
   }
 }
 
+
+@media (max-width: 600px) {
+  .pillars-section-title h3 {
+    white-space: normal;
+    font-size: 1.25rem;
+  }
+}

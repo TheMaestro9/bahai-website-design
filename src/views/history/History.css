@@ -144,3 +144,19 @@
     margin-top: 1rem;
     font-family: var(--font-sans);
 }
+
+/* ================================================================
+   RESPONSIVE (kept here so it loads after the rules above)
+   ================================================================ */
+@media (max-width: 900px) {
+    .milestone-box { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
+@media (max-width: 600px) {
+    .history-hero { height: 240px; min-height: 240px; }
+    .history-hero-overlay { padding: 1.75rem 1.25rem; }
+    .history-hero-title { font-size: 1.75rem; }
+    .history-content { padding: 2.25rem 1.25rem; gap: 1.5rem; }
+    .history-opening-quote { padding: 1.5rem 1.25rem; }
+    .content-section { padding: 2.25rem 1.25rem; }
+}
