@@ -78,7 +78,7 @@
 
 /* Container */
 .covenant-container {
-    max-width: 900px;
+    max-width: var(--read-w);
     margin: 0 auto;
     padding: 0 2rem;
 }

@@ -28,7 +28,8 @@
     --font-serif:  'Amiri', Georgia, serif;
     --font-sans:   'Cairo', system-ui, sans-serif;
     --transition:  all .35s cubic-bezier(.4,0,.2,1);
-    --max-w:       1100px;
+    --max-w:       1200px;
+    --read-w:      900px;
     --symbol-url:  url('/assets/bahai-symbol.png');
     /* ---- Pattern assets ---- */
     --pattern-geo:    url('/assets/pattern-1.jpg');   /* Islamic geometric lattice */

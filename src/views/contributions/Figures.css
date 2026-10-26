@@ -23,7 +23,7 @@
 
 .figures-hero-full {
   width: 100%;
-  max-width: 1300px;
+  max-width: var(--max-w);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -130,7 +130,7 @@
 
 .figure-full-layout {
   width: 100%;
-  max-width: 1560px;
+  max-width: var(--max-w);
   margin: 0 auto;
 }
 

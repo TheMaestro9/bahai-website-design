@@ -67,7 +67,7 @@
 
 /* Container */
 .visits-container {
-    max-width: 850px;
+    max-width: var(--read-w);
     margin: 0 auto;
     padding: 0 2rem;
 }

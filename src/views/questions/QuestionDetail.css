@@ -20,7 +20,7 @@
 }
 
 .article-hero-content {
-  max-width: 860px;
+  max-width: var(--read-w);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@
 
 /* Main Container */
 .article-main-container {
-  max-width: 900px;
+  max-width: var(--read-w);
   margin: 0 auto;
   padding: 0 1.5rem;
 }

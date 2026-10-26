@@ -133,7 +133,7 @@
 /* Content sections used on History page */
 .content-section {
     padding: 5rem 2rem;
-    max-width: 800px;
+    max-width: var(--read-w);
     margin: 0 auto;
 }
 
