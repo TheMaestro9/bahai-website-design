@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Netlify branch
 
 on:
   push:
@@ -15,13 +15,20 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
       - name: Install and Build 🔧
         run: |
-          npm install
+          npm ci
           npm run build
 
+      # Pushes the built static site (Next.js export -> out/) to the branch Netlify serves
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
-          branch: gh-pages
+          folder: out
+          branch: netlify-deploy
