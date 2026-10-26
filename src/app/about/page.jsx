@@ -1,7 +1,7 @@
 import About from '@/views/about/About';
 
 export const metadata = {
-  title: 'الجامعة البهائية في مصر',
+  title: 'البهائيون في مصر',
   description: 'مواطنون مصريون يعملون بروح التفاني والشراكة لبناء مجتمع متماسك ومزدهر',
 };
 
