@@ -47,10 +47,7 @@
 
     /* Lotus frieze separator */
     .section-separator {
-        height: 42px;
-        background-size: auto 42px;
-        margin: 0;
-        opacity: 0.22;
+        --separator-h: 34px;
     }
 
     /* Page-specific phone rules live at the end of each page's own CSS

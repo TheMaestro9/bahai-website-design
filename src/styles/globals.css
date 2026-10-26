@@ -33,7 +33,7 @@
     --symbol-url:  url('/assets/bahai-symbol.png');
     /* ---- Pattern assets ---- */
     --pattern-geo:    url('/assets/pattern-1.jpg');   /* Islamic geometric lattice */
-    --pattern-lotus:  url('/assets/pattern4.png');    /* Egyptian lotus border frieze */
+    --pattern-lotus:  url('/assets/lotus-frieze.svg'); /* Egyptian lotus border frieze */
     --papyrus:        url('/assets/bardi-paper.webp'); /* Egyptian papyrus texture */
 }
 
@@ -202,25 +202,32 @@ strong { color: var(--text-dark); font-weight: 700; }
     opacity: 0.8;
 }
 
+/* Full-width lotus frieze printed on a papyrus strip */
 .section-separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
+    --separator-h: 56px;
+    position: relative;
+    isolation: isolate;
     margin: 0;
     padding: 0;
-    /* Replace the plain separator with a full-width lotus frieze */
-    height: 70px;
-    background-image: var(--pattern-lotus);
-    background-size: auto 70px;
-    background-repeat: repeat-x;
-    background-position: center;
-    opacity: 0.28;
+    height: var(--separator-h);
     overflow: hidden;
+    /* papyrus texture softened by the warm background tone */
+    background:
+        linear-gradient(rgb(251 247 242 / 0.82), rgb(251 247 242 / 0.82)),
+        var(--papyrus) 0 0 / 550px auto repeat;
 }
 
-/* Hide the old pseudo-element lines */
-.section-separator::before,
+/* The lotus, blended into the paper like ink */
+.section-separator::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--pattern-lotus) center / auto var(--separator-h) repeat-x;
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
 .section-separator::after { display: none; }
 
 /* Also hide the bahai symbol inside separators — lotus now is the separator */
