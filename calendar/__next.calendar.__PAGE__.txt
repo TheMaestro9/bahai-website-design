@@ -1,0 +1,27 @@
+2:"$Sreact.fragment"
+3:"/bahai-website-design/_next/static/chunks/2wfzr_hl_0s_s.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:"/bahai-website-design/_next/static/chunks/0aigqdeeknz4a.js"
+b:I[61932,["$3","$a"],"default"]
+c:I[97367,["$3"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+:HL["/bahai-website-design/_next/static/chunks/433f1kpk_2uzt.css","style"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Lb",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/bahai-website-design/_next/static/chunks/433f1kpk_2uzt.css","precedence":"next"}],["$","script","script-0",{"src":"/bahai-website-design/_next/static/chunks/0aigqdeeknz4a.js","async":true}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"p":"$@f","v":null,"s":"$8"}}]]
+1:[["children",{"s":"calendar","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"التقويم البهائي (البديع) | الجامعة البهائية في مصر"}],["$","meta","1",{"name":"description","content":"تقويم شمسي أسسه الباب، يتكون من ١٩ شهراً، في كل شهر ١٩ يوماً، بالإضافة إلى أيام الهاء الاستثنائية."}]]}]}],null]}],null]}],"p":"$@14","v":null,"s":"$8"}},"a":"$@15","u":"$@16","b":"irbphRlURsQxwik_8vdaU"}
+e:null
+16:true
+8:300
+8:C
+15:0
+6:"$undefined"
+14:"$undefined"
+f:"$undefined"

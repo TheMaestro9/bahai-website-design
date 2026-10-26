@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!--
+    Hidden copy of the contact form, read by Netlify at deploy time.
+    The real form lives at /contact and posts here in the background.
+    Keep the field names in sync with src/views/contact/Contact.jsx.
+  -->
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input name="bot-field">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="subject">
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

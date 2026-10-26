@@ -1,0 +1,8 @@
+:HL["/bahai-website-design/_next/static/chunks/3asyzqef59r7z.css","style"]
+:HL["/bahai-website-design/_next/static/chunks/38vixn9vl_dim.css","style"]
+:HL["/bahai-website-design/_next/static/chunks/19bq8qsho7kef.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap","style"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"alleged-relation-with-israel","s":[]},"h":96,"c":"$Q3"}]]
+1:[["children",{"s":"articles","h":64,"c":"$Q2"}]]
+0:{"b":"irbphRlURsQxwik_8vdaU","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
