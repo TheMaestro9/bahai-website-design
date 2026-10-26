@@ -1,5 +1,8 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import './Header.css';
 import { getBadiDate } from '../utils/badiCalendar';
 
@@ -7,7 +10,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [badiDate, setBadiDate] = useState('');
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +39,11 @@ export default function Header() {
 
   // Helper for hash links or page links
   const NavLink = ({ to, children, hash }) => {
-    const isHomePage = location.pathname === '/';
+    const isHomePage = pathname === '/';
     if (isHomePage && hash) {
       return <li><a href={hash} onClick={closeMenu}>{children}</a></li>;
     }
-    return <li><Link to={to} onClick={closeMenu}>{children}</Link></li>;
+    return <li><Link href={to} onClick={closeMenu}>{children}</Link></li>;
   };
 
   return (
@@ -49,7 +52,7 @@ export default function Header() {
       <header className={`site-header ${isScrolled ? 'scrolled' : ''}`} id="site-header">
         <div className="header-inner">
           <div className="header-logo">
-            <Link to="/" className="logo-link">
+            <Link href="/" className="logo-link">
               <div className="logo-text">
                 <span className="logo-main"> البهائية في مصر</span>
                 <span className="logo-sub">الموقع الرسمي</span>
@@ -68,7 +71,7 @@ export default function Header() {
           <div className="header-actions">
             {badiDate && (
               <Link 
-                to="/calendar" 
+                href="/calendar" 
                 className="header-badi-date" 
                 title="اضغط لعرض تفاصيل التقويم البهائي (يتحدث يومياً الساعة ٦:٠٠ مساءً)"
               >
@@ -93,7 +96,7 @@ export default function Header() {
       {/* Mobile Nav Drawer */}
       <div className={`mobile-nav ${isOpen ? 'open' : ''}`} id="mobile-nav">
         {badiDate && (
-          <Link to="/calendar" className="mobile-badi-date" onClick={closeMenu}>
+          <Link href="/calendar" className="mobile-badi-date" onClick={closeMenu}>
             <span className="badi-label">التاريخ البهائي:</span>
             <span className="badi-value">{badiDate}</span>
           </Link>

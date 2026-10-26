@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './Footer.css';
 
 const WORLD_BAHAI_LINKS = [
@@ -33,14 +33,14 @@ export default function Footer() {
         </div>
 
         <nav className="footer-nav" aria-label="روابط الموقع">
-          <Link to="/#about">البهائيون في مصر</Link>
-          <Link to="/figures">نماذج بارزة</Link>
-          <Link to="/beliefs">ما يؤمنون به</Link>
-          <Link to="/beliefs/covenant">الميثاق الإلهي</Link>
-          <Link to="/contributions">مساهماتهم</Link>
-          <Link to="/history">التاريخ</Link>
-          <Link to="/calendar">التقويم</Link>
-          <Link to="/#contact">تواصل معنا</Link>
+          <Link href="/#about">البهائيون في مصر</Link>
+          <Link href="/figures">نماذج بارزة</Link>
+          <Link href="/beliefs">ما يؤمنون به</Link>
+          <Link href="/beliefs/covenant">الميثاق الإلهي</Link>
+          <Link href="/contributions">مساهماتهم</Link>
+          <Link href="/history">التاريخ</Link>
+          <Link href="/calendar">التقويم</Link>
+          <Link href="/#contact">تواصل معنا</Link>
         </nav>
 
         <div className="footer-divider"></div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './Button.css';
 import SvgIcon from './SvgIcon';
 
@@ -37,7 +37,7 @@ export default function Button({
 
   if (to) {
     return (
-      <Link to={to} className={classNames} onClick={onClick} {...props}>
+      <Link href={to} className={classNames} onClick={onClick} {...props}>
         {content}
       </Link>
     );
