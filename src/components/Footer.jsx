@@ -40,7 +40,7 @@ export default function Footer() {
           <Link href="/contributions">مساهماتهم</Link>
           <Link href="/history">التاريخ</Link>
           <Link href="/calendar">التقويم</Link>
-          <Link href="/#contact">تواصل معنا</Link>
+          <Link href="/contact">تواصل معنا</Link>
         </nav>
 
         <div className="footer-divider"></div>

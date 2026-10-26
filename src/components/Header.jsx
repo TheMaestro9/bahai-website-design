@@ -65,7 +65,7 @@ export default function Header() {
               <NavLink to="/beliefs">ما يؤمنون به</NavLink>
               <NavLink to="/contributions">مساهماتهم</NavLink>
               <NavLink to="/history">التاريخ</NavLink>
-              <NavLink to="/#contact" hash="#contact">تواصل معنا</NavLink>
+              <NavLink to="/contact">تواصل معنا</NavLink>
             </ul>
           </nav>
           <div className="header-actions">
@@ -106,7 +106,7 @@ export default function Header() {
           <NavLink to="/beliefs">ما يؤمنون به</NavLink>
           <NavLink to="/contributions">مساهماتهم</NavLink>
           <NavLink to="/history">التاريخ</NavLink>
-          <NavLink to="/#contact" hash="#contact">تواصل معنا</NavLink>
+          <NavLink to="/contact">تواصل معنا</NavLink>
         </ul>
       </div>
       <div

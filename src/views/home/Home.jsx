@@ -287,7 +287,7 @@ export default function Home() {
           <p className="contact-lead">
             يسعدنا استقبال استفساراتكم والتواصل معكم للتعرف على المزيد حول المجتمع البهائي وأنشطته. يمكنكم التواصل معنا عبر البريد الإلكتروني أو من خلال النماذج المتاحة على الموقع.
           </p>
-          <a href="mailto:info@bahai-egypt.org" className="btn-contact">تواصل معنا</a>
+          <Link href="/contact" className="btn-contact">تواصل معنا</Link>
         </div>
       </section>
 
