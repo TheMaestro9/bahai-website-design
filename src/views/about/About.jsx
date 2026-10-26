@@ -12,7 +12,7 @@ export default function About() {
       {/* HERO SECTION */}
       <section className="about-hero">
         <img
-          src="/assets/img-about.png"
+          src="/assets/azhar-garden.jpeg"
           alt="البهائيون في مصر"
           className="about-bg-img"
         />
