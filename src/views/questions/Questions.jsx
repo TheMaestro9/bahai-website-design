@@ -6,6 +6,7 @@ import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
 import IconButton from '../../components/ui/IconButton';
 import SvgIcon from '../../components/ui/SvgIcon';
+import { BASE_PATH } from '@/utils/asset';
 import './Questions.css';
 
 export default function Questions() {
@@ -45,7 +46,7 @@ export default function Questions() {
   }, []);
 
   const handleCopyLink = (slug, id) => {
-    const url = `${window.location.origin}/questions/${slug}/`;
+    const url = `${window.location.origin}${BASE_PATH}/questions/${slug}/`;
     navigator.clipboard.writeText(url).then(() => {
       setCopiedId(id);
       setTimeout(() => setCopiedId(null), 2500);

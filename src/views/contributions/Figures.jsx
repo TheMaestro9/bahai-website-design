@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './Figures.css';
+import { asset } from '@/utils/asset';
 
 export default function Figures() {
   useReveal('.figures-reveal, .figure-card, .showcase-item, .bicar-editorial-row');
@@ -55,7 +56,7 @@ export default function Figures() {
           <div className="figure-header-row figures-reveal">
             <div className="figure-portrait-wrapper">
               <img
-                src="/assets/nmazeg/h-bicar/personal-image-1.jpg"
+                src={asset('/assets/nmazeg/h-bicar/personal-image-1.jpg')}
                 alt="الفنان حسين بيكار"
                 className="figure-main-portrait"
                 loading="lazy"
@@ -99,7 +100,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/h-bicar/art-work1.jpg"
+                    src={asset('/assets/nmazeg/h-bicar/art-work1.jpg')}
                     alt="أصالة الريف والمرأة المصرية في أعمال بيكار"
                     loading="lazy"
                   />
@@ -125,7 +126,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/h-bicar/art-wrok2.jpg"
+                    src={asset('/assets/nmazeg/h-bicar/art-wrok2.jpg')}
                     alt="بورتريه بريشة الفنان حسين بيكار"
                     loading="lazy"
                   />
@@ -154,7 +155,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/h-bicar/abu-simbel.jpg"
+                    src={asset('/assets/nmazeg/h-bicar/abu-simbel.jpg')}
                     alt="توثيق معبد أبي سمبل وملحمة العجيبة الثامنة"
                     loading="lazy"
                   />
@@ -180,7 +181,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/h-bicar/personal-image.jpg"
+                    src={asset('/assets/nmazeg/h-bicar/personal-image.jpg')}
                     alt="عازف الموسيقى ورمزية الأصالة النوبية"
                     loading="lazy"
                   />
@@ -226,7 +227,7 @@ export default function Figures() {
           <div className="figure-header-row figures-reveal">
             <div className="figure-portrait-wrapper">
               <img
-                src="/assets/nmazeg/s-ramadan/personal-look.jpg"
+                src={asset('/assets/nmazeg/s-ramadan/personal-look.jpg')}
                 alt="الدكتورة سمية رمضان"
                 className="figure-main-portrait"
                 loading="lazy"
@@ -267,7 +268,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box book-frame">
                   <img
-                    src="/assets/nmazeg/s-ramadan/book-by-ramadan.jpg"
+                    src={asset('/assets/nmazeg/s-ramadan/book-by-ramadan.jpg')}
                     alt="غلاف رواية أوراق النرجس للدكتورة سمية رمضان"
                     loading="lazy"
                   />
@@ -293,7 +294,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/s-ramadan/persoanl-conferance.jpg"
+                    src={asset('/assets/nmazeg/s-ramadan/persoanl-conferance.jpg')}
                     alt="د. سمية رمضان متحدثة في مؤتمر أكاديمي"
                     loading="lazy"
                   />
@@ -322,7 +323,7 @@ export default function Figures() {
               <div className="bicar-editorial-media">
                 <div className="bicar-frame-box">
                   <img
-                    src="/assets/nmazeg/s-ramadan/somaya-bicar-portrait.jpg"
+                    src={asset('/assets/nmazeg/s-ramadan/somaya-bicar-portrait.jpg')}
                     alt="د. سمية رمضان أمام البورتريه الشخصي بريشة حسين بيكار"
                     loading="lazy"
                   />

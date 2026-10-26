@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './About.css';
+import { asset } from '@/utils/asset';
 
 export default function About() {
   useReveal('.about-reveal, .content-section');
@@ -12,7 +13,7 @@ export default function About() {
       {/* HERO SECTION */}
       <section className="about-hero">
         <img
-          src="/assets/azhar-garden.jpeg"
+          src={asset('/assets/azhar-garden.jpeg')}
           alt="البهائيون في مصر"
           className="about-bg-img"
         />
@@ -104,7 +105,7 @@ export default function About() {
             </p>
             <div className="history-preview-container">
               <img
-                src="/assets/bahais-in-egypt/first-conference-1924.png"
+                src={asset('/assets/bahais-in-egypt/first-conference-1924.png')}
                 alt="المندوبون في أول مؤتمر بهائي مركزي بمصر عام 1924"
                 className="history-preview-img"
                 loading="lazy"

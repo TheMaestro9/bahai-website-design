@@ -5,6 +5,7 @@ import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import '../history/History.css'; // styles for the history preview section
 import './Home.css';
+import { asset } from '@/utils/asset';
 
 export default function Home() {
   const [currentWord, setCurrentWord] = useState(0);
@@ -35,7 +36,7 @@ export default function Home() {
     <>
       {/* HERO SECTION */}
       <section className="hero" id="home">
-        <div className="hero-bg" style={{ backgroundImage: 'url("/assets/hero.png")' }}></div>
+        <div className="hero-bg" style={{ backgroundImage: `url("${asset('/assets/hero.png')}")` }}></div>
         <div className="hero-overlay"></div>
         <div className="hero-pattern"></div>
         <div className="hero-content">
@@ -73,7 +74,7 @@ export default function Home() {
       <section className="split-section" id="about">
         <div className="split-image">
           <img
-            src="/assets/bahais-in-egypt/children.png"
+            src={asset('/assets/bahais-in-egypt/children.png')}
             alt="البهائيون في مصر — مجتمع يعمل لخير الوطن"
             loading="lazy"
             width="550"
@@ -165,7 +166,7 @@ export default function Home() {
       <section className="split-section split-reversed" id="contributions">
         <div className="split-image">
           <img
-            src="/assets/the-bahai-temple-delhi-india-robert-preston.jpg"
+            src={asset('/assets/the-bahai-temple-delhi-india-robert-preston.jpg')}
             alt="مساهمات البهائيين في بناء المجتمع المصري"
             loading="lazy"
             width="550"
@@ -210,7 +211,7 @@ export default function Home() {
       <section className="history-section" id="history">
         <div className="history-hero">
           <img
-            src="/assets/history-hero.jpeg"
+            src={asset('/assets/history-hero.jpeg')}
             alt="تاريخ البهائية في مصر"
             className="history-bg-img"
             loading="lazy"

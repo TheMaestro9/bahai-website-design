@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './AbdulBahaVisits.css';
+import { asset } from '@/utils/asset';
 
 export default function AbdulBahaVisits() {
   useReveal('.visits-block, .visits-section, .opinion-card');
@@ -12,7 +13,7 @@ export default function AbdulBahaVisits() {
       {/* HERO SECTION */}
       <section className="visits-hero">
         <img
-          src="/assets/bahais-in-egypt/abdulbaha-visits/abdul-baha.jpg"
+          src={asset('/assets/bahais-in-egypt/abdulbaha-visits/abdul-baha.jpg')}
           alt="حضرة عبد البهاء عباس"
           className="visits-bg-img"
         />
@@ -190,7 +191,7 @@ export default function AbdulBahaVisits() {
             <div className="opinion-card">
               <div className="opinion-header">
                 <img
-                  src="/assets/bahais-in-egypt/abdulbaha-visits/prince-shkip-arslan.webp"
+                  src={asset('/assets/bahais-in-egypt/abdulbaha-visits/prince-shkip-arslan.webp')}
                   alt="الأمير شكيب أرسلان"
                   className="opinion-author-img"
                 />
@@ -211,7 +212,7 @@ export default function AbdulBahaVisits() {
             <div className="opinion-card">
               <div className="opinion-header">
                 <img
-                  src="/assets/bahais-in-egypt/abdulbaha-visits/mohamed abdo.webp"
+                  src={asset('/assets/bahais-in-egypt/abdulbaha-visits/mohamed abdo.webp')}
                   alt="الإمام محمد عبده"
                   className="opinion-author-img"
                 />
@@ -232,7 +233,7 @@ export default function AbdulBahaVisits() {
             <div className="opinion-card">
               <div className="opinion-header">
                 <img
-                  src="/assets/bahais-in-egypt/abdulbaha-visits/abdulrahman-el barkoki.jpg"
+                  src={asset('/assets/bahais-in-egypt/abdulbaha-visits/abdulrahman-el barkoki.jpg')}
                   alt="عبد الرحمن البرقوقي"
                   className="opinion-author-img"
                 />
@@ -253,7 +254,7 @@ export default function AbdulBahaVisits() {
             <div className="opinion-card">
               <div className="opinion-header">
                 <img
-                  src="/assets/bahais-in-egypt/abdulbaha-visits/el-antakyjpg.jpg"
+                  src={asset('/assets/bahais-in-egypt/abdulbaha-visits/el-antakyjpg.jpg')}
                   alt="عبد المسيح الأنطاكي"
                   className="opinion-author-img"
                 />

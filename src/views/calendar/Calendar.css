@@ -12,7 +12,7 @@
 .calendar-hero {
     position: relative;
     height: 380px;
-    background-image: url('/assets/bahais-in-egypt/calendar-header-image-v3.jpg'); /* Local assets header image */
+    background-image: var(--calendar-hero-img); /* set in src/app/layout.jsx */
     background-size: cover;
     background-position: center;
     display: flex;

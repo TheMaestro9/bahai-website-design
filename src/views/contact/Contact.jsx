@@ -2,9 +2,11 @@
 
 import { useState, useRef } from 'react';
 import './Contact.css';
+import { asset } from '@/utils/asset';
 
 // Netlify registers this form from public/__forms.html at deploy time.
 const FORM_NAME = 'contact';
+const CONTACT_EMAIL = 'info@bahai-egypt.org';
 
 export default function Contact() {
   // idle | sending | success | error
@@ -36,7 +38,7 @@ export default function Contact() {
   return (
     <div className="contact-page">
       <section className="contact-hero">
-        <img src="/assets/nile-night.jpeg" alt="" className="contact-hero-img" />
+        <img src={asset('/assets/nile-night.jpeg')} alt="" className="contact-hero-img" />
         <div className="contact-hero-overlay">
           <span className="section-tag light">تواصل معنا</span>
           <h1 className="contact-hero-title">باب المحبة مفتوح للجميع</h1>
@@ -94,7 +96,7 @@ export default function Contact() {
               {status === 'error' && (
                 <p className="contact-error" role="alert">
                   عذرًا، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا عبر{' '}
-                  <a href="mailto:info@bahai-egypt.org">info@bahai-egypt.org</a>.
+                  <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
                 </p>
               )}
 

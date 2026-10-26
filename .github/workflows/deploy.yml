@@ -1,4 +1,4 @@
-name: Deploy to Netlify branch
+name: Deploy to Netlify and GitHub Pages
 
 on:
   push:
@@ -21,14 +21,34 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build
+      - name: Install 📦
+        run: npm ci
 
-      # Pushes the built static site (Next.js export -> out/) to the branch Netlify serves
-      - name: Deploy 🚀
+      # Netlify serves the site from the domain root.
+      - name: Build for Netlify 🔧
+        run: |
+          npm run build
+          touch out/.nojekyll
+          mv out out-netlify
+
+      # GitHub Pages serves it from /bahai-website-design/.
+      # The contact form only receives messages on Netlify.
+      - name: Build for GitHub Pages 🔧
+        env:
+          NEXT_PUBLIC_BASE_PATH: /bahai-website-design
+        run: |
+          npm run build
+          touch out/.nojekyll
+          mv out out-gh-pages
+
+      - name: Deploy to Netlify branch 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out
+          folder: out-netlify
           branch: netlify-deploy
+
+      - name: Deploy to GitHub Pages branch 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out-gh-pages
+          branch: gh-pages

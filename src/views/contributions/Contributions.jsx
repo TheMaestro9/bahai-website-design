@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './Contributions.css';
+import { asset } from '@/utils/asset';
 
 export default function Contributions() {
   useReveal('.contrib-reveal, .contrib-section');
@@ -27,7 +28,7 @@ export default function Contributions() {
       {/* HERO SECTION */}
       <section className="contrib-hero">
         <img
-          src="/assets/What we do/action.jpg"
+          src={asset('/assets/What we do/action.jpg')}
           alt="مساهمات في بناء المجتمع"
           className="contrib-bg-img"
         />
@@ -334,7 +335,7 @@ export default function Contributions() {
             <div className="about-figure-card">
               <div className="about-figure-img-wrap">
                 <img 
-                  src="/assets/nmazeg/h-bicar/personal-image.jpg" 
+                  src={asset('/assets/nmazeg/h-bicar/personal-image.jpg')} 
                   alt="الفنان حسين بيكار" 
                   loading="lazy" 
                 />
@@ -353,7 +354,7 @@ export default function Contributions() {
             <div className="about-figure-card">
               <div className="about-figure-img-wrap">
                 <img 
-                  src="/assets/nmazeg/s-ramadan/personal-look.jpg" 
+                  src={asset('/assets/nmazeg/s-ramadan/personal-look.jpg')} 
                   alt="د. سمية رمضان" 
                   loading="lazy" 
                 />

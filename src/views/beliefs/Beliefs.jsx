@@ -2,6 +2,7 @@
 
 import useReveal from '../../hooks/useReveal';
 import './Beliefs.css';
+import { asset } from '@/utils/asset';
 
 const TOPIC_LINKS = [
   { title: 'لمحة عامّة', url: '#overview', isInternal: true },
@@ -17,7 +18,7 @@ const THEMATIC_TOPICS = [
     id: 'covenant',
     title: 'حضرة بهاءاللّٰه وعهده وميثاقه',
     subtitle: 'نشأة الدّين البهائيّ ومصدر وحدته المميزة',
-    image: '/assets/beliefs/tile-1-bahaullah-covenant.jpg',
+    image: asset('/assets/beliefs/tile-1-bahaullah-covenant.jpg'),
     url: 'https://www.bahai.org/ar/beliefs/bahaullah-covenant',
     tag: 'العهد والميثاق'
   },
@@ -25,7 +26,7 @@ const THEMATIC_TOPICS = [
     id: 'life-spirit',
     title: 'حياة الرّوح',
     subtitle: 'الروح الخالدة، الهدف من الحياة، وتطور الصفات الروحانية',
-    image: '/assets/beliefs/tile-4-life-spirit.jpg',
+    image: asset('/assets/beliefs/tile-4-life-spirit.jpg'),
     url: 'https://www.bahai.org/ar/beliefs/life-spirit',
     tag: 'الروحانيات'
   },
@@ -33,7 +34,7 @@ const THEMATIC_TOPICS = [
     id: 'god-creation',
     title: 'الله وخلقه',
     subtitle: 'اللّٰه والوحي الإلهيّ ومظاهر الظّهور والجنس البشريّ وعالم الطّبيعة، تقدّم المدنيّة',
-    image: '/assets/beliefs/tile-3-god-his-creation.jpg',
+    image: asset('/assets/beliefs/tile-3-god-his-creation.jpg'),
     url: 'https://www.bahai.org/ar/beliefs/god-his-creation',
     tag: 'الوحي والكون'
   },
@@ -41,7 +42,7 @@ const THEMATIC_TOPICS = [
     id: 'relationships',
     title: 'العلاقات الأساسيّة',
     subtitle: 'تطوير العلاقات والروابط الّتي تعكس مبدأ وحدة العالم الإنساني بين الأفراد، الجامعات، والمؤسسات',
-    image: '/assets/beliefs/tile-2-essential-relationships.jpg',
+    image: asset('/assets/beliefs/tile-2-essential-relationships.jpg'),
     url: 'https://www.bahai.org/ar/beliefs/essential-relationships',
     tag: 'المجتمع والوحدة'
   },
@@ -49,7 +50,7 @@ const THEMATIC_TOPICS = [
     id: 'peace',
     title: 'السّلام العالميّ',
     subtitle: 'المبادئ اللازمة لتحقيق السلام وبناء مدنيّة عالمية جديدة',
-    image: '/assets/beliefs/tile-5-universal-peace.jpg',
+    image: asset('/assets/beliefs/tile-5-universal-peace.jpg'),
     url: 'https://www.bahai.org/ar/beliefs/universal-peace',
     tag: 'السلام والحضارة'
   }
@@ -63,7 +64,7 @@ export default function Beliefs() {
       {/* HERO SECTION */}
       <section className="beliefs-hero">
         <img
-          src="/assets/sea2.jpeg"
+          src={asset('/assets/sea2.jpeg')}
           alt="ما يؤمن به البهائيّون"
           className="beliefs-bg-img"
         />

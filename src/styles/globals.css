@@ -30,11 +30,9 @@
     --transition:  all .35s cubic-bezier(.4,0,.2,1);
     --max-w:       1200px;
     --read-w:      900px;
-    --symbol-url:  url('/assets/bahai-symbol.png');
-    /* ---- Pattern assets ---- */
-    --pattern-geo:    url('/assets/pattern-1.jpg');   /* Islamic geometric lattice */
-    --pattern-lotus:  url('/assets/lotus-frieze.svg'); /* Egyptian lotus border frieze */
-    --papyrus:        url('/assets/bardi-paper.webp'); /* Egyptian papyrus texture */
+    /* Image variables (--symbol-url, --pattern-geo, --pattern-lotus, --papyrus,
+       --calendar-hero-img) are set in src/app/layout.jsx so they work on
+       GitHub Pages, where the site lives in a subfolder. */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
