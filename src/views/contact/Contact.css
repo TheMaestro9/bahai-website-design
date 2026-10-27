@@ -10,8 +10,8 @@
 /* ---- Hero ---- */
 .contact-hero {
   position: relative;
-  height: 44vh;
-  min-height: 340px;
+  height: var(--hero-h);
+  min-height: var(--hero-min-h);
   overflow: hidden;
 }
 
@@ -204,11 +204,6 @@
 }
 
 @media (max-width: 640px) {
-  .contact-hero {
-    height: 36vh;
-    min-height: 260px;
-  }
-
   .contact-hero-overlay {
     padding: 2rem 1.25rem 1.5rem;
     gap: 0.6rem;

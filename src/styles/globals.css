@@ -30,9 +30,19 @@
     --transition:  all .35s cubic-bezier(.4,0,.2,1);
     --max-w:       1200px;
     --read-w:      900px;
+    /* Inner-page hero size (home page keeps its full-screen hero) */
+    --hero-h:      52vh;
+    --hero-min-h:  380px;
     /* Image variables (--symbol-url, --pattern-geo, --pattern-lotus, --papyrus,
        --calendar-hero-img) are set in src/app/layout.jsx so they work on
        GitHub Pages, where the site lives in a subfolder. */
+}
+
+@media (max-width: 768px) {
+    :root {
+        --hero-h:     40vh;
+        --hero-min-h: 280px;
+    }
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

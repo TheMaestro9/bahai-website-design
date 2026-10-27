@@ -19,6 +19,10 @@
   background: linear-gradient(135deg, var(--blue-deep) 0%, #113460 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   text-align: center;
+  min-height: max(var(--hero-h), var(--hero-min-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .figures-hero-full {

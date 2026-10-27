@@ -17,6 +17,10 @@
   color: var(--white);
   margin-bottom: 2.5rem;
   box-shadow: 0 4px 20px rgba(13, 46, 84, 0.15);
+  min-height: max(var(--hero-h), var(--hero-min-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .article-hero-content {

@@ -10,8 +10,8 @@
 /* Hero Section */
 .visits-hero {
     position: relative;
-    height: 60vh;
-    min-height: 420px;
+    height: var(--hero-h);
+    min-height: var(--hero-min-h);
     overflow: hidden;
 }
 
@@ -349,11 +349,6 @@
 }
 
 @media (max-width: 768px) {
-    .visits-hero {
-        height: 40vh;
-        min-height: 280px;
-    }
-    
     .visits-hero-overlay {
         padding: 2rem 1.25rem 1.5rem;
         gap: 0.6rem;

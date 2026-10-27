@@ -11,7 +11,8 @@
 /* Hero Section */
 .calendar-hero {
     position: relative;
-    height: 380px;
+    height: var(--hero-h);
+    min-height: var(--hero-min-h);
     background-image: var(--calendar-hero-img); /* set in src/app/layout.jsx */
     background-size: cover;
     background-position: center;
@@ -494,8 +495,6 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
     .calendar-hero {
-        height: 260px;
-        min-height: 240px;
         padding: 0 1.25rem;
     }
 
