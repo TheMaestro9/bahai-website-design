@@ -4,6 +4,7 @@ import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './Figures.css';
 import { asset } from '@/utils/asset';
+import SocialLinks from '../../components/ui/SocialLinks';
 
 export default function Figures() {
   useReveal('.figures-reveal, .figure-card, .showcase-item, .bicar-editorial-row');
@@ -76,6 +77,15 @@ export default function Figures() {
               <p>
                 بدأ مسيرته المهنية عقب تخرجه بالتدريس في مصر والمغرب، ثم عاد في مطلع الأربعينيات ليدرّس في كلية الفنون الجميلة بالقاهرة مساعداً لأستاذه أحمد صبري، بالتوازي مع انطلاقته اللامعة في عالم الصحافة.
               </p>
+
+              <SocialLinks
+                ariaLabel="روابط حسين بيكار"
+                links={[
+                  { type: 'website', href: 'https://www.hbicar.com' },
+                  { type: 'instagram', href: 'https://www.instagram.com/hussein_bicar/' },
+                  { type: 'facebook', href: 'https://www.facebook.com/hBicar' },
+                ]}
+              />
             </div>
           </div>
 

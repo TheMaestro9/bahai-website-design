@@ -1,0 +1,28 @@
+.ui-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.ui-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--blue-light);
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.ui-social-link:hover,
+.ui-social-link:focus-visible {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+  color: var(--white);
+}
