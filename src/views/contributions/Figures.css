@@ -122,7 +122,8 @@
   padding: 5.5rem 4vw;
 }
 
-.figure-bicar-section {
+.figure-bicar-section,
+.figure-moussa-section {
   background: var(--white);
 }
 

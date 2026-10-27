@@ -44,6 +44,14 @@ export default function Figures() {
               <span>الدكتورة سمية رمضان</span>
               <span className="pill-dates">(١٩٥١ - ٢٠٢٤)</span>
             </button>
+            <button
+              type="button"
+              className="quick-nav-pill"
+              onClick={() => scrollToSection('moussa')}
+            >
+              <span>الدكتورة باسمة موسى</span>
+              <span className="pill-dates">(١٩٥٨ - ٢٠٢٥)</span>
+            </button>
           </div>
         </div>
       </section>
@@ -353,6 +361,157 @@ export default function Figures() {
               «إنها أجمل إنسان يمكن أن تصادفه في حياتك: ثقافةٌ وبساطة، قوةٌ ورقّة، علمٌ وعذوبةٌ... زهرةٌ مصريةٌ مشرقة اجتمع على حبّها الناسُ جميعُهم.»
             </blockquote>
             <cite className="tribute-author">— شهادة إحدى رائدات الفكر المستنير في سيرة د. سمية رمضان</cite>
+          </div>
+
+        </div>
+      </section>
+
+      {/* LOTUS DIVIDER */}
+      <div className="section-separator">
+        <div className="site-symbol"></div>
+      </div>
+
+      {/* ============================================================ */}
+      {/* SECTION 3: DR. BASMA MOUSSA */}
+      {/* ============================================================ */}
+      <section id="moussa" className="figure-section figure-moussa-section">
+        <div className="figure-full-layout">
+
+          <div className="figure-header-row figures-reveal">
+            <div className="figure-portrait-wrapper">
+              <img
+                src={asset('/assets/nmazeg/b-moussa/basma5.jpeg')}
+                alt="الدكتورة باسمة موسى"
+                className="figure-main-portrait"
+                loading="lazy"
+              />
+              <span className="figure-years-badge">١٩٥٨ — ٢٠٢٥م</span>
+            </div>
+
+            <div className="figure-intro-col">
+              <span className="section-tag">صوت المواطنة وحرية العقيدة</span>
+              <h2 className="figure-name">د. باسمة موسى</h2>
+              <p className="figure-tagline">
+                أستاذة جراحة الفم والفك بقصر العيني، والمدافعة الصبورة عن حقوق البهائيين والأقليات وحرية العقيدة في مصر
+              </p>
+              <p>
+                وُلدت الدكتورة باسمة موسى في مدينة بورفؤاد بمحافظة بورسعيد في ١٩ أكتوبر ١٩٥٨م لأبوين بهائيين، ونشأت بين إخوتها يحيى وفاتن ووفاء وعلا وشريف، وأنجبت عليّ وأذكار طاهر خليفة.
+              </p>
+              <p>
+                حصلت على بكالوريوس طب وجراحة الفم والأسنان من قصر العيني عام ١٩٨١م، لتبدأ مسيرة علمية وإنسانية امتدت لأكثر من أربعة عقود، جمعت فيها بين العطاء الأكاديمي والدفاع عن حق كل إنسان في المواطنة الكاملة.
+              </p>
+            </div>
+          </div>
+
+          <div className="bicar-story-flow">
+
+            {/* 1. Academic career under persecution */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">المسيرة الأكاديمية</span>
+                <h3 className="bicar-editorial-title">ثلاثون عاماً من الصبر الجميل حتى الأستاذية</h3>
+                <p>
+                  عُيّنت معيدة في قسم الجراحة عام ١٩٨٢م، لكنها عانت اضطهاداً دينياً شديداً من قبل بعض الأساتذة؛ فحصلت على الماجستير بعد سبع سنوات، ثم على الدكتوراه بعد معاناة تسع سنوات أخرى.
+                </p>
+                <p>
+                  وحين تقدمت بطلب تعيينها مدرّسة، أرسل عدد من الأساتذة رسالة إلى الأزهر يطلبون فيها الفتوى في تعيين من يدين بالفكر البهائي في وظائف تربوية، ونشرت جريدة «عقيدتي» فتوى الأزهر ورُفض التعيين، غير أن مجلس الكلية قرر تعيينها على درجة مدرس.
+                </p>
+                <p>
+                  وفي عام ٢٠١٢م نالت درجة الأستاذية، أي بعد ثلاثين عاماً من الاضطهاد الشديد والصبر الجميل والتوكل على الخالق عز وجل.
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src={asset('/assets/nmazeg/b-moussa/basma3.jpeg')}
+                    alt="د. باسمة موسى مع زملائها في غرفة العمليات"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  د. باسمة موسى مع زملائها الجراحين في غرفة العمليات
+                </span>
+              </div>
+            </article>
+
+            {/* 2. Human rights and the identity-papers case (Reversed) */}
+            <article className="bicar-editorial-row editorial-reverse figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">حقوق الإنسان والمواطنة</span>
+                <h3 className="bicar-editorial-title">الدفاع عن الأوراق الثبوتية وحقوق المضطهدين</h3>
+                <p>
+                  حصلت على دبلوم في المجتمع المدني وحقوق الإنسان من كلية الاقتصاد والعلوم السياسية بجامعة القاهرة، حتى يتسنى لها الدفاع عن حقوق البهائيين والأقليات، وعن الطلبة المضطهدين في الكلية للحيلولة دون رسوبهم؛ وكان لها باع كبير في حصول كثير منهم على درجاتهم العلمية بمنتهى النزاهة.
+                </p>
+                <p>
+                  وعندما رفضت الدولة منح البهائيين أوراقهم الثبوتية، رفع البهائيون قضية مدنية، وحضرت د. باسمة جميع جلساتها رغم شعورها بالخطر المحدق بها. وفي كل جلسة كانت تلتقي النشطاء والصحفيين لتحدثهم عن الدين البهائي وحق المواطنة.
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src={asset('/assets/nmazeg/b-moussa/basma1.jpeg')}
+                    alt="د. باسمة موسى في مؤتمر لحقوق الإنسان"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  د. باسمة موسى بين الحضور في أحد مؤتمرات المجتمع المدني وحقوق الإنسان
+                </span>
+              </div>
+            </article>
+
+            {/* 3. Writing and civil society */}
+            <article className="bicar-editorial-row figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">القلم والمجتمع المدني</span>
+                <h3 className="bicar-editorial-title">صوت للمرأة والطفل والتعليم والسلام</h3>
+                <p>
+                  شاركت متحدثةً في العديد من منظمات المجتمع المدني ومنظمات حقوق الإنسان المصرية، ونُشرت لها مقالات كثيرة في عدة جرائد مصرية تناولت فيها حقوق المرأة والطفل، والتعليم، والاهتمام بالبيئة والمناخ، والتسامح والسلام.
+                </p>
+                <p>
+                  ونتيجة لجهودها اختارتها جريدة «اليوم السابع» واحدةً من السيدات الأكثر تأثيراً في مصر في الدفاع عن حرية العقيدة.
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src={asset('/assets/nmazeg/b-moussa/basma4.jpeg')}
+                    alt="د. باسمة موسى في احتفالية اليوم العالمي للمرأة"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  في احتفالية اليوم العالمي للمرأة
+                </span>
+              </div>
+            </article>
+
+            {/* 4. Media dialogue (Reversed) */}
+            <article className="bicar-editorial-row editorial-reverse figures-reveal">
+              <div className="bicar-editorial-content">
+                <span className="section-tag">الحوار بأدب ووقار</span>
+                <h3 className="bicar-editorial-title">الرد على الإساءة بالكلمة الطيبة</h3>
+                <p>
+                  شاركت في عدة حلقات تليفزيونية، وكانت تتعرض خلالها للهجوم الشرس والسب بالألفاظ الجارحة، لكنها كانت ترد بكل أدب ووقار. وكان لذلك ردود فعل عظيمة لدى الناس؛ إذ أثار تعاطفهم مع القضية البهائية ودفع كثيرين إلى البحث عن حقيقة الدين البهائي.
+                </p>
+                <p>
+                  توفيت في ٢٩ نوفمبر ٢٠٢٥م، ورحلت إلى الملكوت الإلهي في سلام.
+                </p>
+              </div>
+              <div className="bicar-editorial-media">
+                <div className="bicar-frame-box">
+                  <img
+                    src={asset('/assets/nmazeg/b-moussa/basma2.jpeg')}
+                    alt="د. باسمة موسى في أحد لقاءاتها العامة"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="bicar-media-caption">
+                  د. باسمة موسى في أحد لقاءاتها العامة
+                </span>
+              </div>
+            </article>
+
           </div>
 
         </div>
