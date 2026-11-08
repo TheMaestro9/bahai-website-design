@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-logo">
-          <span className="logo-main">الجامعة البهائية في مصر</span>
+          <span className="logo-main">البهائيون في مصر</span>
         </div>
 
         <nav className="footer-nav" aria-label="روابط الموقع">
