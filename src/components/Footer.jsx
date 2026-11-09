@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="footer-divider"></div>
 
         <p className="footer-copy">
-          &copy; {new Date().getFullYear()} الجامعة البهائية في مصر — جميع الحقوق محفوظة
+          &copy; {new Date().getFullYear()} البهائيون في مصر — جميع الحقوق محفوظة
         </p>
       </div>
     </footer>

@@ -19,7 +19,7 @@ export default function About() {
         />
         <div className="about-hero-overlay">
           <span className="section-tag light">من نحن</span>
-          <h1 className="about-hero-title">الجامعة البهائية في مصر</h1>
+          <h1 className="about-hero-title">البهائيون في مصر</h1>
           <p className="about-hero-subtitle">
             مواطنون مصريون يعملون بروح التفاني والشراكة لبناء مجتمع متماسك ومزدهر
           </p>

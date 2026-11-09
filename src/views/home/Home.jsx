@@ -40,7 +40,7 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="hero-pattern"></div>
         <div className="hero-content">
-          <h1 className="hero-site-title">الجامعة البهائية في مصر</h1>
+          <h1 className="hero-site-title">البهائيون في مصر</h1>
           <blockquote className="hero-quote">
             "لم يزل كان إصلاح العالم بالأعمال الطيبة الطاهرة والأخلاق الراضية المرضية"
           </blockquote>
@@ -92,7 +92,7 @@ export default function Home() {
           </p>
           <div style={{ marginTop: '1.5rem' }}>
             <Link href="/about" className="read-more-link" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span>المزيد عن الجامعة البهائية في مصر</span>
+              <span>المزيد عن البهائيين في مصر</span>
               <span aria-hidden="true">←</span>
             </Link>
           </div>
@@ -202,7 +202,7 @@ export default function Home() {
 
       <div className="quote-divider">
         <blockquote>
-          يَا ابْنَ الرُّوحِ — فِي أَوَّلِ القَوْلِ امْلِكْ قَلْباً جَيِّداً حَسَناً مُنيراً لِتَمْلِكَ مُلْكاً دائِماً باقِياً.
+          يَا ابْنَ الرُّوحِ — فِي أَوَّلِ القَوْلِ امْلِكْ قَلْباً جَيِّداً حَسَناً مُنيراً لِتَمْلِكَ مُلْكاً دائِماً باقِياً أَزَلاً قَدِيماً.
         </blockquote>
         <cite>— حضرة بهاء الله</cite>
       </div>
