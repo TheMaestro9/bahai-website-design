@@ -3,4 +3,4 @@
 :HL["/bahai-website-design/_next/static/chunks/17l-0qb6z2aly.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap","style"]
 1:[["children",{"s":"__PAGE__","h":128}]]
-0:{"b":"YB2Y2K2OOTx9K_KQvcuy5","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"-62dltbxQggG3R7WxbltC","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
