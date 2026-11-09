@@ -1,4 +1,4 @@
-name: Deploy to Netlify and GitHub Pages
+name: Deploy to Vercel and GitHub Pages
 
 on:
   push:
@@ -9,7 +9,37 @@ permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  # Vercel serves the site from the domain root.
+  # Needs repo secrets: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID.
+  deploy-vercel:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Vercel CLI 📦
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel project settings
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build for Vercel 🔧
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel 🚀
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+  # GitHub Pages serves it from /bahai-website-design/.
+  deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -24,31 +54,15 @@ jobs:
       - name: Install 📦
         run: npm ci
 
-      # Netlify serves the site from the domain root.
-      - name: Build for Netlify 🔧
-        run: |
-          npm run build
-          touch out/.nojekyll
-          mv out out-netlify
-
-      # GitHub Pages serves it from /bahai-website-design/.
-      # The contact form only receives messages on Netlify.
       - name: Build for GitHub Pages 🔧
         env:
           NEXT_PUBLIC_BASE_PATH: /bahai-website-design
         run: |
           npm run build
           touch out/.nojekyll
-          mv out out-gh-pages
-
-      - name: Deploy to Netlify branch 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: out-netlify
-          branch: netlify-deploy
 
       - name: Deploy to GitHub Pages branch 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out-gh-pages
+          folder: out
           branch: gh-pages

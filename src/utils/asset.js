@@ -1,4 +1,4 @@
-// Folder the site is served from: '' on Netlify, '/bahai-website-design' on GitHub Pages.
+// Folder the site is served from: '' on Vercel, '/bahai-website-design' on GitHub Pages.
 // Set at build time by the deploy workflow.
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 

@@ -1,4 +1,4 @@
-// Empty for Netlify (served at the domain root). The GitHub Pages build sets it to
+// Empty for Vercel (served at the domain root). The GitHub Pages build sets it to
 // /bahai-website-design because that site lives in a subfolder.
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
