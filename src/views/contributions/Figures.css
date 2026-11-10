@@ -120,6 +120,8 @@
 .figure-section {
   width: 100%;
   padding: 5.5rem 4vw;
+  /* Land below the fixed header when opened via /figures#id */
+  scroll-margin-top: var(--site-header-h);
 }
 
 .figure-bicar-section,

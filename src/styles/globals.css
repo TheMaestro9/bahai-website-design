@@ -33,15 +33,25 @@
     /* Inner-page hero size (home page keeps its full-screen hero) */
     --hero-h:      52vh;
     --hero-min-h:  380px;
+    /* Fixed site header height. Use it for anything that sits under the
+       header, e.g. sticky bars: top: var(--site-header-h). */
+    --site-header-h: 94px;
     /* Image variables (--symbol-url, --pattern-geo, --pattern-lotus, --papyrus,
        --calendar-hero-img) are set in src/app/layout.jsx so they work on
        GitHub Pages, where the site lives in a subfolder. */
+}
+
+@media (max-width: 900px) {
+    :root {
+        --site-header-h: 86px; /* Baha'i date badge is hidden from here down */
+    }
 }
 
 @media (max-width: 768px) {
     :root {
         --hero-h:     40vh;
         --hero-min-h: 280px;
+        --site-header-h: 70px;
     }
 }
 

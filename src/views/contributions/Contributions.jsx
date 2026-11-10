@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import useReveal from '../../hooks/useReveal';
 import './Contributions.css';
@@ -13,11 +13,42 @@ export default function Contributions() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // Shrink the section nav once it is stuck under the header. We watch a
+  // marker placed just above the nav, so the nav's own size change can't
+  // flip the state back and forth.
+  const navSentinelRef = useRef(null);
+  const [navStuck, setNavStuck] = useState(false);
+
+  useEffect(() => {
+    const sentinel = navSentinelRef.current;
+    if (!sentinel) return;
+    let frame = 0;
+    const check = () => {
+      frame = 0;
+      const header = document.querySelector('.site-header');
+      const headerH = header ? header.offsetHeight : 0;
+      setNavStuck(sentinel.getBoundingClientRect().top <= headerH);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(check);
+    };
+    check();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -125;
+      const header = document.querySelector('.site-header');
+      const nav = document.querySelector('.contrib-nav-bar');
+      const yOffset = -((header?.offsetHeight || 0) + (nav?.offsetHeight || 0) + 16);
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -42,7 +73,11 @@ export default function Contributions() {
       </section>
 
       {/* QUICK IN-PAGE NAVIGATION BAR */}
-      <nav className="contrib-nav-bar" aria-label="أقسام الصفحة">
+      <div ref={navSentinelRef} className="contrib-nav-sentinel" aria-hidden="true" />
+      <nav
+        className={`contrib-nav-bar${navStuck ? ' is-stuck' : ''}`}
+        aria-label="أقسام الصفحة"
+      >
         <div className="contrib-container">
           <div className="contrib-nav-links">
             <a
@@ -332,7 +367,7 @@ export default function Contributions() {
 
           <div className="about-figures-grid contrib-reveal">
             {/* BICAR PREVIEW CARD */}
-            <div className="about-figure-card">
+            <Link href="/figures#bicar" className="about-figure-card">
               <div className="about-figure-img-wrap">
                 <img 
                   src={asset('/assets/nmazeg/h-bicar/personal-image.jpg')} 
@@ -347,11 +382,14 @@ export default function Contributions() {
                 <p className="about-figure-desc">
                   أحد أبرز رواد الجيل الثاني من التشكيليين المصريين، أحدث طفرة في الرسوم الصحفية وأغلفة المجلات، وخلد بريشته ملحمة إنقاذ معبد أبي سمبل، وعاش مؤمناً بأن الفن رسالة جمال لكل مواطن بسيط.
                 </p>
+                <span className="about-figure-more">
+                  اقرأ السيرة الكاملة <span aria-hidden="true">←</span>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* SOMAYA PREVIEW CARD */}
-            <div className="about-figure-card">
+            <Link href="/figures#ramadan" className="about-figure-card">
               <div className="about-figure-img-wrap">
                 <img 
                   src={asset('/assets/nmazeg/s-ramadan/personal-look.jpg')} 
@@ -366,11 +404,14 @@ export default function Contributions() {
                 <p className="about-figure-desc">
                   كاتبة ومترجمة وأستاذة جامعية من مؤسسات ملتقى المرأة والذاكرة، أضاءت المشهد الأدبي بروايتها «أوراق النرجس» وكتابها «طريق المستقبل: رؤية بهائية»، مجسدة ثقافة وبساطة وعطاءً فكرياً راقياً.
                 </p>
+                <span className="about-figure-more">
+                  اقرأ السيرة الكاملة <span aria-hidden="true">←</span>
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* BASMA PREVIEW CARD */}
-            <div className="about-figure-card">
+            <Link href="/figures#moussa" className="about-figure-card">
               <div className="about-figure-img-wrap">
                 <img
                   src={asset('/assets/nmazeg/b-moussa/basma5.jpeg')}
@@ -385,8 +426,11 @@ export default function Contributions() {
                 <p className="about-figure-desc">
                   وُلدت في بورفؤاد عام ١٩٥٨م، ونالت الأستاذية بعد ثلاثين عاماً من الصبر الجميل في وجه الاضطهاد الديني، وكرست مسيرتها للعطاء الأكاديمي والدفاع عن حق كل إنسان في المواطنة الكاملة.
                 </p>
+                <span className="about-figure-more">
+                  اقرأ السيرة الكاملة <span aria-hidden="true">←</span>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="about-figures-cta contrib-reveal">

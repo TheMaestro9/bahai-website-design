@@ -8,7 +8,8 @@
 .contributions-page {
   background: var(--white);
   position: relative;
-  overflow-x: hidden;
+  /* clip (not hidden) so the section nav can stay sticky */
+  overflow-x: clip;
   direction: rtl;
 }
 
@@ -78,9 +79,19 @@
   background: var(--white);
   border-bottom: 1px solid var(--divider);
   position: sticky;
-  top: 70px;
+  top: var(--site-header-h);
   z-index: 50;
   box-shadow: 0 4px 12px rgba(26, 78, 138, 0.05);
+  transition: box-shadow 0.35s ease;
+}
+
+.contrib-nav-bar.is-stuck {
+  box-shadow: 0 6px 18px rgba(26, 78, 138, 0.1);
+}
+
+/* Zero-height marker just above the nav, used to detect the stuck state */
+.contrib-nav-sentinel {
+  height: 0;
 }
 
 .contrib-nav-links {
@@ -90,6 +101,7 @@
   gap: clamp(1rem, 2.5vw, 2rem);
   padding: 0.85rem 0;
   flex-wrap: wrap;
+  transition: padding 0.35s cubic-bezier(.4,0,.2,1), gap 0.35s cubic-bezier(.4,0,.2,1);
 }
 
 .contrib-nav-item {
@@ -126,6 +138,25 @@
   justify-content: center;
   font-size: 0.82rem;
   font-weight: 700;
+  transition: width 0.35s cubic-bezier(.4,0,.2,1), height 0.35s cubic-bezier(.4,0,.2,1), font-size 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* Compact nav while stuck under the header */
+.contrib-nav-bar.is-stuck .contrib-nav-links {
+  padding: 0.45rem 0;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.contrib-nav-bar.is-stuck .contrib-nav-item {
+  padding: 0.35rem 1.05rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+.contrib-nav-bar.is-stuck .nav-num {
+  width: 20px;
+  height: 20px;
+  font-size: 0.72rem;
 }
 
 /* ================================================================
@@ -718,10 +749,6 @@
     line-height: 1.6;
   }
 
-  .contrib-nav-bar {
-    top: 56px;
-  }
-
   .contrib-nav-links {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -747,6 +774,23 @@
     width: 20px;
     height: 20px;
     font-size: 0.75rem;
+  }
+
+  .contrib-nav-bar.is-stuck .contrib-nav-links {
+    padding: 0.35rem 1rem;
+    gap: 0.4rem;
+  }
+
+  .contrib-nav-bar.is-stuck .contrib-nav-item {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.8rem;
+    gap: 0.35rem;
+  }
+
+  .contrib-nav-bar.is-stuck .nav-num {
+    width: 17px;
+    height: 17px;
+    font-size: 0.66rem;
   }
 
   .contrib-section {
@@ -921,6 +965,32 @@
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-figure-card:focus-visible {
+  outline: 3px solid var(--blue-mid);
+  outline-offset: 3px;
+}
+
+.about-figure-more {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.about-figure-more span {
+  transition: transform 0.3s ease;
+}
+
+.about-figure-card:hover .about-figure-more span {
+  transform: translateX(-4px);
 }
 
 .about-figure-card:hover {
