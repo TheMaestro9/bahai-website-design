@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <nav className="footer-nav" aria-label="روابط الموقع">
-          <Link href="/#about">البهائيون في مصر</Link>
+          <Link href="/#about">عن البهائيين في مصر</Link>
           <Link href="/figures">نماذج بارزة</Link>
           <Link href="/beliefs">ما يؤمنون به</Link>
           <Link href="/beliefs/covenant">الميثاق الإلهي</Link>
