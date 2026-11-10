@@ -368,6 +368,25 @@ export default function Contributions() {
                 </p>
               </div>
             </div>
+
+            {/* BASMA PREVIEW CARD */}
+            <div className="about-figure-card">
+              <div className="about-figure-img-wrap">
+                <img
+                  src={asset('/assets/nmazeg/b-moussa/basma5.jpeg')}
+                  alt="د. باسمة موسى"
+                  loading="lazy"
+                />
+                <span className="about-figure-badge">١٩٥٨ — ٢٠٢٥م</span>
+              </div>
+              <div className="about-figure-content">
+                <h3 className="about-figure-name">د. باسمة موسى</h3>
+                <p className="about-figure-role">أستاذة جراحة الفم والفك بقصر العيني وصوت المواطنة وحرية العقيدة</p>
+                <p className="about-figure-desc">
+                  وُلدت في بورفؤاد عام ١٩٥٨م، ونالت الأستاذية بعد ثلاثين عاماً من الصبر الجميل في وجه الاضطهاد الديني، وكرست مسيرتها للعطاء الأكاديمي والدفاع عن حق كل إنسان في المواطنة الكاملة.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="about-figures-cta contrib-reveal">
