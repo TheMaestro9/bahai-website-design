@@ -164,6 +164,13 @@
   cursor: wait;
 }
 
+/* Reserve the widget's height so the form doesn't jump when it loads. */
+.contact-captcha {
+  min-height: 78px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .contact-error {
   color: var(--coral-hover);
   background: #fdf0f0;
