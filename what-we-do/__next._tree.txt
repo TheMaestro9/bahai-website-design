@@ -1,6 +1,6 @@
-:HL["/bahai-website-design/_next/static/chunks/16-7xohf52uxy.css","style"]
-:HL["/bahai-website-design/_next/static/chunks/2lpctj70iraq3.css","style"]
+:HL["/bahai-website-design/_next/static/chunks/33tx67w8ad6t8.css","style"]
+:HL["/bahai-website-design/_next/static/chunks/2137y37v5__qd.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"what-we-do","h":64,"c":"$Q2"}]]
-0:{"b":"-62dltbxQggG3R7WxbltC","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"S0Jn3B0Wy51iY0LThMm6Q","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
